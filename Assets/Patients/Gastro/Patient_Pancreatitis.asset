@@ -1,0 +1,800 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb738e7044b7cc4dae6b9c5d16348a1, type: 3}
+  m_Name: Patient_Pancreatitis
+  m_EditorClassIdentifier: Assembly-CSharp::PatientCaseData
+  caseId: PATIENT_PANCREATITIS_01
+  trueDiseaseId: PANCREATITIS
+  patientVisualIndex: 10
+  rootNodeId: root
+  startText: "Merhaba doktor, karn\u0131m\u0131n \xFCst k\u0131sm\u0131nda a\u011Fr\u0131
+    ve bulant\u0131m var."
+  startAssistantText: "\xDCst kar\u0131n a\u011Fr\u0131s\u0131nda a\u011Fr\u0131n\u0131n
+    yeri, yay\u0131l\u0131m\u0131, yemek ili\u015Fkisi ve kan de\u011Ferleri \xF6nemlidir."
+  allNodes:
+  - nodeId: root
+    isHubNode: 1
+    nodeIntroText: 
+    nodeAssistantText: 
+    choices:
+    - choiceText: "A\u011Fr\u0131n\u0131z nerede?"
+      choiceType: 0
+      doctorLine: "A\u011Fr\u0131n\u0131z daha \xE7ok nerede?\n"
+      patientReply: "Karn\u0131m\u0131n \xFCst orta k\u0131sm\u0131nda.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - epi_pain
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Epigastrik a\u011Fr\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "\xDCst kar\u0131n a\u011Fr\u0131s\u0131 var. "
+      notebookTests: []
+      notebookNotes:
+      - "A\u011Fr\u0131 epigastrik b\xF6lgede. "
+      diseaseEffects:
+      - diseaseId: 'PANCREATITIS '
+        score: 3
+      - diseaseId: 'GASTRITIS '
+        score: 2
+      - diseaseId: 'GERD '
+        score: 1
+      - diseaseId: 'GALLBLADDER '
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "A\u011Fr\u0131 ne zaman ba\u015Flad\u0131?"
+      choiceType: 0
+      doctorLine: "A\u011Fr\u0131n\u0131z ne zaman ba\u015Flad\u0131?\n"
+      patientReply: "D\xFCn ba\u015Flad\u0131, bug\xFCn daha belirgin oldu.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - acute
+      - worse_today
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Akut ba\u015Flayan a\u011Fr\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - 'Akut seyir var. '
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PANCREATITIS '
+        score: 2
+      - diseaseId: 'GALLBLADDER '
+        score: 2
+      - diseaseId: 'GASTRITIS '
+        score: 1
+      - diseaseId: 'GERD '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "A\u011Fr\u0131 ne kadar \u015Fiddetli?"
+      choiceType: 0
+      doctorLine: "A\u011Fr\u0131n\u0131z hafif mi, \u015Fiddetli mi?\n"
+      patientReply: "Orta-\u015Fiddetli diyebilirim. Rahat oturam\u0131yorum.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - severe_pain
+      requiredTags:
+      - epi_pain
+      blockedTags: []
+      discoveredSymptoms:
+      - "Orta-\u015Fiddetli a\u011Fr\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "A\u011Fr\u0131 orta-\u015Fiddetli. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PANCREATITIS '
+        score: 3
+      - diseaseId: 'GALLBLADDER '
+        score: 2
+      - diseaseId: 'GASTRITIS '
+        score: 0
+      - diseaseId: 'GERD '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Yemekten sonra art\u0131yor mu?"
+      choiceType: 0
+      doctorLine: "A\u011Fr\u0131n\u0131z yemeklerden sonra art\u0131yor mu?\n"
+      patientReply: "Evet, \xF6zellikle ya\u011Fl\u0131 bir yemekten sonra artt\u0131.\n"
+      assistantReply: "Yemek ili\u015Fkisi \xF6nemli.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - meal_worse
+      - fat_meal
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Ya\u011Fl\u0131 yemek sonras\u0131 art\u0131\u015F "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Ya\u011Fl\u0131 yemek sonras\u0131 art\u0131\u015F "
+      diseaseEffects:
+      - diseaseId: 'GALLBLADDER '
+        score: 3
+      - diseaseId: 'PANCREATITIS '
+        score: 2
+      - diseaseId: 'GASTRITIS '
+        score: 1
+      - diseaseId: 'GERD '
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Bulant\u0131 veya kusma var m\u0131?"
+      choiceType: 0
+      doctorLine: "Bulant\u0131 veya kusma oldu mu?\n"
+      patientReply: "Bulant\u0131m var. Bir kez kustum.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - nausea
+      - vomit_once
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Bulant\u0131 ve kusma "
+      performedTests: []
+      notebookSymptoms:
+      - "Bulant\u0131 ve kusma "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PANCREATITIS '
+        score: 3
+      - diseaseId: 'GALLBLADDER '
+        score: 2
+      - diseaseId: 'GASTRITIS '
+        score: 1
+      - diseaseId: 'GERD '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "A\u011Fr\u0131 s\u0131rta vuruyor mu?"
+      choiceType: 0
+      doctorLine: "A\u011Fr\u0131 s\u0131rt\u0131n\u0131za vuruyor mu?\n"
+      patientReply: "Evet, bazen s\u0131rt\u0131ma do\u011Fru yay\u0131l\u0131yor.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - back_pain
+      requiredTags:
+      - epi_pain
+      - severe_pain
+      blockedTags: []
+      discoveredSymptoms:
+      - "S\u0131rta vuran a\u011Fr\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "S\u0131rta vuran a\u011Fr\u0131 "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PANCREATITIS '
+        score: 5
+      - diseaseId: 'GALLBLADDER '
+        score: 1
+      - diseaseId: 'GASTRITIS '
+        score: -1
+      - diseaseId: 'GERD '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Sa\u011F \xFCst kar\u0131nda m\u0131 daha fazla?"
+      choiceType: 0
+      doctorLine: "A\u011Fr\u0131 sa\u011F \xFCst kar\u0131n taraf\u0131nda m\u0131
+        daha fazla?\n"
+      patientReply: "Tam sa\u011F tarafta de\u011Fil, daha \xE7ok orta \xFCstte.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - no_ruq
+      - mid_upper
+      requiredTags:
+      - meal_worse
+      - fat_meal
+      blockedTags: []
+      discoveredSymptoms:
+      - "Sa\u011F \xFCst kar\u0131n a\u011Fr\u0131s\u0131 bask\u0131n de\u011Fil "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "A\u011Fr\u0131 orta \xFCst b\xF6lgede daha belirgin. "
+      diseaseEffects:
+      - diseaseId: 'GALLBLADDER '
+        score: -2
+      - diseaseId: 'PANCREATITIS '
+        score: 2
+      - diseaseId: 'GASTRITIS '
+        score: 1
+      - diseaseId: 'GERD '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "G\xF6\u011Fse yanma veya ek\u015Fi su var m\u0131?"
+      choiceType: 0
+      doctorLine: "G\xF6\u011Fse do\u011Fru yanma veya a\u011Fza ek\u015Fi su gelmesi
+        oluyor mu?\n"
+      patientReply: "\xC7ok belirgin de\u011Fil. Daha \xE7ok kar\u0131n a\u011Fr\u0131m
+        var.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - no_reflux
+      requiredTags:
+      - epi_pain
+      blockedTags: []
+      discoveredSymptoms:
+      - "Refl\xFC bulgusu bask\u0131n de\u011Fil "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Ek\u015Fi su ve g\xF6\u011F\xFCs yanmas\u0131 belirgin de\u011Fil. "
+      diseaseEffects:
+      - diseaseId: 'GERD '
+        score: -3
+      - diseaseId: 'PANCREATITIS '
+        score: 1
+      - diseaseId: 'GASTRITIS '
+        score: 1
+      - diseaseId: 'GALLBLADDER '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "A\u011Fr\u0131 kesici veya alkol kullan\u0131m\u0131 oldu mu?"
+      choiceType: 0
+      doctorLine: "Son g\xFCnlerde alkol veya fazla a\u011Fr\u0131 kesici kulland\u0131n\u0131z
+        m\u0131?"
+      patientReply: "Hafta sonu alkol ald\u0131m. A\u011Fr\u0131 kesici pek kullanmad\u0131m.\n"
+      assistantReply: "Yak\u0131n d\xF6nem al\u0131\u015Fkanl\u0131klar de\u011Ferlendirilmeli.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - alcohol
+      - no_nsaid
+      requiredTags:
+      - nausea
+      - epi_pain
+      blockedTags: []
+      discoveredSymptoms:
+      - "Yak\u0131n zamanda alkol kullan\u0131m\u0131 "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Alkol \xF6yk\xFCs\xFC mevcut. "
+      diseaseEffects:
+      - diseaseId: 'PANCREATITIS '
+        score: 4
+      - diseaseId: 'GASTRITIS '
+        score: 1
+      - diseaseId: 'GERD '
+        score: 0
+      - diseaseId: 'GALLBLADDER '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Ate\u015Finiz oldu mu?"
+      choiceType: 0
+      doctorLine: "Ate\u015Finiz oldu mu?\n"
+      patientReply: "\xC7ok y\xFCksek de\u011Fil, 37.8 civar\u0131yd\u0131.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - low_fever
+      requiredTags:
+      - acute
+      - worse_today
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hafif ate\u015F "
+      performedTests: []
+      notebookSymptoms:
+      - "Hafif ate\u015F var. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PANCREATITIS '
+        score: 2
+      - diseaseId: 'GALLBLADDER '
+        score: 1
+      - diseaseId: 'GASTRITIS '
+        score: 0
+      - diseaseId: 'GERD '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Sar\u0131l\u0131k veya idrar koyula\u015Fmas\u0131 var m\u0131?"
+      choiceType: 0
+      doctorLine: "G\xF6zlerde sararma veya idrarda koyula\u015Fma fark ettiniz mi?\n"
+      patientReply: "Hay\u0131r, fark etmedim.\n"
+      assistantReply: "Safra yolu bulgular\u0131 sorguland\u0131.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - no_jaundice
+      requiredTags:
+      - fat_meal
+      - no_ruq
+      blockedTags: []
+      discoveredSymptoms:
+      - "Sar\u0131l\u0131k yok "
+      performedTests: []
+      notebookSymptoms:
+      - "Sar\u0131l\u0131k ve koyu idrar yok. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'GALLBLADDER '
+        score: -2
+      - diseaseId: 'PANCREATITIS '
+        score: 1
+      - diseaseId: 'GASTRITIS '
+        score: 0
+      - diseaseId: 'GERD '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "D\u0131\u015Fk\u0131 renginiz de\u011Fi\u015Fti mi?"
+      choiceType: 0
+      doctorLine: "D\u0131\u015Fk\u0131n\u0131zda siyahl\u0131k veya renk a\xE7\u0131lmas\u0131
+        oldu mu?\n"
+      patientReply: "Hay\u0131r, normal gibi.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - stool_norm
+      requiredTags:
+      - no_jaundice
+      blockedTags: []
+      discoveredSymptoms:
+      - "D\u0131\u015Fk\u0131 de\u011Fi\u015Fikli\u011Fi yok "
+      performedTests: []
+      notebookSymptoms:
+      - "Belirgin d\u0131\u015Fk\u0131 de\u011Fi\u015Fikli\u011Fi yok. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'GALLBLADDER '
+        score: -1
+      - diseaseId: 'GASTRITIS '
+        score: 0
+      - diseaseId: 'PANCREATITIS '
+        score: 0
+      - diseaseId: 'GERD '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Kar\u0131n muayenesi yap"
+      choiceType: 1
+      doctorLine: "Kar\u0131n muayenesi yapaca\u011F\u0131m.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: 'Epigastrik hassasiyet var. Defans yok.
+
+'
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - epi_tender
+      - no_guard
+      requiredTags:
+      - epi_pain
+      - severe_pain
+      - nausea
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Epigastrik hassasiyet '
+      performedTests:
+      - "Kar\u0131n muayenesi "
+      notebookSymptoms: []
+      notebookTests:
+      - 'Epigastrik hassasiyet var. Defans yok. '
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: PANCREATITIS
+        score: 3
+      - diseaseId: 'GASTRITIS '
+        score: 2
+      - diseaseId: 'GALLBLADDER '
+        score: 1
+      - diseaseId: 'GERD '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tam kan say\u0131m\u0131 ve CRP iste"
+      choiceType: 1
+      doctorLine: "Kan de\u011Ferlerine bakal\u0131m.\n"
+      patientReply: 'Tamam.
+
+'
+      assistantReply: "WBC: 12.400 /\xB5L\nCRP: 42 mg/L\nHb: 14.0 g/dL\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - wbc_high
+      - crp_high
+      requiredTags:
+      - low_fever
+      - epi_tender
+      blockedTags: []
+      discoveredSymptoms:
+      - "Enflamasyon y\xFCksekli\u011Fi "
+      performedTests:
+      - "Tam kan say\u0131m\u0131 ve CRP "
+      notebookSymptoms: []
+      notebookTests:
+      - "WBC: 12.400 /\xB5L"
+      - 'CRP: 42 mg/L'
+      - 'Hb: 14.0 g/dL'
+      notebookNotes:
+      - "WBC ve CRP y\xFCksek."
+      diseaseEffects:
+      - diseaseId: 'PANCREATITIS '
+        score: 3
+      - diseaseId: 'GALLBLADDER '
+        score: 2
+      - diseaseId: 'GASTRITIS '
+        score: 1
+      - diseaseId: 'GERD '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: Amilaz ve lipaz iste
+      choiceType: 1
+      doctorLine: "Pankreas enzimlerine bakal\u0131m.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - lipase_high
+      - amylase_high
+      requiredTags:
+      - back_pain
+      - vomit_once
+      - wbc_high
+      blockedTags: []
+      discoveredSymptoms:
+      - "Pankreas enzimleri y\xFCksek "
+      performedTests:
+      - 'Amilaz ve lipaz '
+      notebookSymptoms: []
+      notebookTests:
+      - 'Lipaz: 620 U/L'
+      - 'Amilaz: 210 U/L '
+      notebookNotes:
+      - "Pankreas enzimleri y\xFCksek. "
+      diseaseEffects:
+      - diseaseId: 'PANCREATITIS '
+        score: 7
+      - diseaseId: 'GALLBLADDER '
+        score: 0
+      - diseaseId: 'GASTRITIS '
+        score: -2
+      - diseaseId: 'GERD '
+        score: -2
+      useTestChance: 1
+      baseSuccessChance: 25
+      bonusSpecialization: 2
+      specializationBonus: 50
+      generalistBonus: 10
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Kar\u0131n ultrasonu iste"
+      choiceType: 1
+      doctorLine: "Safra kesesi ve kar\u0131n i\xE7i yap\u0131lar\u0131na ultrasonla
+        bakal\u0131m.\n"
+      patientReply: 'Tamam.
+
+'
+      assistantReply: "Safra ta\u015F\u0131 izlenmedi. Pankreas hafif \xF6demli.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - usg_no_stone
+      - pancreas_swollen
+      requiredTags:
+      - fat_meal
+      - no_ruq
+      - crp_high
+      blockedTags: []
+      discoveredSymptoms:
+      - "Pankreas \xF6demli g\xF6r\xFCn\xFCm "
+      performedTests:
+      - "Kar\u0131n ultrasonu "
+      notebookSymptoms: []
+      notebookTests:
+      - "Safra ta\u015F\u0131 izlenmedi. Pankreas hafif \xF6demli. "
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PANCREATITIS '
+        score: 5
+      - diseaseId: 'GALLBLADDER '
+        score: -4
+      - diseaseId: 'GASTRITIS '
+        score: 0
+      - diseaseId: 'GERD '
+        score: 0
+      useTestChance: 1
+      baseSuccessChance: 25
+      bonusSpecialization: 2
+      specializationBonus: 50
+      generalistBonus: 10
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "\xDCst G\u0130S endoskopi d\xFC\u015F\xFCn "
+      choiceType: 1
+      doctorLine: "Mide kaynakl\u0131 nedenleri d\u0131\u015Flamak i\xE7in endoskopi
+        d\xFC\u015F\xFCnebiliriz."
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Hafif antral eritem var. \xDClser yok. Belirgin \xF6zofajit
+        yok."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - mild_gastritis
+      - no_ulcer
+      - no_esoph
+      requiredTags:
+      - no_reflux
+      - epi_tender
+      - lipase_high
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Hafif gastrit bulgusu '
+      performedTests:
+      - "\xDCst G\u0130S endoskopi "
+      notebookSymptoms: []
+      notebookTests:
+      - Hafif antral eritem var.
+      - "\xDClser yok."
+      - "Belirgin \xF6zofajit yok."
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'GASTRITIS '
+        score: 2
+      - diseaseId: 'PANCREATITIS '
+        score: 1
+      - diseaseId: 'GERD '
+        score: -2
+      - diseaseId: 'GALLBLADDER '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tan\u0131 koy"
+      choiceType: 2
+      doctorLine: 
+      patientReply: 
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 0
+      opensDiagnosisPanel: 1
+      reusable: 1
+      hideAfterUse: 0
+      gainedTags: []
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects: []
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+  diagnosisChoices:
+  - diseaseId: PANCREATITIS
+    diagnosisName: Pankreatit
+    resultText: "Do\u011Fru tan\u0131 pankreatit. Epigastrik \u015Fiddetli a\u011Fr\u0131,
+      s\u0131rta yay\u0131l\u0131m, bulant\u0131-kusma, y\xFCksek lipaz/amilaz ve
+      pankreas \xF6demi tan\u0131y\u0131 destekler.\n"
+    isCorrectDiagnosis: 1
+    recommendedTags:
+    - epi_pain
+    - severe_pain
+    - back_pain
+    - vomit_once
+    - lipase_high
+    - pancreas_swollen
+  - diseaseId: GERD
+    diagnosisName: "Refl\xFC"
+    resultText: "GERD\u2019de g\xF6\u011Fse yanma ve ek\u015Fi su gelmesi daha bask\u0131n
+      beklenir. Bu vakada \xFCst kar\u0131n a\u011Fr\u0131s\u0131, s\u0131rta yay\u0131l\u0131m
+      ve y\xFCksek lipaz pankreatiti destekler.\n"
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - no_reflux
+    - back_pain
+    - lipase_high
+  - diseaseId: GASTRITIS
+    diagnosisName: Gastrit
+    resultText: "Gastrit mide yanmas\u0131 ve bulant\u0131yla d\xFC\u015F\xFCn\xFClebilir.
+      Ancak a\u011Fr\u0131n\u0131n \u015Fiddeti, s\u0131rta vurmas\u0131 ve pankreas
+      enzim y\xFCksekli\u011Fi gastritten daha g\xFC\xE7l\xFCd\xFCr."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - epi_pain
+    - nausea
+    - mild_gastritis
+  - diseaseId: GALLBLADDER
+    diagnosisName: Safra Kesesi
+    resultText: "Safra kesesi hastal\u0131\u011F\u0131nda sa\u011F \xFCst kar\u0131n
+      a\u011Fr\u0131s\u0131 ve USG\u2019de ta\u015F beklenebilir. Bu vakada ta\u015F
+      izlenmedi ve a\u011Fr\u0131 orta \xFCst b\xF6lgede."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - fat_meal
+    - no_ruq
+    - usg_no_stone
+  assistantHints: []
+  variationProfile: {fileID: 0}

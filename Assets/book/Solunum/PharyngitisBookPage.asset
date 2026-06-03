@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34b718b78ce91a4bb6b271059134183, type: 3}
+  m_Name: PharyngitisBookPage
+  m_EditorClassIdentifier: Assembly-CSharp::DiseaseBookPageData
+  diseaseId: pharyngitis
+  diseaseName: "FARENJ\u0130T"
+  generalInfo: "Farenjit, farinks b\xF6lgesinin iltihaplanmas\u0131yla geli\u015Fen
+    bir \xFCst solunum yolu hastal\u0131\u011F\u0131d\u0131r. Hastalarda bo\u011Faz
+    a\u011Fr\u0131s\u0131, yutma g\xFC\xE7l\xFC\u011F\xFC ve hafif ate\u015F g\xF6r\xFClebilir."
+  symptomsInfo: "Bo\u011Faz a\u011Fr\u0131s\u0131, Odinofaji mevcut olmas\u0131,
+    kat\u0131 g\u0131da yutarken a\u011Fr\u0131 mevcut olmas\u0131 ve hafif ses k\u0131s\u0131kl\u0131\u011F\u0131
+    mevcut olmas\u0131 farenjitte s\u0131k g\xF6r\xFClen belirtilerdendir. Hafif
+    burun ak\u0131nt\u0131s\u0131 ve ara ara hafif \xF6ks\xFCr\xFCk var olabilir."
+  diagnosisTips: 
+  diseaseImage: {fileID: 21300000, guid: 6b496cc2780456942b043bf7a6c6e5d8, type: 3}
+  extraInfo: 
+  highlightKeywords:
+  - Hafif halsizlik
+  - "Bo\u011Faz a\u011Fr\u0131s\u0131"
+  - Odinofaji
+  - "Kat\u0131 g\u0131da yutarken a\u011Fr\u0131"
+  - "ses k\u0131s\u0131kl\u0131\u011F\u0131"
+  - "burun ak\u0131nt\u0131s\u0131"
+  - "hafif \xF6ks\xFCr\xFCk"
+  - hiperemi
+  - "gran\xFCler g\xF6r\xFCn\xFCm"

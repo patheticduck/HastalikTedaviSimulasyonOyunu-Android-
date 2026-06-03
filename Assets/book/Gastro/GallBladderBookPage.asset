@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34b718b78ce91a4bb6b271059134183, type: 3}
+  m_Name: GallBladderBookPage
+  m_EditorClassIdentifier: Assembly-CSharp::DiseaseBookPageData
+  diseaseId: gallbladder
+  diseaseName: "SAFRA KESES\u0130 HASTALI\u011EI"
+  generalInfo: "Safra kesesi hastal\u0131klar\u0131, safra ak\u0131\u015F\u0131n\u0131n
+    bozulmas\u0131 veya ta\u015F olu\u015Fumu ile geli\u015Fen sindirim sistemi hastal\u0131klar\u0131d\u0131r.
+    Hastalarda \xFCst kar\u0131n a\u011Fr\u0131s\u0131, bulant\u0131 ve yemek sonras\u0131
+    rahats\u0131zl\u0131k g\xF6r\xFClebilir."
+  symptomsInfo: "\xDCst kar\u0131n a\u011Fr\u0131s\u0131 var olmas\u0131, bulant\u0131
+    var olmas\u0131, a\u011Fr\u0131 sa\u011F omuza yay\u0131l\u0131yor olmas\u0131
+    ve yemek sonras\u0131 \u015Fi\u015Fkinlik var olmas\u0131 safra kesesi hastal\u0131klar\u0131nda
+    s\u0131k g\xF6r\xFClen belirtilerdendir."
+  diagnosisTips: 
+  diseaseImage: {fileID: 21300000, guid: 3497590acd6e7dc43a215cb7beaac728, type: 3}
+  extraInfo: 
+  highlightKeywords:
+  - "\xDCst kar\u0131n a\u011Fr\u0131s\u0131"
+  - "bulant\u0131"
+  - "sa\u011F omuz"
+  - "\u015Fi\u015Fkinlik"
+  - "Yemek ili\u015Fkisi"
+  - Murphy
+  - "\xE7oklu ta\u015F"
+  - "ta\u015F olu\u015Fumu"
+  - sindirim
+  - "rahats\u0131zl\u0131k"

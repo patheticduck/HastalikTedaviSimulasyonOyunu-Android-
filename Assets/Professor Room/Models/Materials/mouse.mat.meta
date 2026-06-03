@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 08a1408b14823ab40a924755e71a3550
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159893
+  packageName: Professor Room
+  packageVersion: 1.3
+  assetPath: Assets/Professor Room/Models/Materials/mouse.mat
+  uploadId: 790588

@@ -1,0 +1,876 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb738e7044b7cc4dae6b9c5d16348a1, type: 3}
+  m_Name: Patient_Gerd
+  m_EditorClassIdentifier: Assembly-CSharp::PatientCaseData
+  caseId: DAY2_PATIENT1_GERD
+  trueDiseaseId: GERD
+  patientVisualIndex: 9
+  rootNodeId: root
+  startText: "Merhaba doktor, birka\xE7 g\xFCnd\xFCr g\xF6\u011Fs\xFCmde ve bo\u011Faz\u0131ma
+    do\u011Fru gelen bir yanma hissi var."
+  startAssistantText: 
+  allNodes:
+  - nodeId: root
+    isHubNode: 1
+    nodeIntroText: 
+    nodeAssistantText: 
+    choices:
+    - choiceText: "Ate\u015Finiz oldu mu? "
+      choiceType: 0
+      doctorLine: "Ate\u015Finiz oldu mu?\n"
+      patientReply: "Hay\u0131r doktor, ate\u015Fim olmad\u0131.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - fever_no
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - no_fever
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Hasta ate\u015F tarif etmiyor. "
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 1
+      - diseaseId: GASTRITIS
+        score: 0
+      - diseaseId: PEPTIC_ULCER
+        score: 0
+      - diseaseId: PHARYNGITIS
+        score: -2
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "\u015Eikayetleriniz ne zaman ba\u015Flad\u0131? "
+      choiceType: 0
+      doctorLine: "\u015Eikayetleriniz ne zaman ba\u015Flad\u0131?\n"
+      patientReply: "Yakla\u015F\u0131k d\xF6rt be\u015F g\xFCnd\xFCr var. \xD6nce
+        hafifti, son g\xFCnlerde daha artt\u0131.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - subacute_onset
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - subacute_symptoms
+      performedTests: []
+      notebookSymptoms:
+      - "Birka\xE7 g\xFCnd\xFCr s\xFCren yanma"
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 1
+      - diseaseId: GASTRITIS
+        score: 1
+      - diseaseId: PEPTIC_ULCER
+        score: 1
+      - diseaseId: PHARYNGITIS
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: Yanma tam olarak nerede oluyor?
+      choiceType: 0
+      doctorLine: Yanma tam olarak nerede oluyor?
+      patientReply: "G\xF6\u011Fs\xFCm\xFCn ortas\u0131nda ba\u015Fl\u0131yor gibi,
+        bazen bo\u011Faz\u0131mda da oluyor.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - heartburn
+      - retrosternal_burning
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - retrosternal_burning
+      performedTests: []
+      notebookSymptoms:
+      - "G\xF6\u011F\xFCs ortas\u0131nda yanma"
+      - "Bo\u011Faza do\u011Fru yay\u0131lan yanma"
+      notebookTests: []
+      notebookNotes:
+      - "Yanma retrosternal b\xF6lgede ba\u015Fl\u0131yor ve bo\u011Faza do\u011Fru
+        yay\u0131l\u0131yor. "
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 3
+      - diseaseId: GASTRITIS
+        score: 1
+      - diseaseId: PEPTIC_ULCER
+        score: 0
+      - diseaseId: PHARYNGITIS
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Mide b\xF6lgenizde a\u011Fr\u0131 var m\u0131?"
+      choiceType: 0
+      doctorLine: "Mide b\xF6lgenizde a\u011Fr\u0131 var m\u0131?"
+      patientReply: "vet, bazen midemin \xFCst taraf\u0131nda hafif rahats\u0131zl\u0131k
+        oluyor"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - epigastric_discomfort
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - epigastric_discomfort
+      performedTests: []
+      notebookSymptoms:
+      - "Hafif epigastrik rahats\u0131zl\u0131k "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 1
+      - diseaseId: GASTRITIS
+        score: 2
+      - diseaseId: PEPTIC_ULCER
+        score: 1
+      - diseaseId: PHARYNGITIS
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Bulant\u0131n\u0131z var m\u0131?"
+      choiceType: 0
+      doctorLine: "Bulant\u0131n\u0131z var m\u0131?"
+      patientReply: "\xC7ok hafif oluyor ama hi\xE7 kusmad\u0131m.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - nausea_mild
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - mild_nausea
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Hafif bulant\u0131 var, kusma yok. "
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 1
+      - diseaseId: GASTRITIS
+        score: 2
+      - diseaseId: PEPTIC_ULCER
+        score: 1
+      - diseaseId: PHARYNGITIS
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Yemeklerden sonra art\u0131yor mu? "
+      choiceType: 0
+      doctorLine: "\u015Eikayetleriniz yemeklerden sonra art\u0131yor mu?\n"
+      patientReply: "Evet, \xF6zellikle yemek yedikten sonra daha fazla hissediyorum.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - postprandial_increase
+      requiredTags:
+      - heartburn
+      - epigastric_discomfort
+      blockedTags: []
+      discoveredSymptoms:
+      - postprandial_symptoms
+      performedTests: []
+      notebookSymptoms:
+      - "Yemek sonras\u0131 artan yanma "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 3
+      - diseaseId: GASTRITIS
+        score: 3
+      - diseaseId: PEPTIC_ULCER
+        score: 0
+      - diseaseId: PHARYNGITIS
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "A\xE7ken mi tokken mi daha k\xF6t\xFC? "
+      choiceType: 0
+      doctorLine: "\u015Eikayetiniz a\xE7ken mi daha k\xF6t\xFC oluyor, tokken mi?"
+      patientReply: "Tokken daha k\xF6t\xFC oluyor a\xE7\u0131k\xE7as\u0131."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - worse_when_full
+      - fasting_pain_no
+      requiredTags:
+      - postprandial_increase
+      blockedTags: []
+      discoveredSymptoms:
+      - worse_when_full
+      performedTests: []
+      notebookSymptoms:
+      - "Tokken artan \u015Fikayet"
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 3
+      - diseaseId: GASTRITIS
+        score: 2
+      - diseaseId: PEPTIC_ULCER
+        score: -2
+      - diseaseId: PHARYNGITIS
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Yat\u0131nca art\u0131yor mu? "
+      choiceType: 0
+      doctorLine: "Uzan\u0131nca veya yat\u0131nca yanma art\u0131yor mu?\n"
+      patientReply: "Evet, \xF6zellikle yemekten sonra uzan\u0131rsam daha k\xF6t\xFC
+        oluyor."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - worse_lying_down
+      requiredTags:
+      - postprandial_increase
+      blockedTags: []
+      discoveredSymptoms:
+      - worse_lying_down
+      performedTests: []
+      notebookSymptoms:
+      - "Yat\u0131nca artan yanma "
+      notebookTests: []
+      notebookNotes:
+      - "yemekten sonra uzan\u0131nca \u015Fikayet mevcut "
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 4
+      - diseaseId: GASTRITIS
+        score: 0
+      - diseaseId: PEPTIC_ULCER
+        score: 0
+      - diseaseId: PHARYNGITIS
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "A\u011Fz\u0131n\u0131za ek\u015Fi veya ac\u0131 su geliyor mu?"
+      choiceType: 0
+      doctorLine: "A\u011Fz\u0131n\u0131za ek\u015Fi ya da ac\u0131 bir s\u0131v\u0131
+        geldi\u011Fi oluyor mu?"
+      patientReply: "Evet, \xF6zellikle sabah uyand\u0131ktan sonra olabiliyor."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - acid_regurgitation
+      requiredTags:
+      - worse_lying_down
+      - heartburn
+      blockedTags: []
+      discoveredSymptoms:
+      - acid_regurgitation
+      performedTests: []
+      notebookSymptoms:
+      - "A\u011Fza ek\u015Fi/ac\u0131 s\u0131v\u0131 gelmesi"
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 5
+      - diseaseId: GASTRITIS
+        score: -1
+      - diseaseId: PEPTIC_ULCER
+        score: -1
+      - diseaseId: PHARYNGITIS
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Yutkunurken a\u011Fr\u0131 art\u0131yor mu? "
+      choiceType: 0
+      doctorLine: "Yutkunurken bo\u011Faz\u0131n\u0131zda a\u011Fr\u0131 art\u0131yor
+        mu?"
+      patientReply: "Hay\u0131r, yutkununca belirgin bir a\u011Fr\u0131 olmuyor."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - odynophagia_no
+      requiredTags:
+      - throat_burning
+      blockedTags: []
+      discoveredSymptoms:
+      - no_odynophagia
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Yutkunma ile artan a\u011Fr\u0131 yok"
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 1
+      - diseaseId: GASTRITIS
+        score: 0
+      - diseaseId: PEPTIC_ULCER
+        score: 0
+      - diseaseId: PHARYNGITIS
+        score: -3
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Sabahlar\u0131 ses k\u0131s\u0131kl\u0131\u011F\u0131 oluyor mu?"
+      choiceType: 0
+      doctorLine: "Sabahlar\u0131 sesinizde k\u0131s\u0131kl\u0131k veya bo\u011Faz
+        temizleme ihtiyac\u0131 oluyor mu?\n"
+      patientReply: Evet, ikisi de oluyor.
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - morning_hoarseness
+      - throat_clearing
+      requiredTags:
+      - acid_regurgitation
+      blockedTags: []
+      discoveredSymptoms:
+      - morning_hoarseness
+      - throat_clearing
+      performedTests: []
+      notebookSymptoms:
+      - "Sabah ses k\u0131s\u0131kl\u0131\u011F\u0131 "
+      notebookTests: []
+      notebookNotes:
+      - "Bo\u011Faz temizleme ihtiyac\u0131 mevcut"
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 3
+      - diseaseId: GASTRITIS
+        score: 0
+      - diseaseId: PEPTIC_ULCER
+        score: 0
+      - diseaseId: PHARYNGITIS
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "D\u0131\u015Fk\u0131n\u0131zda siyahl\u0131k g\xF6rd\xFCn\xFCz
+        m\xFC?"
+      choiceType: 0
+      doctorLine: "D\u0131\u015Fk\u0131n\u0131zda siyahl\u0131k veya kan g\xF6rd\xFCn\xFCz
+        m\xFC?\n"
+      patientReply: "Hay\u0131r, b\xF6yle bir \u015Fey g\xF6rmedim."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - gi_bleeding_no
+      requiredTags:
+      - epigastric_discomfort
+      - nausea_mild
+      blockedTags: []
+      discoveredSymptoms:
+      - no_gi_bleeding
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "hematemez veya kanl\u0131 d\u0131\u015Fk\u0131 tarif etmiyor. "
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 1
+      - diseaseId: GASTRITIS
+        score: 0
+      - diseaseId: PEPTIC_ULCER
+        score: -2
+      - diseaseId: PHARYNGITIS
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Baharatl\u0131 yiyecekler?"
+      choiceType: 0
+      doctorLine: "Baharatl\u0131, ya\u011Fl\u0131 yemekler \u015Fikayetinizi art\u0131r\u0131yor
+        mu?\n"
+      patientReply: "Evet, \xF6zellikle kahve ve ya\u011Fl\u0131 yemekler"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - trigger_foods_positive
+      requiredTags:
+      - postprandial_increase
+      - worse_when_full
+      blockedTags: []
+      discoveredSymptoms:
+      - food_triggers
+      performedTests: []
+      notebookSymptoms:
+      - "Kahve/ya\u011Fl\u0131 yemekle art\u0131\u015F "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 3
+      - diseaseId: GASTRITIS
+        score: 1
+      - diseaseId: PEPTIC_ULCER
+        score: 0
+      - diseaseId: 
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Bo\u011Faz muayenesi yap "
+      choiceType: 1
+      doctorLine: "Bo\u011Faz\u0131n\u0131z\u0131 muayene edece\u011Fim."
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Orofarenkste belirgin hiperemi veya eks\xFCda izlenmedi."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - no_pharyngeal_exudate
+      - mild_posterior_pharyngeal_irritation
+      requiredTags:
+      - throat_burning
+      - odynophagia_no
+      blockedTags: []
+      discoveredSymptoms:
+      - mild_throat_irritation
+      performedTests:
+      - throat_exam
+      notebookSymptoms: []
+      notebookTests:
+      - "Bo\u011Faz muayenesi: belirgin enfeksiyon bulgusu yok"
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 2
+      - diseaseId: GASTRITIS
+        score: 0
+      - diseaseId: PEPTIC_ULCER
+        score: 0
+      - diseaseId: PHARYNGITIS
+        score: -3
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tam kan say\u0131m\u0131 iste "
+      choiceType: 1
+      doctorLine: "Tam kan say\u0131m\u0131 isteyelim.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Tam kan say\u0131m\u0131: WBC 7.400/\xB5L, Hb 13.8 g/dL, PLT
+        265.000/\xB5L\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - cbc_normal
+      - no_anemia
+      - no_leukocytosis
+      requiredTags:
+      - fever_no
+      - gi_bleeding_no
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests:
+      - complete_blood_count
+      notebookSymptoms: []
+      notebookTests:
+      - "Tam kan say\u0131m\u0131: WBC 7.400/\xB5L, Hb 13.8 g/dL, PLT 265.000/\xB5L "
+      notebookNotes:
+      - "L\xF6kositoz veya anemi saptanmad\u0131. "
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 1
+      - diseaseId: GASTRITIS
+        score: 0
+      - diseaseId: PEPTIC_ULCER
+        score: -1
+      - diseaseId: PHARYNGITIS
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: 'CRP testi iste '
+      choiceType: 1
+      doctorLine: CRP testi isteyelim.
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "CRP: 2 mg/L. Bu de\u011Fer normal aral\u0131ktad\u0131r"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - crp_normal
+      requiredTags:
+      - fever_no
+      - throat_burning
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests:
+      - crp_test
+      notebookSymptoms: []
+      notebookTests:
+      - 'CRP: 2 mg/L'
+      notebookNotes:
+      - CRP normal
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 1
+      - diseaseId: GASTRITIS
+        score: 0
+      - diseaseId: PEPTIC_ULCER
+        score: 0
+      - diseaseId: PHARYNGITIS
+        score: -2
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: 'H. pylori testi iste '
+      choiceType: 1
+      doctorLine: H. pylori antijen testi isteyelim.
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "H. pylori d\u0131\u015Fk\u0131 antijen testi negatif."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - hpylori_negative
+      requiredTags:
+      - epigastric_discomfort
+      - postprandial_increase
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests:
+      - hpylori_stool_antigen_test
+      notebookSymptoms: []
+      notebookTests:
+      - "H. pylori d\u0131\u015Fk\u0131 antijen testi: Negatif"
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 1
+      - diseaseId: GASTRITIS
+        score: -1
+      - diseaseId: PEPTIC_ULCER
+        score: -2
+      - diseaseId: PHARYNGITIS
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Antiasit yan\u0131t testi yap "
+      choiceType: 1
+      doctorLine: "K\u0131sa s\xFCreli antiasit deneyelim."
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Antiasit sonras\u0131 yanma hissinde belirgin azalma oldu."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - antacid_response
+      requiredTags:
+      - heartburn
+      - acid_regurgitation
+      blockedTags: []
+      discoveredSymptoms:
+      - symptom_relief_with_antacid
+      performedTests:
+      - antacid_response_test
+      notebookSymptoms: []
+      notebookTests:
+      - "Antiasit yan\u0131t testi: Semptomlarda belirgin azalma "
+      notebookNotes:
+      - Antiasit ile rahatlama
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 4
+      - diseaseId: GASTRITIS
+        score: 2
+      - diseaseId: PEPTIC_ULCER
+        score: 1
+      - diseaseId: PHARYNGITIS
+        score: -1
+      useTestChance: 1
+      baseSuccessChance: 25
+      bonusSpecialization: 2
+      specializationBonus: 50
+      generalistBonus: 10
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "\xDCst G\u0130S endoskopi iste "
+      choiceType: 1
+      doctorLine: "\xDCst gastrointestinal sistem endoskopisi isteyelim.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Endoskopi hafif refl\xFC \xF6zofajiti ile uyumlu; mide \xFClseri
+        veya aktif kanama izlenmedi.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - distal_esophageal_irritation
+      - no_gastric_ulcer
+      requiredTags:
+      - postprandial_increase
+      - worse_lying_down
+      - acid_regurgitation
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests:
+      - upper_gi_endoscopy
+      notebookSymptoms:
+      - "mide \xFClseri yok"
+      notebookTests:
+      - "\xDCst G\u0130S endoskopi: Distal \xF6zofagusta hafif eritem/irritasyon "
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: GERD
+        score: 5
+      - diseaseId: GASTRITIS
+        score: -1
+      - diseaseId: PEPTIC_ULCER
+        score: -3
+      - diseaseId: PHARYNGITIS
+        score: 0
+      useTestChance: 1
+      baseSuccessChance: 25
+      bonusSpecialization: 2
+      specializationBonus: 50
+      generalistBonus: 10
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tan\u0131 koy "
+      choiceType: 2
+      doctorLine: 
+      patientReply: 
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 0
+      opensDiagnosisPanel: 1
+      reusable: 1
+      hideAfterUse: 0
+      gainedTags: []
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects: []
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+  diagnosisChoices:
+  - diseaseId: GASTRITIS
+    diagnosisName: Gastrit
+    resultText: "Gastritte epigastrik a\u011Fr\u0131, mide bulant\u0131s\u0131 ve
+      yemekle ili\u015Fkili mide rahats\u0131zl\u0131\u011F\u0131 g\xF6r\xFClebilir.
+      Ancak bu vakada bo\u011Faza do\u011Fru yanma, yat\u0131nca art\u0131\u015F
+      ve a\u011Fza ek\u015Fi s\u0131v\u0131 gelmesi refl\xFCy\xFC daha g\xFC\xE7l\xFC
+      d\xFC\u015F\xFCnd\xFCr\xFCr."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - epigastric_discomfort
+    - nausea_mild
+    - postprandial_increase
+  - diseaseId: PEPTIC_ULCER
+    diagnosisName: "Peptik \xDClser "
+    resultText: "Peptik \xFClserde a\xE7l\u0131k a\u011Fr\u0131s\u0131, gece epigastrik
+      a\u011Fr\u0131 ve H. pylori pozitifli\u011Fi beklenebilir. Bu hastada a\xE7ken
+      belirginle\u015Fen \xFClser tipi a\u011Fr\u0131 yoktur ve H. pylori testi negatiftir."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - fasting_pain
+    - night_epigastric_pain
+    - hpylori_positive
+  - diseaseId: GERD
+    diagnosisName: "Refl\xFC"
+    resultText: "Hastan\u0131n yemek sonras\u0131 ve yat\u0131nca artan yanma \u015Fikayeti,
+      a\u011Fza ek\u015Fi/ac\u0131 s\u0131v\u0131 gelmesi, sabah ses k\u0131s\u0131kl\u0131\u011F\u0131
+      ve antiasit ile rahatlamas\u0131 GERD ile uyumludur. Endoskopide distal \xF6zofagusta
+      hafif irritasyon g\xF6r\xFClmesi de refl\xFCy\xFC destekler."
+    isCorrectDiagnosis: 1
+    recommendedTags:
+    - heartburn
+    - postprandial_increase
+    - worse_lying_down
+    - acid_regurgitation
+    - morning_hoarseness
+    - antacid_response
+    - distal_esophageal_irritation
+  - diseaseId: PHARYNGITIS
+    diagnosisName: Farenjit
+    resultText: "Bo\u011Faz yanmas\u0131 farenjit ile kar\u0131\u015Fabilir; ancak
+      ate\u015F, yutkunurken artan a\u011Fr\u0131, belirgin farengeal hiperemi veya
+      enfeksiyon laboratuvar bulgular\u0131 yoktur. Bu nedenle farenjit daha zay\u0131f
+      bir tan\u0131d\u0131r."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - odynophagia_yes
+    - fever_yes
+    - pharyngeal_hyperemia
+    - crp_high
+  assistantHints: []
+  variationProfile: {fileID: 0}

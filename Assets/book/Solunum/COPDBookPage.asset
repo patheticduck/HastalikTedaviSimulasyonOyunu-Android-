@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34b718b78ce91a4bb6b271059134183, type: 3}
+  m_Name: COPDBookPage
+  m_EditorClassIdentifier: Assembly-CSharp::DiseaseBookPageData
+  diseaseId: copd
+  diseaseName: KOAH
+  generalInfo: "KOAH, hava yollar\u0131nda daralma ile ilerleyen kronik bir solunum
+    yolu hastal\u0131\u011F\u0131d\u0131r. Hastalarda nefes darl\u0131\u011F\u0131,
+    \xF6ks\xFCr\xFCk ve balgam s\u0131k g\xF6r\xFClen belirtilerdendir."
+  symptomsInfo: "Nefes darl\u0131\u011F\u0131 mevcut olmas\u0131, balgaml\u0131 \xF6ks\xFCr\xFCk,
+    hafif h\u0131r\u0131lt\u0131 ve halsizlik mevcut olmas\u0131 KOAH\u2019ta s\u0131k
+    g\xF6r\xFClen belirtilerdendir. Baz\u0131 hastalarda eforla \xF6ks\xFCr\xFCk
+    art\u0131\u015F\u0131 g\xF6r\xFClebilir."
+  diagnosisTips: 
+  diseaseImage: {fileID: 21300000, guid: 191aac3ac38f4d343babb8a63a313415, type: 3}
+  extraInfo: 
+  highlightKeywords:
+  - "Nefes darl\u0131\u011F\u0131"
+  - "balgaml\u0131 \xF6ks\xFCr\xFCk"
+  - "hafif h\u0131r\u0131lt\u0131"
+  - halsizlik
+  - "eforla \xF6ks\xFCr\xFCk"
+  - "Kronik \xF6ks\xFCr\xFCk"

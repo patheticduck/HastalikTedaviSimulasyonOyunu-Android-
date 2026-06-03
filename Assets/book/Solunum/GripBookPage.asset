@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34b718b78ce91a4bb6b271059134183, type: 3}
+  m_Name: GripBookPage
+  m_EditorClassIdentifier: Assembly-CSharp::DiseaseBookPageData
+  diseaseId: grip
+  diseaseName: "GR\u0130P"
+  generalInfo: "Grip, influenza vir\xFCslerinin neden oldu\u011Fu bula\u015F\u0131c\u0131
+    bir solunum yolu hastal\u0131\u011F\u0131d\u0131r. Genellikle ani ba\u015Flar
+    ve ki\u015Fide halsizlik, ate\u015F ve kas a\u011Fr\u0131s\u0131 gibi belirtiler
+    olu\u015Fturur."
+  symptomsInfo: "Y\xFCksek ate\u015F, kas a\u011Fr\u0131s\u0131, Halsizlik, bo\u011Faz
+    a\u011Fr\u0131s\u0131, \xF6ks\xFCr\xFCk ve ani ba\u015Flang\u0131\xE7 gripte
+    s\u0131k g\xF6r\xFClen belirtilerdendir."
+  diagnosisTips: 
+  diseaseImage: {fileID: 21300000, guid: 8073dcd92aa942e44a658623960ea007, type: 3}
+  extraInfo: 
+  highlightKeywords:
+  - "Y\xFCksek ate\u015F "
+  - "kas a\u011Fr\u0131s\u0131 "
+  - Halsizlik
+  - "bo\u011Faz a\u011Fr\u0131s\u0131 "
+  - "\xF6ks\xFCr\xFCk"
+  - "ani ba\u015Flang\u0131\xE7"

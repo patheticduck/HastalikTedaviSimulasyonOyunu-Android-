@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5c6f8e0c3ac7fc0458ddf5a1d3fefaa5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159893
+  packageName: Professor Room
+  packageVersion: 1.3
+  assetPath: Assets/Professor Room/Models/Materials/glass clock.mat
+  uploadId: 790588

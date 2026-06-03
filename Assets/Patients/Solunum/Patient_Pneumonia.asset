@@ -1,0 +1,918 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb738e7044b7cc4dae6b9c5d16348a1, type: 3}
+  m_Name: Patient_Pneumonia
+  m_EditorClassIdentifier: Assembly-CSharp::PatientCaseData
+  caseId: DAY2_PATIENT2_PNEUMONIA
+  trueDiseaseId: PNEUMONIA
+  patientVisualIndex: 5
+  rootNodeId: root
+  startText: "Merhaba doktor, birka\xE7 g\xFCnd\xFCr \xF6ks\xFCr\xFCyorum ve nefesim
+    biraz daral\u0131yor. G\xF6\u011Fs\xFCmde de rahats\u0131z edici bir a\u011Fr\u0131
+    var."
+  startAssistantText: 
+  allNodes:
+  - nodeId: root
+    isHubNode: 1
+    nodeIntroText: 
+    nodeAssistantText: 
+    choices:
+    - choiceText: "Ate\u015Finiz oldu mu?"
+      choiceType: 0
+      doctorLine: "Ate\u015Finiz oldu mu? \xD6l\xE7t\xFCyseniz ka\xE7 dereceydi?\n"
+      patientReply: "Evet, d\xFCn gece 38.6 dereceye kadar \xE7\u0131kt\u0131. Ama
+        sabah biraz daha d\xFC\u015F\xFCkt\xFC"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - fever_present
+      - fever_high_moderate
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Ate\u015F"
+      performedTests: []
+      notebookSymptoms:
+      - "38.6\xB0C\u2019ye kadar \xE7\u0131kan ate\u015F"
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PNEUMONIA '
+        score: 3
+      - diseaseId: 'BRONCHITIS '
+        score: 1
+      - diseaseId: 'ASTHMA '
+        score: -1
+      - diseaseId: COPD
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "\xD6ks\xFCr\xFCk kuru mu balgaml\u0131 m\u0131?"
+      choiceType: 0
+      doctorLine: "\xD6ks\xFCr\xFC\u011F\xFCn\xFCz kuru mu balgaml\u0131 m\u0131?"
+      patientReply: "Balgam geliyor. Bazen sar\u0131ms\u0131 gibi oluyor"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - productive_cough
+      - yellowish_sputum
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Balgaml\u0131 \xF6ks\xFCr\xFCk "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Sar\u0131ms\u0131 balgam tarifliyor. "
+      diseaseEffects:
+      - diseaseId: 'PNEUMONIA '
+        score: 2
+      - diseaseId: BRONCHITIS
+        score: 2
+      - diseaseId: 'COPD '
+        score: 1
+      - diseaseId: 'ASTHMA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "\u015Eikayetleriniz ne zaman ba\u015Flad\u0131?"
+      choiceType: 0
+      doctorLine: "\u015Eikayetleriniz ne zaman ba\u015Flad\u0131?"
+      patientReply: "Yakla\u015F\u0131k d\xF6rt g\xFCnd\xFCr var. \u0130lk g\xFCn
+        hafif \xF6ks\xFCr\xFCyordumi ama son iki g\xFCnd\xFCr k\xF6t\xFC hissediyorum."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - acute_onset
+      - worsening_course
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Birka\xE7 g\xFCnd\xFCr k\xF6t\xFCle\u015Fen \xF6ks\xFCr\xFCk "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "\u015Eikayetler 4 g\xFCnd\xFCr var ve son 2 g\xFCnde artm\u0131\u015F."
+      diseaseEffects:
+      - diseaseId: 'PNEUMONIA '
+        score: 2
+      - diseaseId: 'BRONCHITIS '
+        score: 2
+      - diseaseId: COPD
+        score: -1
+      - diseaseId: 'ASTHMA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Nefes darl\u0131\u011F\u0131n\u0131z var m\u0131?"
+      choiceType: 0
+      doctorLine: "Nefes darl\u0131\u011F\u0131n\u0131z var m\u0131?"
+      patientReply: "Evet,  \u015Fu an merdiven \xE7\u0131k\u0131nca bile nefesim
+        \xE7abukcak kesiliyor."
+      assistantReply: "Eforla artan nefes darl\u0131\u011F\u0131 zat\xFCrre, ast\u0131m
+        ata\u011F\u0131 veya KOAH alevlenmesinde g\xF6r\xFClebilir."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - dyspnea_present
+      - exertional_dyspnea
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Nefes darl\u0131\u011F\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "Nefes darl\u0131\u011F\u0131 mevcut"
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PNEUMONIA '
+        score: 2
+      - diseaseId: 'ASTHMA '
+        score: 2
+      - diseaseId: 'COPD '
+        score: 2
+      - diseaseId: 'BRONCHITIS '
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "G\xF6\u011F\xFCs a\u011Fr\u0131n\u0131z nas\u0131l?"
+      choiceType: 0
+      doctorLine: "G\xF6\u011Fs\xFCn\xFCzdeki a\u011Fr\u0131 nas\u0131l bir a\u011Fr\u0131?"
+      patientReply: "Daha \xE7ok sa\u011F taraf\u0131mda batma gibi. Derin nefes
+        al\u0131nca ve \xF6ks\xFCr\xFCnce art\u0131yor."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - pleuritic_chest_pain
+      - right_sided_chest_pain
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms:
+      - "Plevritik a\u011Fr\u0131"
+      notebookTests: []
+      notebookNotes:
+      - "Derin nefesle artan g\xF6\u011F\xFCs a\u011Fr\u0131s\u0131"
+      diseaseEffects:
+      - diseaseId: 'PNEUMONIA '
+        score: 4
+      - diseaseId: 'BRONCHITIS '
+        score: 0
+      - diseaseId: 'ASTHMA '
+        score: -1
+      - diseaseId: 'COPD '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "H\u0131r\u0131lt\u0131 veya \u0131sl\u0131k sesi?"
+      choiceType: 0
+      doctorLine: "Nefes al\u0131p verirken h\u0131r\u0131lt\u0131, \u0131sl\u0131k
+        sesi veya g\xF6\u011F\xFCste s\u0131k\u0131\u015Fma hissediyor musunuz?\n"
+      patientReply: "Bazen \xF6ks\xFCr\xFCkten sonra g\xF6\u011Fs\xFCmde h\u0131r\u0131lt\u0131
+        gibi oluyor"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - mild_wheezing
+      - not_constant_wheezing
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms:
+      - "Ara ara h\u0131r\u0131lt\u0131 "
+      notebookTests: []
+      notebookNotes:
+      - "S\xFCrekli olmayan hafif h\u0131r\u0131lt\u0131 tarifliyor."
+      diseaseEffects:
+      - diseaseId: ASTHMA
+        score: 2
+      - diseaseId: COPD
+        score: 1
+      - diseaseId: BRONCHITIS
+        score: 1
+      - diseaseId: PNEUMONIA
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Daha \xF6nce ast\u0131m tan\u0131n\u0131z var m\u0131?"
+      choiceType: 0
+      doctorLine: "Daha \xF6nce ast\u0131m tan\u0131s\u0131 ald\u0131n\u0131z m\u0131
+        veya nefes a\xE7\u0131c\u0131 ila\xE7 kulland\u0131n\u0131z m\u0131?\n"
+      patientReply: "Hay\u0131r, ast\u0131m tan\u0131m yok. Daha \xF6nce b\xF6yle
+        nefes darl\u0131\u011F\u0131m pek olmazd\u0131."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - no_asthma_history
+      requiredTags:
+      - dyspnea_present
+      blockedTags: []
+      discoveredSymptoms:
+      - "Ast\u0131m \xF6yk\xFCs\xFC yok "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Ast\u0131m \xF6yk\xFCs\xFC yok "
+      diseaseEffects:
+      - diseaseId: 'ASTHMA '
+        score: -3
+      - diseaseId: 'PNEUMONIA '
+        score: 1
+      - diseaseId: 'BRONCHITIS '
+        score: 1
+      - diseaseId: 'COPD '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Sigara kullan\u0131yor musunuz?"
+      choiceType: 0
+      doctorLine: "Sigara kullan\u0131yor musunuz? Kullan\u0131yorsan\u0131z ne kadar
+        s\xFCredir?"
+      patientReply: "Eskiden ara s\u0131ra i\xE7erdim. Son birka\xE7 y\u0131ld\u0131r
+        neredeyse hi\xE7 kullanm\u0131yorum.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - no_significant_smoking_history
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Belirgin sigara \xF6yk\xFCs\xFC yok "
+      diseaseEffects:
+      - diseaseId: 'COPD '
+        score: -4
+      - diseaseId: 'PNEUMONIA '
+        score: 1
+      - diseaseId: 'BRONCHITIS '
+        score: 0
+      - diseaseId: 'ASTHMA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Gece veya sabaha kar\u015F\u0131 art\u0131yor mu?"
+      choiceType: 0
+      doctorLine: "nefes darl\u0131\u011F\u0131n\u0131z gece ya da sabaha kar\u015F\u0131
+        belirgin art\u0131yor mu?"
+      patientReply: "Gece \xF6ks\xFCr\xFCkle ve ate\u015F ile uyand\u0131m ama normalde
+        gece gelen ataklar\u0131m olmaz. "
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - no_nocturnal_asthma_pattern
+      - night_cough_due_to_infection
+      requiredTags:
+      - mild_wheezing
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'ASTHMA '
+        score: -2
+      - diseaseId: 'PNEUMONIA '
+        score: 1
+      - diseaseId: 'BRONCHITIS '
+        score: 1
+      - diseaseId: 'COPD '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "\xDC\u015F\xFCme titreme oldu mu?"
+      choiceType: 0
+      doctorLine: "Ate\u015Fle beraber \xFC\u015F\xFCme veya titreme ya\u015Fad\u0131n\u0131z
+        m\u0131?"
+      patientReply: "Evet, \xF6zellikle d\xFCn ak\u015Fam baya\u011F\u0131 \xFC\u015F\xFCd\xFCm
+        ve titredim."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - chills_present
+      requiredTags:
+      - fever_present
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms:
+      - "Ate\u015Fle birlikte \xFC\u015F\xFCme ve titreme."
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PNEUMONIA '
+        score: 3
+      - diseaseId: 'BRONCHITIS '
+        score: 1
+      - diseaseId: 'ASTHMA '
+        score: -1
+      - diseaseId: 'COPD '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "G\xFCnl\xFCk aktivitelerinizi etkiliyor mu?"
+      choiceType: 0
+      doctorLine: "Bu durum g\xFCnl\xFCk i\u015Flerinizi yapman\u0131z\u0131 etkiliyor
+        mu?"
+      patientReply: "Evet, halsizim. K\u0131sa y\xFCr\xFCy\xFC\u015Fte bile yoruluyorum.
+        Ama tamamen yata\u011Fa d\xFC\u015Fm\xFC\u015F gibi de de\u011Filim.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - fatigue_present
+      - moderate_functional_limitation
+      requiredTags:
+      - acute_onset
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms:
+      - Halsizlik mevcut
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PNEUMONIA '
+        score: 2
+      - diseaseId: 'BRONCHITIS '
+        score: 1
+      - diseaseId: 'COPD '
+        score: 0
+      - diseaseId: 'ASTHMA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Son g\xFCnlerde so\u011Fuk alg\u0131nl\u0131\u011F\u0131?"
+      choiceType: 0
+      doctorLine: "Son g\xFCnlerde so\u011Fuk alg\u0131nl\u0131\u011F\u0131 ge\xE7irdiniz
+        mi?"
+      patientReply: "Evet, birka\xE7 g\xFCn \xF6nce hafif bo\u011Faz a\u011Fr\u0131m
+        ve burun ak\u0131nt\u0131m vard\u0131."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - preceding_uri
+      - symptoms_moved_to_chest
+      requiredTags:
+      - acute_onset
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "\xD6ncesinde \xFCst solunum yolu belirtisi"
+      diseaseEffects:
+      - diseaseId: 'BRONCHITIS '
+        score: 2
+      - diseaseId: 'PNEUMONIA '
+        score: 1
+      - diseaseId: 'ASTHMA '
+        score: 0
+      - diseaseId: 'COPD '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Oksijen sat\xFCrasyonu \xF6l\xE7"
+      choiceType: 1
+      doctorLine: "Oksijen sat\xFCrasyonunuzu \xF6l\xE7elim.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Sat\xFCrasyon hafif d\xFC\u015F\xFCk."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - spo2_mild_low
+      requiredTags:
+      - dyspnea_present
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hafif d\xFC\u015F\xFCk oksijen sat\xFCrasyonu"
+      performedTests:
+      - "Oksijen sat\xFCrasyonu"
+      notebookSymptoms: []
+      notebookTests:
+      - 'SpO2: %94'
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: PNEUMONIA
+        score: 3
+      - diseaseId: 'COPD '
+        score: 1
+      - diseaseId: 'ASTHMA '
+        score: 1
+      - diseaseId: 'BRONCHITIS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Solunum say\u0131s\u0131n\u0131 de\u011Ferlendir"
+      choiceType: 1
+      doctorLine: "Solunum say\u0131n\u0131z\u0131 ve genel nefes al\u0131\u015F\u0131n\u0131z\u0131
+        de\u011Ferlendirelim.\n"
+      patientReply: Tamam.
+      assistantReply: "Solunum say\u0131s\u0131n\u0131n hafif y\xFCksek olmas\u0131
+        alt solunum yolu enfeksiyonu a\xE7\u0131s\u0131ndan anlaml\u0131 olabilir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - tachypnea_mild
+      requiredTags:
+      - dyspnea_present
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Hafif takipne '
+      performedTests:
+      - "Solunum say\u0131s\u0131 de\u011Ferlendirmesi "
+      notebookSymptoms: []
+      notebookTests:
+      - "Solunum say\u0131s\u0131: 23/dk "
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PNEUMONIA '
+        score: 2
+      - diseaseId: 'ASTHMA '
+        score: 1
+      - diseaseId: 'COPD '
+        score: 1
+      - diseaseId: 'BRONCHITIS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Akci\u011Fer dinlemesi yap"
+      choiceType: 1
+      doctorLine: "Akci\u011Ferlerinizi steteskopla dinleyece\u011Fim. Derin nefes
+        al\u0131p verir misiniz?"
+      patientReply: 'Tabii doktor.
+
+'
+      assistantReply: "Sa\u011F alt akci\u011Fer alan\u0131nda ince ral duyulmas\u0131"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - right_lower_crackles
+      - mild_rhonchi
+      requiredTags:
+      - productive_cough
+      - dyspnea_present
+      blockedTags: []
+      discoveredSymptoms:
+      - "Sa\u011F alt akci\u011Ferde ral "
+      performedTests:
+      - "Akci\u011Fer osk\xFCltasyonu "
+      notebookSymptoms:
+      - "Sa\u011F alt akci\u011Ferde ral"
+      notebookTests: []
+      notebookNotes:
+      - "Sa\u011F alt zonda ince ral duyuldu."
+      diseaseEffects:
+      - diseaseId: 'PNEUMONIA '
+        score: 5
+      - diseaseId: 'BRONCHITIS '
+        score: 1
+      - diseaseId: 'ASTHMA '
+        score: 1
+      - diseaseId: 'COPD '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tam kan say\u0131m\u0131 iste"
+      choiceType: 1
+      doctorLine: "Tam kan say\u0131m\u0131 isteyelim."
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "L\xF6kosit ve n\xF6trofil y\xFCksekli\u011Fi"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - wbc_high
+      - neutrophil_dominance
+      requiredTags:
+      - fever_present
+      - productive_cough
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests:
+      - "Tam kan say\u0131m\u0131"
+      notebookSymptoms: []
+      notebookTests:
+      - "WBC: 13.800 /\xB5L N\xF6trofil: %82 Lenfosit: %12 Hb: 14.1 g/dL PLT: 286.000
+        /\xB5L"
+      notebookNotes:
+      - "L\xF6kosit y\xFCksekli\u011Fi "
+      diseaseEffects:
+      - diseaseId: 'PNEUMONIA '
+        score: 4
+      - diseaseId: 'BRONCHITIS '
+        score: 1
+      - diseaseId: 'COPD '
+        score: 0
+      - diseaseId: 'ASTHMA '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: CRP testi iste
+      choiceType: 1
+      doctorLine: "CRP testi de isteyelim. Enflamasyon d\xFCzeyini g\xF6relim."
+      patientReply: 'Tamam.
+
+'
+      assistantReply: "CRP belirgin y\xFCksek."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - crp_high
+      requiredTags:
+      - fever_present
+      - worsening_course
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests:
+      - 'CRP testi '
+      notebookSymptoms: []
+      notebookTests:
+      - 'CRP: 76 mg/L '
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PNEUMONIA '
+        score: 5
+      - diseaseId: 'BRONCHITIS '
+        score: 1
+      - diseaseId: 'COPD '
+        score: 0
+      - diseaseId: 'ASTHMA '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Akci\u011Fer grafisi iste"
+      choiceType: 1
+      doctorLine: "Akci\u011Fer grafisi isteyelim."
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Sa\u011F alt lobda infiltrasyon g\xF6r\xFClmesi"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - xray_infiltration
+      - right_lower_lobe_infiltrate
+      requiredTags:
+      - right_lower_crackles
+      - crp_high
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests:
+      - "Akci\u011Fer grafisi "
+      notebookSymptoms: []
+      notebookTests:
+      - "a\u011F alt lobda hafif-orta d\xFCzeyde infiltratif g\xF6r\xFCn\xFCm."
+      - "Belirgin plevral ef\xFCzyon yok."
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PNEUMONIA '
+        score: 7
+      - diseaseId: 'BRONCHITIS '
+        score: -2
+      - diseaseId: 'ASTHMA '
+        score: -3
+      - diseaseId: 'COPD '
+        score: -2
+      useTestChance: 1
+      baseSuccessChance: 25
+      bonusSpecialization: 1
+      specializationBonus: 50
+      generalistBonus: 10
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: Solunum fonksiyon testi
+      choiceType: 1
+      doctorLine: "solunum fonksiyon testi de\u011Ferlendirebiliriz."
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Belirgin kronik obstr\xFCksiyon bulgusu yok.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - no_clear_chronic_obstruction
+      requiredTags:
+      - mild_wheezing
+      - no_significant_smoking_history
+      blockedTags: []
+      discoveredSymptoms:
+      - "Belirgin kronik obstr\xFCksiyon yok "
+      performedTests:
+      - 'Solunum fonksiyon testi '
+      notebookSymptoms: []
+      notebookTests:
+      - 'FEV1/FVC: %78 '
+      - "FEV1: beklenenin %84\u2019\xFC "
+      - "Belirgin reversibilite saptanmad\u0131. "
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'COPD '
+        score: -3
+      - diseaseId: 'ASTHMA '
+        score: -2
+      - diseaseId: PNEUMONIA
+        score: 1
+      - diseaseId: 'BRONCHITIS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Balgam k\xFClt\xFCr\xFC iste"
+      choiceType: 1
+      doctorLine: "Balgam \xF6rne\u011Fi al\u0131p k\xFClt\xFCr de\u011Ferlendirmesi
+        isteyelim."
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Gram boyama: Bol n\xF6trofil g\xF6r\xFCld\xFC.                      
+        K\xFClt\xFCr: \xD6n de\u011Ferlendirme bakteriyel enfeksiyonla uyumlu"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - sputum_bacterial_suspicion
+      requiredTags:
+      - productive_cough
+      - fever_present
+      - crp_high
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests:
+      - "Balgam k\xFClt\xFCr\xFC "
+      notebookSymptoms: []
+      notebookTests:
+      - "Gram boyama: Bol n\xF6trofil g\xF6r\xFCld\xFC."
+      - "K\xFClt\xFCr: \xD6n de\u011Ferlendirme bakteriyel enfeksiyonla uyumlu"
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PNEUMONIA '
+        score: 3
+      - diseaseId: 'BRONCHITIS '
+        score: 1
+      - diseaseId: 'COPD '
+        score: 0
+      - diseaseId: 'ASTHMA '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 25
+      bonusSpecialization: 1
+      specializationBonus: 50
+      generalistBonus: 10
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tan\u0131 koy"
+      choiceType: 2
+      doctorLine: 
+      patientReply: 
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 0
+      opensDiagnosisPanel: 1
+      reusable: 1
+      hideAfterUse: 0
+      gainedTags: []
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects: []
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+  diagnosisChoices:
+  - diseaseId: BRONCHITIS
+    diagnosisName: "Bron\u015Fit"
+    resultText: "Bron\u015Fitte balgaml\u0131 \xF6ks\xFCr\xFCk ve g\xF6\u011F\xFCste
+      h\u0131r\u0131lt\u0131 g\xF6r\xFClebilir. Ancak bu vakada y\xFCksek ate\u015F,CRP
+      y\xFCksekli\u011Fi, n\xF6trofil bask\u0131n l\xF6kositoz zat\xFCrreyi daha
+      g\xFC\xE7l\xFC d\xFC\u015F\xFCnd\xFCrmektedir."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - productive_cough
+    - mild_rhonchi
+    - preceding_uri
+  - diseaseId: PNEUMONIA
+    diagnosisName: "Zat\xFCrre"
+    resultText: "Do\u011Fru tan\u0131 zat\xFCrredir. Hastada ate\u015F, balgaml\u0131
+      \xF6ks\xFCr\xFCk, plevritik g\xF6\u011F\xFCs a\u011Fr\u0131s\u0131, sa\u011F
+      alt zonda ral, CRP y\xFCksekli\u011Fi ve akci\u011Fer grafisinde sa\u011F alt
+      lob infiltrasyonu zat\xFCrre ile uyumludur."
+    isCorrectDiagnosis: 1
+    recommendedTags:
+    - fever_present
+    - productive_cough
+    - dyspnea_present
+    - pleuritic_chest_pain
+    - right_lower_crackles
+    - crp_high
+    - xray_infiltration
+  - diseaseId: COPD
+    diagnosisName: KOAH
+    resultText: "KOAH genellikle uzun s\xFCreli sigara \xF6yk\xFCs\xFC, kronik \xF6ks\xFCr\xFCk,
+      ilerleyici nefes darl\u0131\u011F\u0131 ve obstr\xFCktif solunum fonksiyon
+      testi bulgular\u0131 ile desteklenir."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - no_significant_smoking_history
+    - no_clear_chronic_obstruction
+    - acute_onset
+  - diseaseId: ASTHMA
+    diagnosisName: "Ast\u0131m"
+    resultText: "Ast\u0131mda ataklar halinde nefes darl\u0131\u011F\u0131, h\u0131r\u0131lt\u0131,
+      gece/sabaha kar\u015F\u0131 art\u0131\u015F ve reversibilite beklenir. Bu vakada
+      hafif h\u0131r\u0131lt\u0131 olsa da ast\u0131m \xF6yk\xFCs\xFC yoktur."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - mild_wheezing
+    - no_asthma_history
+    - no_nocturnal_asthma_pattern
+  assistantHints: []
+  variationProfile: {fileID: 0}

@@ -1,0 +1,828 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb738e7044b7cc4dae6b9c5d16348a1, type: 3}
+  m_Name: Patient_Hyperthyroid
+  m_EditorClassIdentifier: Assembly-CSharp::PatientCaseData
+  caseId: PATIENT_HYPERTHYROID_01
+  trueDiseaseId: HYPERTHYROIDISM
+  patientVisualIndex: 12
+  rootNodeId: root
+  startText: "Merhaba doktor, son haftalarda \xE7arp\u0131nt\u0131m, terlemem ve
+    halsizli\u011Fim oluyor. Bir de midem s\u0131k s\u0131k rahats\u0131z."
+  startAssistantText: 
+  allNodes:
+  - nodeId: root
+    isHubNode: 1
+    nodeIntroText: 
+    nodeAssistantText: 
+    choices:
+    - choiceText: "\u015Eikayetleriniz ne zamand\u0131r var?"
+      choiceType: 0
+      doctorLine: "Bu \u015Fikayetleriniz ne zamand\u0131r s\xFCr\xFCyor?\n"
+      patientReply: "Yakla\u015F\u0131k 1 ayd\u0131r var. Son iki haftad\u0131r daha
+        belirgin.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - chronic
+      - worse_2w
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Uzun s\xFCren \xE7arp\u0131nt\u0131 ve halsizlik "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "\u015Eikayetler yakla\u015F\u0131k 1 ayd\u0131r var. "
+      diseaseEffects:
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 2
+      - diseaseId: 'FIBROMYALGIA '
+        score: 1
+      - diseaseId: 'IBS '
+        score: 1
+      - diseaseId: 'PANIC_ATTACK '
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "\xC7arp\u0131nt\u0131 oluyor mu?"
+      choiceType: 0
+      doctorLine: "\xC7arp\u0131nt\u0131n\u0131z ne s\u0131kl\u0131kla oluyor?\n"
+      patientReply: "G\xFCn i\xE7inde birka\xE7 kez oluyor. Bazen durup dururken
+        ba\u015Fl\u0131yor.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - palp
+      - sudden_palp
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "S\u0131k \xE7arp\u0131nt\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "S\u0131k \xE7arp\u0131nt\u0131 "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PANIC_ATTACK '
+        score: 3
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 3
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      - diseaseId: 'IBS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Kilo de\u011Fi\u015Fikli\u011Fi oldu mu?"
+      choiceType: 0
+      doctorLine: "Son d\xF6nemde kilo de\u011Fi\u015Fikli\u011Finiz oldu mu?\n"
+      patientReply: "Evet, i\u015Ftah\u0131m iyi ama biraz kilo verdim.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - weight_loss
+      - appetite_high
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "\u0130\u015Ftah art\u0131\u015F\u0131na ra\u011Fmen kilo kayb\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "\u0130\u015Ftah iyi ama kilo kayb\u0131 var. "
+      notebookTests: []
+      notebookNotes:
+      - 'Metabolik bulgu olabilir. '
+      diseaseEffects:
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 5
+      - diseaseId: 'PANIC_ATTACK '
+        score: 1
+      - diseaseId: 'IBS '
+        score: 1
+      - diseaseId: 'FIBROMYALGIA '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Terleme veya s\u0131cak basmas\u0131 var m\u0131?"
+      choiceType: 0
+      doctorLine: "Terleme, s\u0131cak basmas\u0131 veya s\u0131ca\u011Fa tahamm\xFCls\xFCzl\xFCk
+        oluyor mu?\n"
+      patientReply: "Evet, normalden daha \xE7ok terliyorum. S\u0131cakta \xE7ok
+        bunal\u0131yorum.\n"
+      assistantReply: "Is\u0131 hassasiyeti dikkat \xE7ekici olabilir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - sweat
+      - heat_intol
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Terleme ve s\u0131cak hassasiyeti "
+      performedTests: []
+      notebookSymptoms:
+      - "Is\u0131 intolerans\u0131 mevcut. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 5
+      - diseaseId: 'PANIC_ATTACK '
+        score: 2
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      - diseaseId: 'IBS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Kayg\u0131 veya panik hissi oluyor mu?"
+      choiceType: 0
+      doctorLine: "\xC7arp\u0131nt\u0131yla birlikte yo\u011Fun kayg\u0131 veya panik
+        hissi oluyor mu?\n"
+      patientReply: "Evet, bazen korkuyorum ama her zaman kayg\u0131yla ba\u015Flam\u0131yor.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - anxiety_some
+      - not_only_anxiety
+      requiredTags:
+      - palp
+      blockedTags: []
+      discoveredSymptoms:
+      - "Ara ara kayg\u0131 hissi "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "\xC7arp\u0131nt\u0131yla bazen kayg\u0131 oluyor. "
+      diseaseEffects:
+      - diseaseId: 'PANIC_ATTACK '
+        score: 3
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 2
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      - diseaseId: 'IBS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: Titreme oluyor mu?
+      choiceType: 0
+      doctorLine: 'Ellerinizde titreme oluyor mu?
+
+'
+      patientReply: "Evet, \xF6zellikle ince i\u015Fler yaparken fark ediyorum.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - tremor
+      requiredTags:
+      - palp
+      - heat_intol
+      blockedTags: []
+      discoveredSymptoms:
+      - 'El titremesi '
+      performedTests: []
+      notebookSymptoms:
+      - 'Elde titreme var. '
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 5
+      - diseaseId: 'PANIC_ATTACK '
+        score: 1
+      - diseaseId: 'FIBROMYALGIA '
+        score: -1
+      - diseaseId: 'IBS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Uyku d\xFCzeniniz nas\u0131l?"
+      choiceType: 0
+      doctorLine: "Uykuya dalma veya gece uyanma sorununuz var m\u0131?\n"
+      patientReply: "Evet, uyumakta zorlan\u0131yorum. Sabah yorgun kalk\u0131yorum.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - bad_sleep
+      - insomnia
+      requiredTags:
+      - chronic
+      blockedTags: []
+      discoveredSymptoms:
+      - Uykusuzluk
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Uykuya dalmakta zorlan\u0131yor. "
+      - "Sabah yorgun kalk\u0131yor. "
+      diseaseEffects:
+      - diseaseId: 'FIBROMYALGIA '
+        score: 3
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 2
+      - diseaseId: 'PANIC_ATTACK '
+        score: 1
+      - diseaseId: 'IBS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Kas a\u011Fr\u0131s\u0131 veya yayg\u0131n a\u011Fr\u0131 var
+        m\u0131?"
+      choiceType: 0
+      doctorLine: "Kas a\u011Fr\u0131s\u0131 veya yayg\u0131n v\xFCcut a\u011Fr\u0131s\u0131
+        oluyor mu?\n"
+      patientReply: "Evet, bazen omuz ve bacaklar\u0131m a\u011Fr\u0131yor.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - body_pain
+      - muscle_ache
+      requiredTags:
+      - bad_sleep
+      blockedTags: []
+      discoveredSymptoms:
+      - "Yayg\u0131n kas a\u011Fr\u0131s\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "Omuz ve bacak a\u011Fr\u0131s\u0131 var. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'FIBROMYALGIA '
+        score: 4
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 1
+      - diseaseId: 'PANIC_ATTACK '
+        score: 0
+      - diseaseId: 'IBS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Ba\u011F\u0131rsak d\xFCzeniniz de\u011Fi\u015Fti mi?"
+      choiceType: 0
+      doctorLine: "\u0130shal, s\u0131k tuvalete \xE7\u0131kma veya kar\u0131n kramplar\u0131
+        oluyor mu?\n"
+      patientReply: "Evet, son zamanlarda daha s\u0131k tuvalete gidiyorum.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - freq_stool
+      - abd_cramp
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "S\u0131k d\u0131\u015Fk\u0131lama "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Daha s\u0131k tuvalete gidiyor. "
+      diseaseEffects:
+      - diseaseId: 'IBS '
+        score: 4
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 3
+      - diseaseId: 'PANIC_ATTACK '
+        score: 0
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Stresle art\u0131yor mu?"
+      choiceType: 0
+      doctorLine: "Kar\u0131n \u015Fikayetleri stresle art\u0131yor mu?\n"
+      patientReply: 'Evet, stresliyken daha fazla hissediyorum.
+
+'
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - stress_link
+      requiredTags:
+      - freq_stool
+      - abd_cramp
+      blockedTags: []
+      discoveredSymptoms:
+      - "Stresle artan kar\u0131n \u015Fikayeti "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Stresle kar\u0131n \u015Fikayeti art\u0131yor. "
+      diseaseEffects:
+      - diseaseId: 'IBS '
+        score: 4
+      - diseaseId: 'PANIC_ATTACK '
+        score: 1
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 1
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "G\xF6zlerde belirginlik veya boyunda \u015Fi\u015Flik?"
+      choiceType: 0
+      doctorLine: "G\xF6zlerinizde belirginle\u015Fme ya da boynunuzda \u015Fi\u015Flik
+        fark ettiniz mi?\n"
+      patientReply: "Boynumda hafif dolgunluk var gibi. G\xF6zlerimde \xE7ok fark
+        etmedim.\n"
+      assistantReply: "Boyun bulgusu \xF6nemli olabilir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - neck_full
+      - no_clear_eye
+      requiredTags:
+      - weight_loss
+      - heat_intol
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Boyunda dolgunluk hissi '
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - 'Boyunda hafif dolgunluk var. '
+      diseaseEffects:
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 4
+      - diseaseId: 'PANIC_ATTACK '
+        score: 0
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      - diseaseId: 'IBS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Adet d\xFCzeni veya g\xFC\xE7s\xFCzl\xFCk de\u011Fi\u015Fti mi?"
+      choiceType: 0
+      doctorLine: "Son d\xF6nemde adet d\xFCzeninizde de\u011Fi\u015Fiklik veya kas
+        g\xFC\xE7s\xFCzl\xFC\u011F\xFC oldu mu?"
+      patientReply: "D\xFCzensizlik oldu. Merdiven \xE7\u0131karken bacaklar\u0131m
+        \xE7abuk yoruluyor.\n"
+      assistantReply: "Hormonal tablo a\xE7\u0131s\u0131ndan anlaml\u0131 olabilir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - cycle_irreg
+      - prox_weak
+      requiredTags:
+      - weight_loss
+      - tremor
+      blockedTags: []
+      discoveredSymptoms:
+      - "Adet d\xFCzensizli\u011Fi ve g\xFC\xE7s\xFCzl\xFCk "
+      performedTests: []
+      notebookSymptoms:
+      - "Adet d\xFCzensizli\u011Fi"
+      - "bacaklarda \xE7abuk yorulma var."
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: HYPERTHYROIDISM
+        score: 4
+      - diseaseId: 'FIBROMYALGIA '
+        score: 1
+      - diseaseId: 'PANIC_ATTACK '
+        score: 0
+      - diseaseId: 'IBS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Vital bulgular\u0131 \xF6l\xE7"
+      choiceType: 1
+      doctorLine: "Nab\u0131z, tansiyon ve ate\u015Finizi \xF6l\xE7elim.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Nab\u0131z: 116/dk\nTA: 135/78 mmHg\nAte\u015F: 36.9\xB0C"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - pulse_high
+      - bp_mild_high
+      requiredTags:
+      - palp
+      - sweat
+      blockedTags: []
+      discoveredSymptoms:
+      - "Ta\u015Fikardi"
+      performedTests:
+      - 'Vital bulgular '
+      notebookSymptoms: []
+      notebookTests:
+      - "Nab\u0131z: 116/dk"
+      - 'TA: 135/78 mmHg '
+      - "Ate\u015F: 36.9\xB0C "
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: HYPERTHYROIDISM
+        score: 4
+      - diseaseId: 'PANIC_ATTACK '
+        score: 3
+      - diseaseId: 'FIBROMYALGIA '
+        score: -1
+      - diseaseId: 'IBS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "EKG \xE7ek"
+      choiceType: 1
+      doctorLine: "\xC7arp\u0131nt\u0131 i\xE7in EKG \xE7ekelim.\n"
+      patientReply: 'Tamam.
+
+'
+      assistantReply: "EKG: Sin\xFCs ta\u015Fikardisi. Akut iskemi yok."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - sinus_tachy
+      requiredTags:
+      - pulse_high
+      - palp
+      blockedTags: []
+      discoveredSymptoms:
+      - "Sin\xFCs ta\u015Fikardisi "
+      performedTests:
+      - EKG
+      notebookSymptoms: []
+      notebookTests:
+      - "EKG: Sin\xFCs ta\u015Fikardisi. Akut iskemi yok."
+      - "Ritim h\u0131zl\u0131 ama d\xFCzenli. "
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 3
+      - diseaseId: 'PANIC_ATTACK '
+        score: 2
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      - diseaseId: 'IBS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: Tiroid muayenesi yap
+      choiceType: 1
+      doctorLine: "Boyun b\xF6lgesini ve tiroid bezinizi muayene edece\u011Fim.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Tiroid hafif diff\xFCz b\xFCy\xFCk. \u0130nce tremor mevcut."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - goiter
+      - fine_tremor
+      requiredTags:
+      - neck_full
+      - tremor
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Guatr ve ince tremor '
+      performedTests:
+      - 'Tiroid muayenesi '
+      notebookSymptoms: []
+      notebookTests:
+      - "Tiroid hafif diff\xFCz b\xFCy\xFCk. \u0130nce tremor mevcut."
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 6
+      - diseaseId: 'PANIC_ATTACK '
+        score: -1
+      - diseaseId: 'FIBROMYALGIA '
+        score: -2
+      - diseaseId: 'IBS '
+        score: -1
+      useTestChance: 1
+      baseSuccessChance: 25
+      bonusSpecialization: 0
+      specializationBonus: 0
+      generalistBonus: 10
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tam kan say\u0131m\u0131, CRP ve glukoz iste"
+      choiceType: 1
+      doctorLine: "Genel kan de\u011Ferlerine bakal\u0131m.\n"
+      patientReply: 'Tamam.
+
+'
+      assistantReply: "WBC: 7.100 /\xB5L\nHb: 13.4 g/dL\nCRP: 2 mg/L\nGlukoz: 91
+        mg/dL"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - cbc_norm
+      - crp_norm
+      - glucose_norm
+      requiredTags:
+      - fatigue
+      - body_pain
+      - freq_stool
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Genel kan testleri normal '
+      performedTests:
+      - "Tam kan say\u0131m\u0131, CRP, glukoz "
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "WBC: 7.100 /\xB5L"
+      - 'Hb: 13.4 g/dL '
+      - 'CRP: 2 mg/L '
+      - 'Glukoz: 91 mg/dL '
+      diseaseEffects:
+      - diseaseId: FIBROMYALGIA
+        score: 1
+      - diseaseId: 'IBS '
+        score: 1
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 1
+      - diseaseId: 'PANIC_ATTACK '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: Tiroid fonksiyon testleri iste
+      choiceType: 1
+      doctorLine: "TSH, fT4 ve fT3 de\u011Ferlerine bakal\u0131m.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: 'TSH: 0.01 mIU/L
+
+        fT4: 2.6 ng/dL
+
+        fT3: 6.8
+        pg/mL
+
+'
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - tsh_low
+      - ft4_high
+      - ft3_high
+      requiredTags:
+      - goiter
+      - sinus_tachy
+      - weight_loss
+      blockedTags: []
+      discoveredSymptoms:
+      - "Tiroid hormon y\xFCksekli\u011Fi "
+      performedTests:
+      - 'Tiroid fonksiyon testleri '
+      notebookSymptoms: []
+      notebookTests:
+      - 'TSH: 0.01 mIU/L'
+      - 'fT4: 2.6 ng/dL'
+      - 'fT3: 6.8 pg/mL'
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: HYPERTHYROIDISM
+        score: 10
+      - diseaseId: 'PANIC_ATTACK '
+        score: -3
+      - diseaseId: 'FIBROMYALGIA '
+        score: -3
+      - diseaseId: 'IBS '
+        score: -2
+      useTestChance: 0
+      baseSuccessChance: 25
+      bonusSpecialization: 0
+      specializationBonus: 0
+      generalistBonus: 10
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tan\u0131 koy"
+      choiceType: 2
+      doctorLine: 
+      patientReply: 
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 0
+      opensDiagnosisPanel: 1
+      reusable: 1
+      hideAfterUse: 0
+      gainedTags: []
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects: []
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+  diagnosisChoices:
+  - diseaseId: HYPERTHYROIDISM
+    diagnosisName: Hipertiroidi
+    resultText: "Do\u011Fru tan\u0131 hipertiroidi. \xC7arp\u0131nt\u0131, kilo kayb\u0131,
+      i\u015Ftah art\u0131\u015F\u0131, terleme, \u0131s\u0131 intolerans\u0131,
+      tremor, guatr ve bask\u0131l\u0131 TSH ile y\xFCksek fT4/fT3 tan\u0131y\u0131
+      destekler.\n"
+    isCorrectDiagnosis: 1
+    recommendedTags:
+    - palp
+    - weight_loss
+    - appetite_high
+    - sweat
+    - heat_intol
+    - tremor
+    - goiter
+    - tsh_low
+    - ft4_high
+    - ft3_high
+  - diseaseId: PANIC_ATTACK
+    diagnosisName: Panik Atak
+    resultText: "Panik atak \xE7arp\u0131nt\u0131, kayg\u0131 ve ani atak hissiyle
+      d\xFC\u015F\xFCn\xFClebilir. Ancak kilo kayb\u0131, terleme, tremor, guatr
+      ve tiroid hormon y\xFCksekli\u011Fi hipertiroidiyi destekler."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - palp
+    - anxiety_some
+    - pulse_high
+    - tsh_low
+    - ft4_high
+  - diseaseId: FIBROMYALGIA
+    diagnosisName: 'Fibromiyalji '
+    resultText: "Fibromiyalji yorgunluk, k\xF6t\xFC uyku ve yayg\u0131n a\u011Fr\u0131
+      ile kar\u0131\u015Fabilir. Ancak ta\u015Fikardi, kilo kayb\u0131, \u0131s\u0131
+      intolerans\u0131 ve tiroid testleri bu tan\u0131y\u0131 zay\u0131flat\u0131r."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - fatigue
+    - bad_sleep
+    - body_pain
+    - tsh_low
+    - ft4_high
+  - diseaseId: IBS
+    diagnosisName: "IBS (Huzursuz Ba\u011F\u0131rsak)"
+    resultText: "IBS kar\u0131n kramplar\u0131, s\u0131k d\u0131\u015Fk\u0131lama
+      ve stres ili\u015Fkisiyle d\xFC\u015F\xFCn\xFClebilir. Fakat sistemik bulgular
+      ve tiroid hormon y\xFCksekli\u011Fi daha a\xE7\u0131klay\u0131c\u0131d\u0131r."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - freq_stool
+    - abd_cramp
+    - stress_link
+    - tsh_low
+    - ft3_high
+  assistantHints: []
+  variationProfile: {fileID: 0}

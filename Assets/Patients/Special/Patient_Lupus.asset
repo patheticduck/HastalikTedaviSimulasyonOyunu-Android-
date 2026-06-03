@@ -1,0 +1,828 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb738e7044b7cc4dae6b9c5d16348a1, type: 3}
+  m_Name: Patient_Lupus
+  m_EditorClassIdentifier: Assembly-CSharp::PatientCaseData
+  caseId: PATIENT_LUPUS_01
+  trueDiseaseId: LUPUS
+  patientVisualIndex: 13
+  rootNodeId: root
+  startText: "Merhaba doktor, son haftalarda \xE7ok yorgunum. Eklem a\u011Fr\u0131lar\u0131m,
+    \xE7arp\u0131nt\u0131m ve ara ara g\xF6\u011F\xFCs s\u0131k\u0131\u015Fmam oluyor."
+  startAssistantText: 
+  allNodes:
+  - nodeId: root
+    isHubNode: 1
+    nodeIntroText: 
+    nodeAssistantText: 
+    choices:
+    - choiceText: "\u015Eikayetleriniz ne zamand\u0131r var?"
+      choiceType: 0
+      doctorLine: "Bu \u015Fikayetler ne zamand\u0131r s\xFCr\xFCyor?\n"
+      patientReply: "Yakla\u015F\u0131k bir ayd\u0131r var. Baz\u0131 g\xFCnler daha
+        k\xF6t\xFC oluyor.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - chronic
+      - fluct
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Uzun s\xFCren halsizlik "
+      performedTests: []
+      notebookSymptoms:
+      - "Dalgal\u0131 seyir mevcut. "
+      notebookTests: []
+      notebookNotes:
+      - "\u015Eikayetler yakla\u015F\u0131k 1 ayd\u0131r var. "
+      diseaseEffects:
+      - diseaseId: 'LUPUS '
+        score: 2
+      - diseaseId: 'FIBROMYALGIA '
+        score: 2
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 1
+      - diseaseId: 'PANIC_ATTACK '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Yorgunluk nas\u0131l?"
+      choiceType: 0
+      doctorLine: "Yorgunluk g\xFCnl\xFCk i\u015Flerinizi etkiliyor mu?\n"
+      patientReply: "Evet, normalden \xE7abuk yoruluyorum.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - fatigue
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Belirgin yorgunluk '
+      performedTests: []
+      notebookSymptoms:
+      - 'Yorgunluk belirgin. '
+      notebookTests: []
+      notebookNotes:
+      - "G\xFCnl\xFCk i\u015Flerde \xE7abuk yoruluyor. "
+      diseaseEffects:
+      - diseaseId: 'LUPUS '
+        score: 2
+      - diseaseId: 'FIBROMYALGIA '
+        score: 3
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 1
+      - diseaseId: 'PANIC_ATTACK '
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "\xC7arp\u0131nt\u0131n\u0131z oluyor mu?"
+      choiceType: 0
+      doctorLine: "\xC7arp\u0131nt\u0131 veya kalp h\u0131zl\u0131 at\u0131yor hissi
+        oluyor mu?\n"
+      patientReply: "Evet, bazen aniden kalbim h\u0131zl\u0131 at\u0131yor gibi oluyor.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - palp
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "\xC7arp\u0131nt\u0131"
+      performedTests: []
+      notebookSymptoms:
+      - "\xC7arp\u0131nt\u0131 mevcut. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PANIC_ATTACK '
+        score: 3
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 3
+      - diseaseId: 'LUPUS '
+        score: 1
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "G\xF6\u011F\xFCs s\u0131k\u0131\u015Fmas\u0131 nas\u0131l oluyor?"
+      choiceType: 0
+      doctorLine: "G\xF6\u011F\xFCs s\u0131k\u0131\u015Fmas\u0131 ne zaman oluyor?\n"
+      patientReply: "Bazen nefes al\u0131nca batma gibi oluyor. Bazen de heyecanlan\u0131nca
+        art\u0131yor.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - chest_tight
+      - pleuritic_hint
+      - stress_trigger
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "G\xF6\u011F\xFCs s\u0131k\u0131\u015Fmas\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "Nefesle artan batma ve stresle art\u0131\u015F var. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PANIC_ATTACK '
+        score: 2
+      - diseaseId: 'LUPUS '
+        score: 3
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 0
+      - diseaseId: 'FIBROMYALGIA '
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Eklem a\u011Fr\u0131lar\u0131n\u0131z var m\u0131?"
+      choiceType: 0
+      doctorLine: "Eklem a\u011Fr\u0131s\u0131 veya tutukluk oluyor mu?\n"
+      patientReply: "Evet, \xF6zellikle ellerimde ve bileklerimde oluyor.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - joint_pain
+      - hand_wrist
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "El ve bilek a\u011Fr\u0131s\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "El ve bileklerde a\u011Fr\u0131 var. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'LUPUS '
+        score: 4
+      - diseaseId: 'FIBROMYALGIA '
+        score: 2
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 0
+      - diseaseId: 'PANIC_ATTACK '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "A\u011Fr\u0131 yayg\u0131n m\u0131?"
+      choiceType: 0
+      doctorLine: "A\u011Fr\u0131lar\u0131n\u0131z t\xFCm v\xFCcutta yayg\u0131n
+        m\u0131?\n"
+      patientReply: "Bazen omuz ve s\u0131rt\u0131m da a\u011Fr\u0131yor ama ellerim
+        daha belirgin.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - body_pain
+      - focal_joint
+      requiredTags:
+      - fatigue
+      - joint_pain
+      blockedTags: []
+      discoveredSymptoms:
+      - "Yayg\u0131n a\u011Fr\u0131 hissi "
+      performedTests: []
+      notebookSymptoms:
+      - "Yayg\u0131n a\u011Fr\u0131 var."
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'FIBROMYALGIA '
+        score: 3
+      - diseaseId: 'LUPUS '
+        score: 2
+      - diseaseId: 'PANIC_ATTACK '
+        score: 0
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Sabah tutuklu\u011Fu oluyor mu?"
+      choiceType: 0
+      doctorLine: "Sabahlar\u0131 eklemlerinizde tutukluk oluyor mu?\n"
+      patientReply: "Evet, sabahlar\u0131 biraz zor a\xE7\u0131l\u0131yor.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - morning_stiff
+      requiredTags:
+      - joint_pain
+      - hand_wrist
+      blockedTags: []
+      discoveredSymptoms:
+      - "Sabah tutuklu\u011Fu "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Sabah eklem tutuklu\u011Fu var. "
+      diseaseEffects:
+      - diseaseId: 'LUPUS '
+        score: 4
+      - diseaseId: 'FIBROMYALGIA '
+        score: 1
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 0
+      - diseaseId: 'PANIC_ATTACK '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Uyku d\xFCzeniniz nas\u0131l?"
+      choiceType: 0
+      doctorLine: 'Uykunuz dinlendirici oluyor mu?
+
+'
+      patientReply: "Hay\u0131r, uyusam da yorgun kalk\u0131yorum.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - bad_sleep
+      requiredTags:
+      - fatigue
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Dinlendirmeyen uyku '
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Uyusa da yorgun kalk\u0131yor. "
+      diseaseEffects:
+      - diseaseId: 'FIBROMYALGIA '
+        score: 4
+      - diseaseId: 'LUPUS '
+        score: 1
+      - diseaseId: 'PANIC_ATTACK '
+        score: 1
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Kilo veya i\u015Ftah de\u011Fi\u015Fti mi?"
+      choiceType: 0
+      doctorLine: "Kilo kayb\u0131, i\u015Ftah art\u0131\u015F\u0131 veya terleme
+        oldu mu?\n"
+      patientReply: 'Biraz kilo verdim. Bazen terleme oluyor.
+
+'
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - weight_loss
+      - sweat
+      requiredTags:
+      - palp
+      blockedTags: []
+      discoveredSymptoms:
+      - "Kilo kayb\u0131 ve terleme "
+      performedTests: []
+      notebookSymptoms:
+      - "Biraz kilo kayb\u0131 ve terleme var. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 4
+      - diseaseId: 'LUPUS '
+        score: 2
+      - diseaseId: 'PANIC_ATTACK '
+        score: 1
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "S\u0131ca\u011Fa tahamm\xFCls\xFCzl\xFCk var m\u0131?"
+      choiceType: 0
+      doctorLine: "S\u0131cakta a\u015F\u0131r\u0131 rahats\u0131z olma veya el titremesi
+        var m\u0131?\n"
+      patientReply: "Bazen s\u0131cak bas\u0131yor ama elimde belirgin titreme yok.\n"
+      assistantReply: "Tiroid bulgular\u0131 net de\u011Fil.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - heat_some
+      - no_tremor
+      requiredTags:
+      - weight_loss
+      - sweat
+      blockedTags: []
+      discoveredSymptoms:
+      - "S\u0131cak basmas\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "S\u0131cak basmas\u0131 var, titreme yok. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 2
+      - diseaseId: 'LUPUS '
+        score: 1
+      - diseaseId: 'PANIC_ATTACK '
+        score: 1
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "D\xF6k\xFCnt\xFC veya g\xFCne\u015F hassasiyeti var m\u0131?"
+      choiceType: 0
+      doctorLine: "Y\xFCz\xFCn\xFCzde d\xF6k\xFCnt\xFC veya g\xFCne\u015Fte artan
+        k\u0131zar\u0131kl\u0131k oluyor mu?\n"
+      patientReply: "Evet, g\xFCne\u015Fe \xE7\u0131k\u0131nca y\xFCz\xFCm k\u0131zar\u0131yor.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - photo
+      - malar_hint
+      requiredTags:
+      - chronic
+      - joint_pain
+      blockedTags: []
+      discoveredSymptoms:
+      - "G\xFCne\u015Fle artan y\xFCz k\u0131zar\u0131kl\u0131\u011F\u0131 "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - 'Fotosensitivite olabilir. '
+      diseaseEffects:
+      - diseaseId: 'LUPUS '
+        score: 6
+      - diseaseId: 'FIBROMYALGIA '
+        score: -1
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 0
+      - diseaseId: 'PANIC_ATTACK '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "A\u011F\u0131z yaras\u0131 oluyor mu?"
+      choiceType: 0
+      doctorLine: "A\u011Fz\u0131n\u0131zda tekrarlayan yara oluyor mu?\n"
+      patientReply: "Evet, son zamanlarda birka\xE7 kez oldu.\n"
+      assistantReply: 'Mukozal bulgular not edilmeli.
+
+'
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - oral_ulcer
+      requiredTags:
+      - photo
+      - malar_hint
+      blockedTags: []
+      discoveredSymptoms:
+      - "A\u011F\u0131z yaras\u0131 "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Tekrarlayan a\u011F\u0131z yaras\u0131 var. "
+      diseaseEffects:
+      - diseaseId: 'LUPUS '
+        score: 4
+      - diseaseId: 'FIBROMYALGIA '
+        score: -1
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 0
+      - diseaseId: 'PANIC_ATTACK '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Vital bulgular\u0131 \xF6l\xE7"
+      choiceType: 1
+      doctorLine: "Ate\u015F, nab\u0131z ve tansiyonunuza bakal\u0131m.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Ate\u015F: 37.7\xB0C\nNab\u0131z: 104/dk\nTA: 110/70 mmHg"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - low_fever
+      - pulse_high
+      requiredTags:
+      - palp
+      - fatigue
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hafif ate\u015F ve nab\u0131z y\xFCksekli\u011Fi "
+      performedTests:
+      - Vital bulgular
+      notebookSymptoms: []
+      notebookTests:
+      - "Ate\u015F: 37.7\xB0C"
+      - "Nab\u0131z: 104/dk"
+      - 'TA: 110/70 mmHg'
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 2
+      - diseaseId: 'PANIC_ATTACK '
+        score: 2
+      - diseaseId: 'LUPUS '
+        score: 2
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: Tiroid testleri iste
+      choiceType: 1
+      doctorLine: "Tiroid hormonlar\u0131n\u0131 kontrol edelim.\n"
+      patientReply: 'Tamam.
+
+'
+      assistantReply: 'TSH: 1.8 mIU/L
+
+        fT4: 1.2 ng/dL
+
+        fT3: 3.1 pg/mL'
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - tsh_norm
+      - ft4_norm
+      requiredTags:
+      - weight_loss
+      - heat_some
+      - pulse_high
+      blockedTags: []
+      discoveredSymptoms:
+      - "Tiroid de\u011Ferleri normal "
+      performedTests:
+      - 'Tiroid fonksiyon testleri '
+      notebookSymptoms: []
+      notebookTests:
+      - 'TSH: 1.8 mIU/L '
+      - 'fT4: 1.2 ng/dL '
+      - 'fT3: 3.1 pg/mL '
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: -6
+      - diseaseId: 'LUPUS '
+        score: 1
+      - diseaseId: 'PANIC_ATTACK '
+        score: 1
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "EKG ve panik de\u011Ferlendirmesi yap"
+      choiceType: 1
+      doctorLine: "\xC7arp\u0131nt\u0131 i\xE7in EKG \xE7ekelim ve atak \u015Feklini
+        de\u011Ferlendirelim.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "EKG: Sin\xFCs ta\u015Fikardisi, akut iskemi bulgusu yok."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - ekg_sinus
+      - no_panic_pattern
+      requiredTags:
+      - chest_tight
+      - stress_trigger
+      - pulse_high
+      blockedTags: []
+      discoveredSymptoms:
+      - "EKG sin\xFCs ta\u015Fikardisi "
+      performedTests:
+      - "EKG de\u011Ferlendirmesi "
+      notebookSymptoms: []
+      notebookTests:
+      - "EKG: Sin\xFCs ta\u015Fikardisi, akut iskemi bulgusu yok."
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'PANIC_ATTACK '
+        score: -2
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 0
+      - diseaseId: 'LUPUS '
+        score: 1
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tam kan say\u0131m\u0131, ESR ve CRP iste"
+      choiceType: 1
+      doctorLine: "Kan say\u0131m\u0131 ve inflamasyon de\u011Ferlerine bakal\u0131m.\n"
+      patientReply: 'Tamam.
+
+'
+      assistantReply: "WBC: 3.400 /\xB5L\nHb: 11.2 g/dL\nESR: 58 mm/s\nCRP: 9 mg/L"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - wbc_low
+      - hb_low
+      - esr_high
+      - crp_mild
+      requiredTags:
+      - morning_stiff
+      - low_fever
+      - fatigue
+      blockedTags: []
+      discoveredSymptoms:
+      - "ESR y\xFCksekli\u011Fi ve kan de\u011Ferlerinde d\xFC\u015F\xFCkl\xFCk "
+      performedTests:
+      - "Tam kan say\u0131m\u0131, ESR, CRP "
+      notebookSymptoms: []
+      notebookTests:
+      - "WBC: 3.400 /\xB5L"
+      - 'Hb: 11.2 g/dL '
+      - 'ESR: 58 mm/s '
+      - 'CRP: 9 mg/L '
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'LUPUS '
+        score: 6
+      - diseaseId: 'FIBROMYALGIA '
+        score: -3
+      - diseaseId: 'PANIC_ATTACK '
+        score: -2
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Otoimm\xFCn panel ve idrar testi iste"
+      choiceType: 1
+      doctorLine: "Otoimm\xFCn belirte\xE7lere ve idrar testine bakal\u0131m.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "ANA: Pozitif 1/320\nanti-dsDNA: Pozitif\nC3: D\xFC\u015F\xFCk\n\u0130drar
+        protein: 1+"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - ana_pos
+      - anti_ds_pos
+      - c3_low
+      - proteinuria
+      requiredTags:
+      - photo
+      - oral_ulcer
+      - esr_high
+      blockedTags: []
+      discoveredSymptoms:
+      - "Otoimm\xFCn panel pozitif "
+      performedTests:
+      - ANA, anti-dsDNA, kompleman, idrar testi
+      notebookSymptoms: []
+      notebookTests:
+      - 'ANA: Pozitif 1/320'
+      - 'anti-dsDNA: Pozitif '
+      - "C3: D\xFC\u015F\xFCk "
+      - "\u0130drar protein: 1+ "
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'LUPUS '
+        score: 9
+      - diseaseId: 'FIBROMYALGIA '
+        score: -4
+      - diseaseId: 'PANIC_ATTACK '
+        score: -4
+      - diseaseId: 'HYPERTHYROIDISM '
+        score: -3
+      useTestChance: 1
+      baseSuccessChance: 25
+      bonusSpecialization: 0
+      specializationBonus: 0
+      generalistBonus: 10
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tan\u0131 koy"
+      choiceType: 2
+      doctorLine: 
+      patientReply: 
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 0
+      opensDiagnosisPanel: 1
+      reusable: 1
+      hideAfterUse: 0
+      gainedTags: []
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects: []
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+  diagnosisChoices:
+  - diseaseId: FIBROMYALGIA
+    diagnosisName: Fibromiyalji
+    resultText: "Fibromiyalji yorgunluk, yayg\u0131n a\u011Fr\u0131 ve k\xF6t\xFC
+      uyku ile kar\u0131\u015Fabilir. Ancak ESR y\xFCksekli\u011Fi, l\xF6kopeni,
+      fotosensitivite ve otoimm\xFCn panel pozitifli\u011Fi organik hastal\u0131\u011F\u0131
+      destekler."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - fatigue
+    - body_pain
+    - bad_sleep
+    - esr_high
+  - diseaseId: HYPERTHYROIDISM
+    diagnosisName: Hipertiroidi
+    resultText: "Hipertiroidi \xE7arp\u0131nt\u0131, kilo kayb\u0131 ve terleme ile
+      d\xFC\u015F\xFCn\xFClebilir. Fakat TSH, fT4 ve fT3 normaldir. Sistemik otoimm\xFCn
+      bulgular daha bask\u0131nd\u0131r."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - palp
+    - weight_loss
+    - tsh_norm
+    - ft4_norm
+  - diseaseId: LUPUS
+    diagnosisName: Lupus
+    resultText: "Do\u011Fru tan\u0131 Lupus. Yorgunluk, eklem a\u011Fr\u0131s\u0131,
+      sabah tutuklu\u011Fu, fotosensitivite, a\u011F\u0131z yaras\u0131, ESR y\xFCksekli\u011Fi,
+      l\xF6kopeni, ANA/anti-dsDNA pozitifli\u011Fi ve d\xFC\u015F\xFCk C3 tan\u0131y\u0131
+      destekler."
+    isCorrectDiagnosis: 1
+    recommendedTags:
+    - joint_pain
+    - morning_stiff
+    - photo
+    - oral_ulcer
+    - wbc_low
+    - esr_high
+    - ana_pos
+    - anti_ds_pos
+    - c3_low
+    - proteinuria
+  - diseaseId: PANIC_ATTACK
+    diagnosisName: Panik Atak
+    resultText: "Panik atak \xE7arp\u0131nt\u0131, g\xF6\u011F\xFCs s\u0131k\u0131\u015Fmas\u0131
+      ve stresle art\u0131\u015F nedeniyle d\xFC\u015F\xFCn\xFClebilir. Ancak eklem
+      tutuklu\u011Fu, fotosensitivite, a\u011F\u0131z yaras\u0131 ve otoimm\xFCn
+      testler bu tan\u0131y\u0131 zay\u0131flat\u0131r."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - palp
+    - stress_trigger
+    - photo
+    - ana_pos
+  assistantHints: []
+  variationProfile: {fileID: 0}

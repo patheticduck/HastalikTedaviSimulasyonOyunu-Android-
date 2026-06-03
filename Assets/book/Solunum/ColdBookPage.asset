@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34b718b78ce91a4bb6b271059134183, type: 3}
+  m_Name: ColdBookPage
+  m_EditorClassIdentifier: Assembly-CSharp::DiseaseBookPageData
+  diseaseId: cold
+  diseaseName: "SO\u011EUK ALGINLI\u011EI"
+  generalInfo: "So\u011Fuk alg\u0131nl\u0131\u011F\u0131, genellikle \xFCst solunum
+    yollar\u0131n\u0131 etkileyen hafif seyirli viral bir enfeksiyondur. Hastada
+    kuru \xF6ks\xFCr\xFCk ve hafif halsizlik var."
+  symptomsInfo: "burun ak\u0131nt\u0131s\u0131, hap\u015F\u0131r\u0131k, hafif bo\u011Faz
+    a\u011Fr\u0131s\u0131, hafif \xF6ks\xFCr\xFCk ve d\xFC\u015F\xFCk ate\u015F so\u011Fuk
+    alg\u0131nl\u0131\u011F\u0131nda s\u0131k g\xF6r\xFClebilir. Hafif ate\u015F
+    hissi"
+  diagnosisTips: 
+  diseaseImage: {fileID: 21300000, guid: 6b496cc2780456942b043bf7a6c6e5d8, type: 3}
+  extraInfo: 
+  highlightKeywords:
+  - "burun ak\u0131nt\u0131s\u0131 "
+  - "hap\u015F\u0131r\u0131k"
+  - "hafif bo\u011Faz a\u011Fr\u0131s\u0131 "
+  - "hafif \xF6ks\xFCr\xFCk "
+  - "d\xFC\u015F\xFCk ate\u015F"
+  - "Hafif ate\u015F hissi"
+  - "kuru \xF6ks\xFCr\xFCk"
+  - hafif halsizlik

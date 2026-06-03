@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34b718b78ce91a4bb6b271059134183, type: 3}
+  m_Name: Covid19BookPage
+  m_EditorClassIdentifier: Assembly-CSharp::DiseaseBookPageData
+  diseaseId: covid19
+  diseaseName: COVID-19
+  generalInfo: "COVID-19, viral bir \xFCst solunum yolu enfeksiyonudur. Hastalarda
+    ate\u015F, halsizlik, \xF6ks\xFCr\xFCk ve koku azalmas\u0131 gibi belirtiler
+    g\xF6r\xFClebilir."
+  symptomsInfo: "Akut ba\u015Flang\u0131\xE7 mevcut olmas\u0131, hafif ate\u015F,
+    kuru \xF6ks\xFCr\xFCk var olmas\u0131, koku azalmas\u0131 ve halsizlik ve k\u0131rg\u0131nl\u0131k
+    var olmas\u0131 COVID-19\u2019da s\u0131k g\xF6r\xFClen belirtilerdendir. Burun
+    t\u0131kan\u0131kl\u0131\u011F\u0131 ve \u015Feffaf burun ak\u0131nt\u0131s\u0131
+    da g\xF6r\xFClebilir."
+  diagnosisTips: 
+  diseaseImage: {fileID: 21300000, guid: 3497590acd6e7dc43a215cb7beaac728, type: 3}
+  extraInfo: 
+  highlightKeywords:
+  - Akut
+  - "hafif ate\u015F"
+  - "Burun t\u0131kan\u0131kl\u0131\u011F\u0131"
+  - "kuru \xF6ks\xFCr\xFCk"
+  - "koku azalmas\u0131"
+  - halsizlik
+  - "k\u0131rg\u0131nl\u0131k"
+  - "\u015Feffaf burun ak\u0131nt\u0131s\u0131"
+  - Temas
+  - testi pozitif

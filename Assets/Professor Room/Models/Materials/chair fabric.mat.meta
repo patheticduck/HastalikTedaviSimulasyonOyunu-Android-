@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3127993e48870c740b5cc0b59d8ccc3c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159893
+  packageName: Professor Room
+  packageVersion: 1.3
+  assetPath: Assets/Professor Room/Models/Materials/chair fabric.mat
+  uploadId: 790588

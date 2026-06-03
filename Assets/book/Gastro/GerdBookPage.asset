@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34b718b78ce91a4bb6b271059134183, type: 3}
+  m_Name: GerdBookPage
+  m_EditorClassIdentifier: Assembly-CSharp::DiseaseBookPageData
+  diseaseId: gerd
+  diseaseName: "REFL\xDC"
+  generalInfo: "Refl\xFC, mide i\xE7eri\u011Finin yemek borusuna geri ka\xE7mas\u0131yla
+    olu\u015Fan bir sindirim sistemi hastal\u0131\u011F\u0131d\u0131r. Hastalarda
+    g\xF6\u011F\xFCs ortas\u0131nda yanma, bo\u011Faza do\u011Fru yay\u0131lan yanma
+    ve a\u011F\u0131za ek\u015Fi/ac\u0131 s\u0131v\u0131 gelmesi g\xF6r\xFClebilir."
+  symptomsInfo: "Birka\xE7 g\xFCnd\xFCr s\xFCren yanma, g\xF6\u011F\xFCs ortas\u0131nda
+    yanma, bo\u011Faza do\u011Fru yay\u0131lan yanma ve yemek sonras\u0131 artan
+    yanma refl\xFCde s\u0131k g\xF6r\xFClen belirtilerdendir. Baz\u0131 hastalarda
+    sabah ses k\u0131s\u0131kl\u0131\u011F\u0131 olabilir."
+  diagnosisTips: 
+  diseaseImage: {fileID: 21300000, guid: 07d6bbffec94977488c952420a7255f6, type: 3}
+  extraInfo: 
+  highlightKeywords:
+  - yanma
+  - "g\xF6\u011F\xFCs"
+  - "bo\u011Faz"
+  - "yemek sonras\u0131"
+  - "ses k\u0131s\u0131kl\u0131\u011F\u0131"
+  - "ek\u015Fi/ac\u0131 s\u0131v\u0131"
+  - Antiasit

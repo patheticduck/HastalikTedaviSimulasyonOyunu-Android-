@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34b718b78ce91a4bb6b271059134183, type: 3}
+  m_Name: FibromyalgiaBookPage
+  m_EditorClassIdentifier: Assembly-CSharp::DiseaseBookPageData
+  diseaseId: fibromyalgia
+  diseaseName: "F\u0130BROM\u0130YALJ\u0130"
+  generalInfo: "Fibromiyalji, yayg\u0131n kas-iskelet sistemi a\u011Fr\u0131lar\u0131
+    ve kronik yorgunluk ile seyreden bir a\u011Fr\u0131 sendromudur. Hastalarda uyku
+    bozuklu\u011Fu, halsizlik ve yayg\u0131n a\u011Fr\u0131 g\xF6r\xFClebilir."
+  symptomsInfo: "Yayg\u0131n a\u011Fr\u0131 var olmas\u0131, belirgin halsizlik mevcut
+    olmas\u0131, kas-eklem a\u011Fr\u0131s\u0131 mevcut olmas\u0131 ve odaklanma
+    sorunu var olmas\u0131 fibromiyaljide s\u0131k g\xF6r\xFClen belirtilerdendir.
+    Baz\u0131 hastalarda sabah yorgun kalk\u0131yor olabilir."
+  diagnosisTips: 
+  diseaseImage: {fileID: 21300000, guid: 58a7dae3fba1ab9488087258e1ad3e56, type: 3}
+  extraInfo: 
+  highlightKeywords:
+  - "a\u011Fr\u0131"
+  - halsizlik
+  - "kas-eklem a\u011Fr\u0131s\u0131"
+  - odaklanma sorunu
+  - yorgun
+  - stres
+  - Belirgin inflamasyon bulgusu
+  - "uyku bozuklu\u011Fu"

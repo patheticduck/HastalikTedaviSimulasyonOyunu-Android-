@@ -1,0 +1,756 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb738e7044b7cc4dae6b9c5d16348a1, type: 3}
+  m_Name: Patient_Bronchitis
+  m_EditorClassIdentifier: Assembly-CSharp::PatientCaseData
+  caseId: PATIENT_BRONCHITIS_01
+  trueDiseaseId: BRONCHITIS
+  rootNodeId: root
+  startText: "Merhaba doktor, birka\xE7 g\xFCnd\xFCr \xF6ks\xFCr\xFCyorum. G\xF6\u011Fs\xFCmde
+    de doluluk gibi bir his var."
+  startAssistantText: 
+  allNodes:
+  - nodeId: root
+    isHubNode: 1
+    nodeIntroText: 
+    nodeAssistantText: 
+    choices:
+    - choiceText: "\u015Eikayetleriniz ne zaman ba\u015Flad\u0131?"
+      choiceType: 0
+      doctorLine: "\u015Eikayetleriniz ka\xE7 g\xFCnd\xFCr var?"
+      patientReply: "Yakla\u015F\u0131k be\u015F g\xFCnd\xFCr var. \u0130lk g\xFCn
+        bo\u011Faz\u0131m hafif yan\u0131yordu.\n"
+      assistantReply: "Akut ba\u015Flang\u0131\xE7 mevcut.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - acute_onset
+      - five_days_symptoms
+      - preceding_throat_irritation
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Birka\xE7 g\xFCnd\xFCr \xF6ks\xFCr\xFCk "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Birka\xE7 g\xFCnd\xFCr \xF6ks\xFCr\xFCk "
+      diseaseEffects:
+      - diseaseId: 'BRONCHITIS '
+        score: 2
+      - diseaseId: 'COVID19 '
+        score: 1
+      - diseaseId: 'INFLUENZA '
+        score: 1
+      - diseaseId: 'PNEUMONIA '
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "\xD6ks\xFCr\xFC\u011F\xFCn\xFCz nas\u0131l?"
+      choiceType: 0
+      doctorLine: "\xD6ks\xFCr\xFC\u011F\xFCn\xFCz kuru mu, balgaml\u0131 m\u0131?\n"
+      patientReply: "Balgaml\u0131 gibi. \xD6zellikle sabah daha \xE7ok oluyor.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - productive_cough
+      - morning_sputum
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Balgaml\u0131 \xF6ks\xFCr\xFCk "
+      performedTests: []
+      notebookSymptoms:
+      - "Balgaml\u0131 \xF6ks\xFCr\xFCk "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'BRONCHITIS '
+        score: 4
+      - diseaseId: 'PNEUMONIA '
+        score: 2
+      - diseaseId: 'INFLUENZA '
+        score: 0
+      - diseaseId: 'COVID19 '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Ate\u015Finiz oldu mu?"
+      choiceType: 0
+      doctorLine: "Ate\u015Finiz oldu mu?"
+      patientReply: "Bir g\xFCn hafif y\xFCkseldi. 37.7 gibi \xF6l\xE7t\xFCm.\n"
+      assistantReply: "Ate\u015F hafif d\xFCzeyde.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - low_grade_fever
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hafif ate\u015F "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Ate\u015F 37.7\xB0C civar\u0131nda. "
+      diseaseEffects:
+      - diseaseId: 'BRONCHITIS '
+        score: 2
+      - diseaseId: 'COVID19 '
+        score: 1
+      - diseaseId: 'INFLUENZA '
+        score: -1
+      - diseaseId: 'PNEUMONIA '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Halsizlik veya kas a\u011Fr\u0131n\u0131z var m\u0131?"
+      choiceType: 0
+      doctorLine: "Halsizlik ya da kas a\u011Fr\u0131n\u0131z oluyor mu?"
+      patientReply: "Biraz halsizim ama a\u011F\u0131r de\u011Fil. Kas a\u011Fr\u0131m
+        \xE7ok yok.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - mild_fatigue
+      - no_prominent_myalgia
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Hafif halsizlik '
+      performedTests: []
+      notebookSymptoms:
+      - 'Hafif halsizlik var. '
+      notebookTests: []
+      notebookNotes:
+      - "Kas a\u011Fr\u0131s\u0131 belirgin de\u011Fil. "
+      diseaseEffects:
+      - diseaseId: BRONCHITIS
+        score: 1
+      - diseaseId: 'COVID19 '
+        score: 1
+      - diseaseId: 'INFLUENZA '
+        score: -2
+      - diseaseId: 'PNEUMONIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Nefes darl\u0131\u011F\u0131n\u0131z var m\u0131?"
+      choiceType: 0
+      doctorLine: "Nefes darl\u0131\u011F\u0131 ya\u015F\u0131yor musunuz?\n"
+      patientReply: "\xC7ok de\u011Fil. Merdiven \xE7\u0131k\u0131nca biraz daha
+        fazla \xF6ks\xFCr\xFCyorum.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - mild_exertional_symptoms
+      - no_clear_dyspnea
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Eforla \xF6ks\xFCr\xFCk art\u0131\u015F\u0131 "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Eforla \xF6ks\xFCr\xFCk art\u0131\u015F\u0131 "
+      diseaseEffects:
+      - diseaseId: 'BRONCHITIS '
+        score: 2
+      - diseaseId: 'PNEUMONIA '
+        score: -1
+      - diseaseId: 'COVID19 '
+        score: 0
+      - diseaseId: 'INFLUENZA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "G\xF6\u011F\xFCs a\u011Fr\u0131n\u0131z var m\u0131?"
+      choiceType: 0
+      doctorLine: "G\xF6\u011Fs\xFCn\xFCzde a\u011Fr\u0131 veya batma oluyor mu?\n"
+      patientReply: "Batma yok. Daha \xE7ok \xF6ks\xFCr\xFCnce g\xF6\u011Fs\xFCm
+        yoruluyor gibi.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - chest_discomfort_with_cough
+      - no_pleuritic_pain
+      requiredTags:
+      - productive_cough
+      blockedTags: []
+      discoveredSymptoms:
+      - "\xD6ks\xFCr\xFCkle g\xF6\u011F\xFCs rahats\u0131zl\u0131\u011F\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "Bat\u0131c\u0131 g\xF6\u011F\xFCs a\u011Fr\u0131s\u0131 yok. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'BRONCHITIS '
+        score: 2
+      - diseaseId: 'PNEUMONIA '
+        score: -3
+      - diseaseId: 'COVID19 '
+        score: 0
+      - diseaseId: 'INFLUENZA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Balgam\u0131n rengi nas\u0131l?"
+      choiceType: 0
+      doctorLine: "Balgam\u0131n\u0131z\u0131n rengi nas\u0131l?\n"
+      patientReply: "Bazen sar\u0131ms\u0131 oluyor ama \xE7ok yo\u011Fun de\u011Fil.\n"
+      assistantReply: "Balgam rengi tek ba\u015F\u0131na yeterli de\u011Fildir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - yellowish_sputum
+      - not_heavy_sputum
+      requiredTags:
+      - productive_cough
+      blockedTags: []
+      discoveredSymptoms:
+      - "Sar\u0131ms\u0131 balgam "
+      performedTests: []
+      notebookSymptoms:
+      - "Bazen sar\u0131ms\u0131 balgam var. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'BRONCHITIS '
+        score: 3
+      - diseaseId: 'PNEUMONIA '
+        score: 1
+      - diseaseId: 'COVID19 '
+        score: 0
+      - diseaseId: 'INFLUENZA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Koku veya tat kayb\u0131 oldu mu?"
+      choiceType: 0
+      doctorLine: "Koku veya tat alman\u0131zda de\u011Fi\u015Fiklik var m\u0131?\n"
+      patientReply: "Hay\u0131r, \xF6yle bir \u015Fey fark etmedim.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - no_smell_taste_loss
+      requiredTags:
+      - 'acute_onset '
+      blockedTags: []
+      discoveredSymptoms:
+      - "Koku-tat kayb\u0131 yok "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Koku ve tat kayb\u0131 yok. "
+      diseaseEffects:
+      - diseaseId: 'COVID19 '
+        score: -3
+      - diseaseId: 'BRONCHITIS '
+        score: 1
+      - diseaseId: 'INFLUENZA '
+        score: 0
+      - diseaseId: 'PNEUMONIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Hasta biriyle temas\u0131n\u0131z oldu mu?"
+      choiceType: 0
+      doctorLine: "Son g\xFCnlerde hasta biriyle yak\u0131n temas\u0131n\u0131z oldu
+        mu?\n"
+      patientReply: "Evde biri nezle gibiydi. Ayn\u0131 ortamdayd\u0131k.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - sick_contact
+      requiredTags:
+      - acute_onset
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hasta temas\u0131 "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Hasta temas\u0131 "
+      diseaseEffects:
+      - diseaseId: 'COVID19 '
+        score: 2
+      - diseaseId: 'INFLUENZA '
+        score: 1
+      - diseaseId: 'BRONCHITIS '
+        score: 1
+      - diseaseId: 'PNEUMONIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "H\u0131r\u0131lt\u0131 oluyor mu?"
+      choiceType: 0
+      doctorLine: "Nefes al\u0131p verirken h\u0131r\u0131lt\u0131 oluyor mu?\n"
+      patientReply: "Bazen \xF6ks\xFCr\xFCkten sonra hafif h\u0131r\u0131lt\u0131
+        oluyor.\n"
+      assistantReply: "H\u0131r\u0131lt\u0131 bron\u015F hassasiyetini g\xF6sterebilir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - mild_wheezing
+      - post_cough_wheeze
+      requiredTags:
+      - productive_cough
+      - mild_exertional_symptoms
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hafif h\u0131r\u0131lt\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "\xD6ks\xFCr\xFCk sonras\u0131 hafif h\u0131r\u0131lt\u0131 var. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'BRONCHITIS '
+        score: 3
+      - diseaseId: 'PNEUMONIA '
+        score: 1
+      - diseaseId: 'COVID19 '
+        score: 0
+      - diseaseId: 'INFLUENZA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Belirtiler aniden mi a\u011F\u0131r ba\u015Flad\u0131?"
+      choiceType: 0
+      doctorLine: "\u015Eikayetleriniz aniden \xE7ok a\u011F\u0131r m\u0131 ba\u015Flad\u0131?\n"
+      patientReply: "Hay\u0131r, yava\u015F yava\u015F artt\u0131.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - gradual_worsening
+      - not_sudden_severe
+      requiredTags:
+      - five_days_symptoms
+      - mild_fatigue
+      blockedTags: []
+      discoveredSymptoms:
+      - "Yava\u015F artan \u015Fikayet"
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "\u015Eikayetler yava\u015F artm\u0131\u015F. "
+      diseaseEffects:
+      - diseaseId: 'BRONCHITIS '
+        score: 2
+      - diseaseId: 'INFLUENZA '
+        score: -3
+      - diseaseId: 'COVID19 '
+        score: 0
+      - diseaseId: 'PNEUMONIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Vital bulgular\u0131 \xF6l\xE7"
+      choiceType: 1
+      doctorLine: "Ate\u015F, nab\u0131z ve oksijen de\u011Ferlerinizi \xF6l\xE7elim.\n"
+      patientReply: 'Tamam.
+
+'
+      assistantReply: "Ate\u015F: 37.6\xB0C Nab\u0131z: 88/dk SpO2: %98"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - vitals_stable
+      - spo2_normal
+      requiredTags:
+      - low_grade_fever
+      - no_clear_dyspnea
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Vital bulgular stabil '
+      performedTests:
+      - 'Vital bulgular '
+      notebookSymptoms: []
+      notebookTests:
+      - "Ate\u015F: 37.6\xB0C Nab\u0131z: 88/dk SpO2: %98"
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'BRONCHITIS '
+        score: 2
+      - diseaseId: 'PNEUMONIA '
+        score: -2
+      - diseaseId: 'COVID19 '
+        score: 0
+      - diseaseId: 'INFLUENZA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Akci\u011Fer dinlemesi yap"
+      choiceType: 1
+      doctorLine: "Akci\u011Ferlerinizi dinleyece\u011Fim. Derin nefes al\u0131r
+        m\u0131s\u0131n\u0131z?\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Yayg\u0131n hafif ronk\xFCs duyuldu. Fokal ral yok.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - diffuse_rhonchi
+      - no_focal_crackles
+      requiredTags:
+      - productive_cough
+      - mild_wheezing
+      blockedTags: []
+      discoveredSymptoms:
+      - "Yayg\u0131n ronk\xFCs "
+      performedTests:
+      - "Akci\u011Fer osk\xFCltasyonu "
+      notebookSymptoms: []
+      notebookTests:
+      - "Yayg\u0131n hafif ronk\xFCs duyuldu. Fokal ral yok. "
+      notebookNotes:
+      - "Fokal zat\xFCrre bulgusu yok. "
+      diseaseEffects:
+      - diseaseId: 'BRONCHITIS '
+        score: 5
+      - diseaseId: 'PNEUMONIA '
+        score: -3
+      - diseaseId: 'COVID19 '
+        score: 0
+      - diseaseId: 'INFLUENZA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tam kan say\u0131m\u0131 ve CRP iste"
+      choiceType: 1
+      doctorLine: "Kan de\u011Ferlerinize bakal\u0131m.\n"
+      patientReply: 'Tamam.
+
+'
+      assistantReply: "WBC: 8.900 /\xB5L\nN\xF6trofil: %68\nCRP: 18 mg/L"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - wbc_normal
+      - crp_mild_high
+      requiredTags:
+      - low_grade_fever
+      - productive_cough
+      blockedTags: []
+      discoveredSymptoms:
+      - "CRP hafif y\xFCksek "
+      performedTests:
+      - "Tam kan say\u0131m\u0131 ve CRP "
+      notebookSymptoms: []
+      notebookTests:
+      - "WBC: 8.900 /\xB5L"
+      - "N\xF6trofil: %68 "
+      - 'CRP: 18 mg/L '
+      notebookNotes:
+      - "CRP hafif y\xFCksek. "
+      diseaseEffects:
+      - diseaseId: BRONCHITIS
+        score: 3
+      - diseaseId: 'PNEUMONIA '
+        score: 1
+      - diseaseId: 'COVID19 '
+        score: 1
+      - diseaseId: 'INFLUENZA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "COVID-19 ve grip h\u0131zl\u0131 testi iste"
+      choiceType: 1
+      doctorLine: "COVID-19 ve grip a\xE7\u0131s\u0131ndan h\u0131zl\u0131 test isteyelim.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: 'COVID-19 antijen: Negatif
+
+        Influenza A/B: Negatif'
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - covid_negative
+      - flu_negative
+      requiredTags:
+      - sick_contact
+      - no_smell_taste_loss
+      - crp_mild_high
+      blockedTags: []
+      discoveredSymptoms:
+      - 'COVID ve grip testi negatif '
+      performedTests:
+      - "COVID-19 / Influenza h\u0131zl\u0131 test "
+      notebookSymptoms: []
+      notebookTests:
+      - 'COVID-19 antijen: Negatif '
+      - 'Influenza A/B: Negatif '
+      notebookNotes:
+      - "H\u0131zl\u0131 testler negatif. "
+      diseaseEffects:
+      - diseaseId: COVID19
+        score: -4
+      - diseaseId: 'INFLUENZA '
+        score: -4
+      - diseaseId: 'BRONCHITIS '
+        score: 2
+      - diseaseId: 'PNEUMONIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Akci\u011Fer grafisi iste"
+      choiceType: 1
+      doctorLine: "Akci\u011Fer grafisi isteyelim.\n"
+      patientReply: 'Tamam.
+
+'
+      assistantReply: "PA grafi: \u0130nfiltrasyon yok. Bron\u015Fiyal belirginle\u015Fme
+        mevcut."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - xray_no_infiltrate
+      - bronchial_markings
+      requiredTags:
+      - diffuse_rhonchi
+      - crp_mild_high
+      - no_pleuritic_pain
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Grafide infiltrasyon yok '
+      performedTests:
+      - "Akci\u011Fer grafisi "
+      notebookSymptoms: []
+      notebookTests:
+      - "PA grafi: \u0130nfiltrasyon yok."
+      - "Bron\u015Fiyal belirginle\u015Fme mevcut."
+      notebookNotes:
+      - "Zat\xFCrre lehine infiltrasyon yok. "
+      diseaseEffects:
+      - diseaseId: BRONCHITIS
+        score: 5
+      - diseaseId: 'PNEUMONIA '
+        score: -5
+      - diseaseId: 'COVID19 '
+        score: -1
+      - diseaseId: 'INFLUENZA '
+        score: 0
+      useTestChance: 1
+      baseSuccessChance: 25
+      bonusSpecialization: 1
+      specializationBonus: 50
+      generalistBonus: 15
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tan\u0131 koy"
+      choiceType: 2
+      doctorLine: 
+      patientReply: 
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 0
+      opensDiagnosisPanel: 1
+      reusable: 1
+      hideAfterUse: 0
+      gainedTags: []
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects: []
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+  diagnosisChoices:
+  - diseaseId: COVID19
+    diagnosisName: COVID-19
+    resultText: "COVID-19 \xF6ks\xFCr\xFCk, halsizlik ve temas \xF6yk\xFCs\xFCyle
+      d\xFC\u015F\xFCn\xFClebilir. Ancak koku-tat kayb\u0131 yok, h\u0131zl\u0131
+      test negatif ve bulgular bron\u015Fit ile daha uyumlu."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - sick_contact
+    - no_smell_taste_loss
+    - covid_negative
+  - diseaseId: INFLUENZA
+    diagnosisName: Grip
+    resultText: "Gripte ani ba\u015Flang\u0131\xE7, y\xFCksek ate\u015F ve belirgin
+      kas a\u011Fr\u0131s\u0131 beklenir. Bu vakada tablo daha hafif ve grip testi
+      negatiftir."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - not_sudden_severe
+    - no_prominent_myalgia
+    - flu_negative
+  - diseaseId: PNEUMONIA
+    diagnosisName: "Zat\xFCrre"
+    resultText: "Zat\xFCrrede y\xFCksek ate\u015F, fokal ral, oksijen d\xFC\u015F\xFCkl\xFC\u011F\xFC
+      veya grafide infiltrasyon beklenebilir. Bu hastada grafide infiltrasyon yoktur.\n"
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - spo2_normal
+    - no_focal_crackles
+    - xray_no_infiltrate
+  - diseaseId: BRONCHITIS
+    diagnosisName: "Bron\u015Fit"
+    resultText: "Do\u011Fru tan\u0131 bron\u015Fit. Balgaml\u0131 \xF6ks\xFCr\xFCk,
+      hafif ate\u015F, \xF6ks\xFCr\xFCk sonras\u0131 h\u0131r\u0131lt\u0131, yayg\u0131n
+      ronk\xFCs ve grafide infiltrasyon olmamas\u0131 bron\u015Fit ile uyumludur.\n"
+    isCorrectDiagnosis: 1
+    recommendedTags:
+    - productive_cough
+    - low_grade_fever
+    - mild_wheezing
+    - diffuse_rhonchi
+    - xray_no_infiltrate
+  assistantHints: []
+  variationProfile: {fileID: 0}

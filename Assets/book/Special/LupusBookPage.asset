@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34b718b78ce91a4bb6b271059134183, type: 3}
+  m_Name: LupusBookPage
+  m_EditorClassIdentifier: Assembly-CSharp::DiseaseBookPageData
+  diseaseId: lupus
+  diseaseName: LUPUS
+  generalInfo: "Lupus, ba\u011F\u0131\u015F\u0131kl\u0131k sisteminin kendi dokular\u0131na
+    sald\u0131rd\u0131\u011F\u0131 kronik otoimm\xFCn bir hastal\u0131kt\u0131r.
+    Hastalarda yorgunluk, eklem a\u011Fr\u0131s\u0131 ve sistemik belirtiler g\xF6r\xFClebilir."
+  symptomsInfo: "Yorgunluk belirgin olmas\u0131, \xE7arp\u0131nt\u0131 mevcut olmas\u0131,
+    yayg\u0131n a\u011Fr\u0131 var olmas\u0131 ve el ve bileklerde a\u011Fr\u0131
+    var olmas\u0131 lupus hastalar\u0131nda s\u0131k g\xF6r\xFClen belirtilerdendir.
+    Baz\u0131 hastalarda s\u0131cak basmas\u0131 var olabilir."
+  diagnosisTips: 
+  diseaseImage: {fileID: 21300000, guid: 07d6bbffec94977488c952420a7255f6, type: 3}
+  extraInfo: 
+  highlightKeywords:
+  - Yorgunluk
+  - "\xE7arp\u0131nt\u0131"
+  - "a\u011Fr\u0131"
+  - "s\u0131cak basmas\u0131"
+  - "eklem tutuklu\u011Fu"
+  - "a\u011F\u0131z yaras\u0131"
+  - "ba\u011F\u0131\u015F\u0131kl\u0131k"
+  - sistemik belirtiler

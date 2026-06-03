@@ -1,0 +1,790 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb738e7044b7cc4dae6b9c5d16348a1, type: 3}
+  m_Name: Patient_Lyme
+  m_EditorClassIdentifier: Assembly-CSharp::PatientCaseData
+  caseId: PATIENT_LYME_01
+  trueDiseaseId: LYME
+  patientVisualIndex: 14
+  rootNodeId: root
+  startText: "Merhaba doktor, son haftalarda halsizlik, kas a\u011Fr\u0131lar\u0131
+    ve ara ara uyu\u015Fmalar\u0131m oluyor. Tam olarak ne oldu\u011Funu anlayamad\u0131m."
+  startAssistantText: 
+  allNodes:
+  - nodeId: root
+    isHubNode: 1
+    nodeIntroText: 
+    nodeAssistantText: 
+    choices:
+    - choiceText: "\u015Eikayetleriniz ne zamand\u0131r var?"
+      choiceType: 0
+      doctorLine: "Bu \u015Fikayetleriniz ne zamand\u0131r s\xFCr\xFCyor?\n"
+      patientReply: "Yakla\u015F\u0131k 5-6 haftad\u0131r var diyebilirim.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - subacute
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Uzun s\xFCren halsizlik "
+      performedTests: []
+      notebookSymptoms:
+      - "Subakut ba\u015Flang\u0131\xE7. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'LYME '
+        score: 2
+      - diseaseId: 'LUPUS '
+        score: 1
+      - diseaseId: 'MS '
+        score: 1
+      - diseaseId: 'FIBROMYALGIA '
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Halsizlik nas\u0131l?"
+      choiceType: 0
+      doctorLine: "Yorgunluk g\xFCnl\xFCk hayat\u0131n\u0131z\u0131 etkiliyor mu?\n"
+      patientReply: "Evet, s\xFCrekli yorgun hissediyorum.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - fatigue
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Belirgin halsizlik '
+      performedTests: []
+      notebookSymptoms:
+      - 'Belirgin halsizlik mevcut. '
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'FIBROMYALGIA '
+        score: 3
+      - diseaseId: 'LUPUS '
+        score: 2
+      - diseaseId: 'LYME '
+        score: 2
+      - diseaseId: 'MS '
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Kas veya eklem a\u011Fr\u0131s\u0131 var m\u0131?"
+      choiceType: 0
+      doctorLine: "Kas veya eklem a\u011Fr\u0131lar\u0131n\u0131z oluyor mu?"
+      patientReply: "Evet, \xF6zellikle bacaklar\u0131m ve dizlerim a\u011Fr\u0131yor.\n"
+      assistantReply: "Kas-eklem tutulumu ay\u0131r\u0131c\u0131 olabilir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - leg_pain
+      - joint_pain
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Bacak ve diz a\u011Fr\u0131s\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "Kas-eklem a\u011Fr\u0131s\u0131 mevcut. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'LYME '
+        score: 3
+      - diseaseId: 'LUPUS '
+        score: 2
+      - diseaseId: 'FIBROMYALGIA '
+        score: 2
+      - diseaseId: 'MS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Uyu\u015Fma veya kar\u0131ncalanma oluyor mu?"
+      choiceType: 0
+      doctorLine: "Uyu\u015Fma veya kar\u0131ncalanma hissi oluyor mu?\n"
+      patientReply: "Evet, bazen ellerimde ve aya\u011F\u0131mda oluyor.\n"
+      assistantReply: "N\xF6rolojik yak\u0131nmalar dikkat \xE7ekici olabilir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - paresthesia
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Uyu\u015Fma hissi "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Elde ve ayakta uyu\u015Fma oluyor. "
+      diseaseEffects:
+      - diseaseId: 'MS '
+        score: 4
+      - diseaseId: 'LYME '
+        score: 3
+      - diseaseId: 'LUPUS '
+        score: 1
+      - diseaseId: 'FIBROMYALGIA '
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Ba\u015F a\u011Fr\u0131n\u0131z oluyor mu?"
+      choiceType: 0
+      doctorLine: "Ba\u015F a\u011Fr\u0131s\u0131 veya ba\u015F d\xF6nmesi oluyor
+        mu?\n"
+      patientReply: "Ara s\u0131ra ba\u015F\u0131m a\u011Fr\u0131yor ve sersem gibi
+        oluyorum.\n"
+      assistantReply: "Nonspesifik ama \xF6nemli olabilir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - headache
+      - dizzy
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Ba\u015F a\u011Fr\u0131s\u0131 ve ba\u015F d\xF6nmesi "
+      performedTests: []
+      notebookSymptoms:
+      - "Ba\u015F a\u011Fr\u0131s\u0131"
+      - sersemlik oluyor.
+      notebookTests: []
+      notebookNotes:
+      - "Nonspecific n\xF6rolojik yak\u0131nma. "
+      diseaseEffects:
+      - diseaseId: 'MS '
+        score: 2
+      - diseaseId: 'LYME '
+        score: 2
+      - diseaseId: 'FIBROMYALGIA '
+        score: 1
+      - diseaseId: 'LUPUS '
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Uyku d\xFCzeniniz nas\u0131l?"
+      choiceType: 0
+      doctorLine: "Uyku sonras\u0131 dinlenmi\u015F hissediyor musunuz?\n"
+      patientReply: "Hay\u0131r, uyusam da yorgun kalk\u0131yorum.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - bad_sleep
+      requiredTags:
+      - fatigue
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Dinlendirmeyen uyku '
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Uyku sonras\u0131 dinlenemiyor. "
+      diseaseEffects:
+      - diseaseId: 'FIBROMYALGIA '
+        score: 4
+      - diseaseId: 'LYME '
+        score: 1
+      - diseaseId: 'LUPUS '
+        score: 1
+      - diseaseId: 'MS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "G\xF6rme problemi oldu mu?"
+      choiceType: 0
+      doctorLine: "Bulan\u0131k g\xF6rme veya \xE7ift g\xF6rme oldu mu?\n"
+      patientReply: "Birka\xE7 kez k\u0131sa s\xFCreli bulan\u0131k g\xF6rme oldu.\n"
+      assistantReply: "N\xF6rolojik de\u011Ferlendirme gerekebilir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - blurred_vision
+      requiredTags:
+      - paresthesia
+      blockedTags: []
+      discoveredSymptoms:
+      - "Bulan\u0131k g\xF6rme "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "K\u0131sa s\xFCreli bulan\u0131k g\xF6rme"
+      diseaseEffects:
+      - diseaseId: 'MS '
+        score: 5
+      - diseaseId: 'LYME '
+        score: 2
+      - diseaseId: 'LUPUS '
+        score: 1
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "D\xF6k\xFCnt\xFC oldu mu?"
+      choiceType: 0
+      doctorLine: "V\xFCcudunuzda d\xF6k\xFCnt\xFC fark ettiniz mi?\n"
+      patientReply: "Bir ara baca\u011F\u0131mda k\u0131rm\u0131z\u0131 halka gibi
+        bir \u015Fey olmu\u015Ftu ama ge\xE7ti.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - ring_rash
+      requiredTags:
+      - subacute
+      - joint_pain
+      blockedTags: []
+      discoveredSymptoms:
+      - "Halka \u015Feklinde d\xF6k\xFCnt\xFC \xF6yk\xFCs\xFC "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Ge\xE7ici d\xF6k\xFCnt\xFC tarifliyor. "
+      diseaseEffects:
+      - diseaseId: 'LYME '
+        score: 7
+      - diseaseId: 'LUPUS '
+        score: 1
+      - diseaseId: 'MS '
+        score: 0
+      - diseaseId: 'FIBROMYALGIA '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "G\xFCne\u015F hassasiyeti var m\u0131?"
+      choiceType: 0
+      doctorLine: "G\xFCne\u015Fte artan k\u0131zar\u0131kl\u0131k veya hassasiyet
+        oluyor mu?\n"
+      patientReply: "Hay\u0131r, \xE7ok fark etmedim.\n"
+      assistantReply: "Fotosensitivite belirgin g\xF6r\xFCnm\xFCyor.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - no_photo
+      requiredTags:
+      - joint_pain
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Fotosensitivite yok '
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "G\xFCne\u015F hassasiyeti yok. "
+      diseaseEffects:
+      - diseaseId: 'LUPUS '
+        score: -4
+      - diseaseId: 'LYME '
+        score: 1
+      - diseaseId: 'MS '
+        score: 0
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Haf\u0131za veya odak sorunu oluyor mu?"
+      choiceType: 0
+      doctorLine: "Unutkanl\u0131k veya odaklanma sorunu oluyor mu?\n"
+      patientReply: "Evet, bazen odaklanmakta zorlan\u0131yorum.\n"
+      assistantReply: "Kognitif yak\u0131nmalar ay\u0131r\u0131c\u0131 olabilir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - brain_fog
+      requiredTags:
+      - fatigue
+      - bad_sleep
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Odak sorunu '
+      performedTests: []
+      notebookSymptoms:
+      - 'Odaklanma sorunu var. '
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'FIBROMYALGIA '
+        score: 3
+      - diseaseId: 'LYME '
+        score: 2
+      - diseaseId: 'MS '
+        score: 1
+      - diseaseId: 'LUPUS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Do\u011Fa y\xFCr\xFCy\xFC\u015F\xFC veya kamp yapt\u0131n\u0131z
+        m\u0131?"
+      choiceType: 0
+      doctorLine: "Son aylarda kamp, piknik veya ormanl\u0131k alanda zaman ge\xE7irdiniz
+        mi?\n"
+      patientReply: "Evet, ge\xE7en ay kamp yapm\u0131\u015Ft\u0131m.\n"
+      assistantReply: "\xC7evresel \xF6yk\xFC \xF6nemli olabilir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - forest_trip
+      requiredTags:
+      - ring_rash
+      blockedTags: []
+      discoveredSymptoms:
+      - "Ormanl\u0131k alan \xF6yk\xFCs\xFC "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Ge\xE7en ay kamp yapm\u0131\u015F. "
+      diseaseEffects:
+      - diseaseId: 'LYME '
+        score: 6
+      - diseaseId: 'MS '
+        score: 0
+      - diseaseId: 'LUPUS '
+        score: 0
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "N\xF6rolojik Muayene"
+      choiceType: 1
+      doctorLine: "N\xF6rolojik muayene yapaca\u011F\u0131m."
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: 'Sol ayakta hafif duyu kusuru mevcut.
+
+'
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - mild_neuro
+      requiredTags:
+      - paresthesia
+      - blurred_vision
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Hafif duyu kusuru '
+      performedTests:
+      - "N\xF6rolojik muayene "
+      notebookSymptoms: []
+      notebookTests:
+      - Sol ayakta hafif duyu kusuru mevcut.
+      - "Belirgin motor kay\u0131p yok. "
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'MS '
+        score: 4
+      - diseaseId: 'LYME '
+        score: 3
+      - diseaseId: 'LUPUS '
+        score: 0
+      - diseaseId: 'FIBROMYALGIA '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: Beyin MR iste
+      choiceType: 1
+      doctorLine: "N\xF6rolojik yak\u0131nmalar i\xE7in MR isteyelim.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Periventrik\xFCler birka\xE7 k\xFC\xE7\xFCk nonspesifik odak
+        izlendi.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - nonspecific_mri
+      requiredTags:
+      - mild_neuro
+      - blurred_vision
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Nonspesifik MR bulgusu '
+      performedTests:
+      - 'Beyin MR '
+      notebookSymptoms: []
+      notebookTests:
+      - "Periventrik\xFCler birka\xE7 k\xFC\xE7\xFCk nonspesifik odak izlendi. "
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'MS '
+        score: 3
+      - diseaseId: 'LYME '
+        score: 2
+      - diseaseId: 'LUPUS '
+        score: 1
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tam kan say\u0131m\u0131, ESR ve CRP iste"
+      choiceType: 1
+      doctorLine: "Kan de\u011Ferleri ve inflamasyona bakal\u0131m.\n"
+      patientReply: 'Tamam.
+
+'
+      assistantReply: "WBC: 5.200 /\xB5L\nESR: 44 mm/s\nCRP: 11 mg/L"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - esr_high
+      - crp_mild
+      requiredTags:
+      - fatigue
+      - joint_pain
+      blockedTags: []
+      discoveredSymptoms:
+      - "ESR y\xFCksekli\u011Fi "
+      performedTests:
+      - "Tam kan say\u0131m\u0131, ESR, CRP "
+      notebookSymptoms: []
+      notebookTests:
+      - "WBC: 5.200 /\xB5L "
+      - 'ESR: 44 mm/s '
+      - 'CRP: 11 mg/L '
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'LUPUS '
+        score: 2
+      - diseaseId: 'LYME '
+        score: 3
+      - diseaseId: 'MS '
+        score: 0
+      - diseaseId: 'FIBROMYALGIA '
+        score: -2
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "ANA ve otoimm\xFCn panel iste"
+      choiceType: 1
+      doctorLine: "Romatolojik nedenler a\xE7\u0131s\u0131ndan otoimm\xFCn test isteyelim.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "ANA: 1/80 d\xFC\u015F\xFCk pozitif\nanti-dsDNA: Negatif"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - ana_lowpos
+      - dsdna_neg
+      requiredTags:
+      - joint_pain
+      - esr_high
+      blockedTags: []
+      discoveredSymptoms:
+      - "D\xFC\u015F\xFCk pozitif ANA "
+      performedTests:
+      - 'ANA, anti-dsDNA '
+      notebookSymptoms: []
+      notebookTests:
+      - "ANA: 1/80 d\xFC\u015F\xFCk pozitif"
+      - 'anti-dsDNA: Negatif'
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'LUPUS '
+        score: 2
+      - diseaseId: 'LYME '
+        score: 1
+      - diseaseId: 'MS '
+        score: 0
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "BOS incelemesi d\xFC\u015F\xFCn"
+      choiceType: 1
+      doctorLine: "N\xF6rolojik s\xFCre\xE7 i\xE7in BOS incelemesi de\u011Ferlendirelim.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: 'Oligoklonal band: Negatif'
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - no_ocb
+      requiredTags:
+      - nonspecific_mri
+      - mild_neuro
+      blockedTags: []
+      discoveredSymptoms:
+      - 'OCB negatif '
+      performedTests:
+      - 'BOS incelemesi '
+      notebookSymptoms: []
+      notebookTests:
+      - 'Oligoklonal band: Negatif'
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'MS '
+        score: -5
+      - diseaseId: 'LYME '
+        score: 2
+      - diseaseId: 'LUPUS '
+        score: 0
+      - diseaseId: 'FIBROMYALGIA '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: Lyme serolojisi iste
+      choiceType: 1
+      doctorLine: "Kene kaynakl\u0131 enfeksiyon a\xE7\u0131s\u0131ndan seroloji
+        isteyelim.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: 'Borrelia IgM: Pozitif
+
+        Western Blot: Pozitif'
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - lyme_pos
+      requiredTags:
+      - forest_trip
+      - ring_rash
+      - no_ocb
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Lyme serolojisi pozitif '
+      performedTests:
+      - 'Borrelia burgdorferi serolojisi '
+      notebookSymptoms: []
+      notebookTests:
+      - 'Borrelia IgM: Pozitif'
+      - 'Western Blot: Pozitif '
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'LYME '
+        score: 10
+      - diseaseId: 'MS '
+        score: -2
+      - diseaseId: 'LUPUS '
+        score: -1
+      - diseaseId: 'FIBROMYALGIA '
+        score: -2
+      useTestChance: 1
+      baseSuccessChance: 25
+      bonusSpecialization: 0
+      specializationBonus: 0
+      generalistBonus: 10
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tan\u0131 koy"
+      choiceType: 2
+      doctorLine: 
+      patientReply: 
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 0
+      opensDiagnosisPanel: 1
+      reusable: 1
+      hideAfterUse: 0
+      gainedTags: []
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects: []
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+  diagnosisChoices:
+  - diseaseId: FIBROMYALGIA
+    diagnosisName: Fibromiyalji
+    resultText: "Fibromiyalji yorgunluk, yayg\u0131n a\u011Fr\u0131 ve uyku bozuklu\u011Fuyla
+      d\xFC\u015F\xFCn\xFClebilir. Ancak n\xF6rolojik yak\u0131nmalar, halka d\xF6k\xFCnt\xFC
+      \xF6yk\xFCs\xFC ve Lyme serolojisi bu tan\u0131y\u0131 zay\u0131flat\u0131r."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - fatigue
+    - bad_sleep
+    - ring_rash
+    - lyme_pos
+  - diseaseId: MS
+    diagnosisName: Multiple Skleroz
+    resultText: "MS uyu\u015Fma, g\xF6rme bulan\u0131kl\u0131\u011F\u0131 ve MR bulgular\u0131yla
+      d\xFC\u015F\xFCn\xFClebilir. Ancak BOS oligoklonal band negatifli\u011Fi ve
+      Lyme serolojisi MS\u2019i zay\u0131flat\u0131r."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - paresthesia
+    - blurred_vision
+    - no_ocb
+    - lyme_pos
+  - diseaseId: LUPUS
+    diagnosisName: Lupus
+    resultText: "Lupus eklem a\u011Fr\u0131s\u0131 ve ANA pozitifli\u011Fi nedeniyle
+      d\xFC\u015F\xFCn\xFClebilir. Ancak fotosensitivite yoktur ve spesifik otoimm\xFCn
+      testler negatiftir."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - joint_pain
+    - ana_lowpos
+    - no_photo
+  - diseaseId: LYME
+    diagnosisName: "Lyme Hastal\u0131\u011F\u0131"
+    resultText: "Do\u011Fru tan\u0131 Lyme hastal\u0131\u011F\u0131. Halka tarz\u0131
+      d\xF6k\xFCnt\xFC \xF6yk\xFCs\xFC, ormanl\u0131k alan temas\u0131, eklem a\u011Fr\u0131lar\u0131,
+      n\xF6rolojik yak\u0131nmalar ve pozitif Lyme serolojisi tan\u0131y\u0131 destekler."
+    isCorrectDiagnosis: 1
+    recommendedTags:
+    - ring_rash
+    - forest_trip
+    - paresthesia
+    - lyme_pos
+  assistantHints: []
+  variationProfile: {fileID: 0}

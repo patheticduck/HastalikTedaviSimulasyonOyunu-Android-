@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 150d96146a20a2040a472a6f14030ab7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159893
+  packageName: Professor Room
+  packageVersion: 1.3
+  assetPath: Assets/Professor Room/Models/Materials/files.mat
+  uploadId: 790588

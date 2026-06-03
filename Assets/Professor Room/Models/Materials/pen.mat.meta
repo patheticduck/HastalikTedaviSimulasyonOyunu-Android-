@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 884d3873ff78be245b5df1bd79d9c7d9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159893
+  packageName: Professor Room
+  packageVersion: 1.3
+  assetPath: Assets/Professor Room/Models/Materials/pen.mat
+  uploadId: 790588

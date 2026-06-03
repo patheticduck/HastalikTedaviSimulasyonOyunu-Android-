@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34b718b78ce91a4bb6b271059134183, type: 3}
+  m_Name: GastritisBookPage
+  m_EditorClassIdentifier: Assembly-CSharp::DiseaseBookPageData
+  diseaseId: gastritis
+  diseaseName: "GASTR\u0130T"
+  generalInfo: "Gastrit, mide mukozas\u0131n\u0131n iltihaplanmas\u0131yla geli\u015Fen
+    bir sindirim sistemi hastal\u0131\u011F\u0131d\u0131r. Hastalarda mide b\xF6lgesinde
+    a\u011Fr\u0131s\u0131, mide b\xF6lgesinde yanma ve bulant\u0131 g\xF6r\xFClebilir."
+  symptomsInfo: "\xDCst mide b\xF6lgesinde a\u011Fr\u0131 var olmas\u0131, bulant\u0131
+    var olmas\u0131, mide b\xF6lgesinde yanma var olmas\u0131 ve yemeklerden sonra
+    a\u011Fr\u0131 art\u0131yor olmas\u0131 gastritte s\u0131k g\xF6r\xFClen belirtilerdendir.
+    Baz\u0131 hastalarda ara s\u0131ra hafif ek\u015Fi su geliyor olabilir."
+  diagnosisTips: 
+  diseaseImage: {fileID: 21300000, guid: 191aac3ac38f4d343babb8a63a313415, type: 3}
+  extraInfo: 
+  highlightKeywords:
+  - "mide b\xF6lgesinde a\u011Fr\u0131"
+  - "bulant\u0131"
+  - "mide b\xF6lgesinde yanma"
+  - "yemeklerden sonra a\u011Fr\u0131"
+  - "hafif ek\u015Fi su"
+  - mide
+  - sindirim sistemi
+  - "akut kar\u0131n bulgusu"

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 196e5e770d88d6947ab32c0aa16e4560
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159893
+  packageName: Professor Room
+  packageVersion: 1.3
+  assetPath: Assets/Professor Room/Scripts/RotateMoveCamera_InputSystem.cs
+  uploadId: 790588

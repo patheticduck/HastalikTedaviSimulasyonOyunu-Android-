@@ -1,0 +1,51 @@
+{
+  "HAS_FEVER": ["fever", "fever_yes", "fever_mid", "fever_mild", "mild_fever", "low_fever", "low_grade_fever", "high_fever", "measured_high_fever"],
+  "NO_FEVER": ["fever_no", "no_fever"],
+
+  "HAS_COUGH": ["cough", "cough_yes", "dry_cough", "dry_cough_yes", "cough_mild", "mild_cough", "productive_cough"],
+  "HAS_SPUTUM": ["sputum", "morning_sputum", "mucus", "yellow_sputum"],
+
+  "HAS_THROAT_PAIN": ["throat_pain", "mild_sore_throat", "throat_irritation", "mild_throat_irritation", "odynophagia"],
+  "HAS_RUNNY_NOSE": ["runny_nose", "mild_runny_nose", "clear_nasal_discharge"],
+  "HAS_NASAL_CONGESTION": ["nasal_congestion", "nasal_congestion_yes"],
+
+  "HAS_FATIGUE": ["fatigue", "fatigue_yes", "fatigue_present", "fatigue_mild", "mild_fatigue"],
+  "HAS_MYALGIA": ["body_pain", "muscle_ache", "muscle_pain_yes", "mild_myalgia"],
+
+  "HIGH_CRP": ["crp_high", "crp_mild_high", "crp_mildly_elevated"],
+  "NORMAL_CRP": ["crp_norm", "crp_normal"],
+
+  "COVID_POSITIVE": ["covid_test_positive", "covid_positive"],
+  "COVID_NEGATIVE": ["covid_negative"],
+
+  "FLU_NEGATIVE": ["flu_negative"],
+
+  "XRAY_INFILTRATION": ["xray_infiltration", "infiltration"],
+  "NO_XRAY_INFILTRATION": ["xray_no_infiltration", "no_infiltration"],
+
+  "WHEEZING": ["mild_wheezing", "wheezing"],
+  "RHONCHI": ["mild_rhonchi", "diffuse_rhonchi"],
+  "CRACKLES": ["fine_crackles", "rale", "right_lower_crackles"],
+
+  "EPIGASTRIC_PAIN": ["epi_pain", "epigastric_discomfort", "mid_upper"],
+  "REFLUX": ["acid_regurgitation", "heartburn", "mild_reflux", "retrosternal_burning"],
+  "NAUSEA": ["nausea", "nausea_mild", "mild_nausea"],
+  "DIARRHEA": ["diarrhea", "freq_stool", "night_stool"],
+  "BLOATING": ["bloating"],
+
+  "HPYLORI_POSITIVE": ["hp_pos", "hpylori_positive"],
+  "HPYLORI_NEGATIVE": ["hp_neg", "hpylori_negative"],
+
+  "LIPASE_HIGH": ["lipase_high", "amylase_high"],
+  "GALLBLADDER_SIGN": ["murphy_pos", "fat_meal", "fat_food"],
+  "CALPRO_HIGH": ["calpro_high"],
+  "OCCULT_BLOOD_POSITIVE": ["stool_occult_blood_positive"],
+
+  "AUTOIMMUNE_POSITIVE": ["ana_pos", "ana_lowpos", "anti_ds_pos", "c3_low"],
+  "LYME_POSITIVE": ["lyme_pos"],
+  "THYROID_HIGH": ["ft3_high", "ft4_high", "tsh_low"],
+  "TACHYCARDIA": ["tachycardia", "ekg_sinus"],
+  "TREMOR": ["fine_tremor"],
+  "WEIGHT_LOSS": ["weight_loss"],
+  "JOINT_PAIN": ["joint_pain", "focal_joint", "hand_wrist"]
+}

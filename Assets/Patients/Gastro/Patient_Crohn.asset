@@ -1,0 +1,803 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb738e7044b7cc4dae6b9c5d16348a1, type: 3}
+  m_Name: Patient_Crohn
+  m_EditorClassIdentifier: Assembly-CSharp::PatientCaseData
+  caseId: PATIENT_CROHN_01
+  trueDiseaseId: CROHN
+  patientVisualIndex: 6
+  rootNodeId: root
+  startText: "Merhaba doktor, bir s\xFCredir kar\u0131n a\u011Fr\u0131m ve ishalim
+    var. Son g\xFCnlerde biraz artt\u0131."
+  startAssistantText: "\u0130shal ve kar\u0131n a\u011Fr\u0131s\u0131nda s\xFCre,
+    d\u0131\u015Fk\u0131 \xF6zelli\u011Fi, kilo kayb\u0131 ve inflamasyon bulgular\u0131
+    \xF6nemlidir."
+  allNodes:
+  - nodeId: root
+    isHubNode: 1
+    nodeIntroText: 
+    nodeAssistantText: 
+    choices:
+    - choiceText: "\u015Eikayetleriniz ne zamand\u0131r var?"
+      choiceType: 0
+      doctorLine: "Bu \u015Fikayetleriniz ka\xE7 g\xFCnd\xFCr var?\n"
+      patientReply: "Yakla\u015F\u0131k \xFC\xE7 haftad\u0131r var. Son birka\xE7
+        g\xFCnd\xFCr daha belirgin.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - chronic
+      - worse_now
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Uzun s\xFCren ishal "
+      performedTests: []
+      notebookSymptoms:
+      - "Uzun s\xFCren ishal "
+      notebookTests: []
+      notebookNotes:
+      - "S\xFCre akut de\u011Fil. "
+      diseaseEffects:
+      - diseaseId: CROHN
+        score: 3
+      - diseaseId: IBS
+        score: 2
+      - diseaseId: GASTROENTERITIS
+        score: -1
+      - diseaseId: 'FOOD_POISONING '
+        score: -2
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Kar\u0131n a\u011Fr\u0131n\u0131z nerede?"
+      choiceType: 0
+      doctorLine: "A\u011Fr\u0131n\u0131z daha \xE7ok karn\u0131n\u0131z\u0131n neresinde?\n"
+      patientReply: "Daha \xE7ok sa\u011F alt tarafa yak\u0131n oluyor.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - rlq_pain
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Sa\u011F alt kar\u0131n a\u011Fr\u0131s\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "Sa\u011F alt kar\u0131n a\u011Fr\u0131s\u0131 "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'CROHN '
+        score: 4
+      - diseaseId: 'IBS '
+        score: 1
+      - diseaseId: 'GASTROENTERITIS '
+        score: 0
+      - diseaseId: 'FOOD_POISONING '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "\u0130shaliniz nas\u0131l?"
+      choiceType: 0
+      doctorLine: "\u0130shaliniz sulu mu, s\u0131k m\u0131 oluyor?\n"
+      patientReply: "Genelde sulu oluyor. G\xFCnde birka\xE7 kez tuvalete gidiyorum.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - diarrhea
+      - watery_stool
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Sulu ishal '
+      performedTests: []
+      notebookSymptoms:
+      - "\u0130shal mevcut. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'GASTROENTERITIS '
+        score: 2
+      - diseaseId: 'FOOD_POISONING '
+        score: 2
+      - diseaseId: 'CROHN '
+        score: 2
+      - diseaseId: 'IBS '
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: Kusma oldu mu?
+      choiceType: 0
+      doctorLine: "Kusma veya yo\u011Fun bulant\u0131 oldu mu?\n"
+      patientReply: "Bulant\u0131m bazen oluyor ama kusmad\u0131m.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - nausea_mild
+      - no_vomit
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hafif bulant\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "Bulant\u0131 hafif, kusma yok. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'FOOD_POISONING '
+        score: -2
+      - diseaseId: 'GASTROENTERITIS '
+        score: 0
+      - diseaseId: 'CROHN '
+        score: 1
+      - diseaseId: 'IBS '
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Ate\u015Finiz oldu mu?"
+      choiceType: 0
+      doctorLine: "Ate\u015Finiz oldu mu?\n"
+      patientReply: 'Ara ara 37.8 gibi oluyor.
+
+'
+      assistantReply: "Hafif ate\u015F e\u015Flik edebilir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - low_fever
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hafif ate\u015F "
+      performedTests: []
+      notebookSymptoms:
+      - "Hafif ate\u015F mevcut. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'CROHN '
+        score: 2
+      - diseaseId: 'GASTROENTERITIS '
+        score: 1
+      - diseaseId: 'FOOD_POISONING '
+        score: 0
+      - diseaseId: 'IBS '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "D\u0131\u015Fk\u0131da kan veya mukus var m\u0131?"
+      choiceType: 0
+      doctorLine: "D\u0131\u015Fk\u0131n\u0131zda kan veya mukus fark ettiniz mi?\n"
+      patientReply: "Bazen mukus gibi oluyor. Kan \xE7ok belirgin g\xF6rmedim.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - mucus
+      - no_clear_blood
+      requiredTags:
+      - diarrhea
+      blockedTags: []
+      discoveredSymptoms:
+      - "Mukuslu d\u0131\u015Fk\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "Mukuslu d\u0131\u015Fk\u0131 "
+      notebookTests: []
+      notebookNotes:
+      - "Kan belirgin de\u011Fil. "
+      diseaseEffects:
+      - diseaseId: 'CROHN '
+        score: 3
+      - diseaseId: 'IBS '
+        score: 1
+      - diseaseId: 'GASTROENTERITIS '
+        score: 1
+      - diseaseId: 'FOOD_POISONING '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Son g\xFCnlerde \u015F\xFCpheli yemek yediniz mi?"
+      choiceType: 0
+      doctorLine: "Son g\xFCnlerde d\u0131\u015Far\u0131da yedi\u011Finiz \u015F\xFCpheli
+        bir yemek oldu mu?\n"
+      patientReply: "Evet, birka\xE7 g\xFCn \xF6nce d\u0131\u015Far\u0131da tavuk
+        yemi\u015Ftim.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - 'food_risk '
+      requiredTags:
+      - diarrhea
+      blockedTags: []
+      discoveredSymptoms:
+      - "\u015E\xFCpheli yemek \xF6yk\xFCs\xFC "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "G\u0131da \xF6yk\xFCs\xFC mevcut. "
+      diseaseEffects:
+      - diseaseId: 'FOOD_POISONING '
+        score: 3
+      - diseaseId: 'GASTROENTERITIS '
+        score: 1
+      - diseaseId: 'CROHN '
+        score: 0
+      - diseaseId: 'IBS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Ayn\u0131 yemekten yiyenlerde \u015Fikayet oldu mu?"
+      choiceType: 0
+      doctorLine: "Ayn\u0131 yemekten yiyen ba\u015Fka ki\u015Filerde de \u015Fikayet
+        oldu mu?\n"
+      patientReply: "Bildi\u011Fim kadar\u0131yla olmad\u0131.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - no_group_sick
+      requiredTags:
+      - food_risk
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Ortak hastalanma yok '
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - 'Ortak hastalanma yok '
+      diseaseEffects:
+      - diseaseId: 'FOOD_POISONING '
+        score: -3
+      - diseaseId: 'CROHN '
+        score: 1
+      - diseaseId: 'GASTROENTERITIS '
+        score: 0
+      - diseaseId: 'IBS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Kilo kayb\u0131n\u0131z oldu mu?"
+      choiceType: 0
+      doctorLine: "Son haftalarda kilo kayb\u0131n\u0131z oldu mu?\n"
+      patientReply: "Evet, i\u015Ftah\u0131m da azald\u0131. Birka\xE7 kilo verdim.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - weight_loss
+      - low_appetite
+      requiredTags:
+      - chronic
+      - worse_now
+      blockedTags: []
+      discoveredSymptoms:
+      - "Kilo kayb\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "Son haftalarda kilo kayb\u0131 var. "
+      notebookTests: []
+      notebookNotes:
+      - "\u0130\u015Ftah azalm\u0131\u015F. "
+      diseaseEffects:
+      - diseaseId: 'CROHN '
+        score: 5
+      - diseaseId: 'IBS '
+        score: -2
+      - diseaseId: 'GASTROENTERITIS '
+        score: -1
+      - diseaseId: 'FOOD_POISONING '
+        score: -2
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tuvaletten sonra a\u011Fr\u0131 azal\u0131yor mu?"
+      choiceType: 0
+      doctorLine: "Tuvalete \xE7\u0131kt\u0131ktan sonra a\u011Fr\u0131n\u0131z azal\u0131yor
+        mu?\n"
+      patientReply: "Bazen azal\u0131yor ama tamamen ge\xE7miyor.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - partial_relief
+      - not_full_relief
+      requiredTags:
+      - rlq_pain
+      - diarrhea
+      blockedTags: []
+      discoveredSymptoms:
+      - "D\u0131\u015Fk\u0131lama sonras\u0131 k\u0131smi rahatlama "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "D\u0131\u015Fk\u0131lama sonras\u0131 k\u0131smi rahatlama "
+      diseaseEffects:
+      - diseaseId: 'IBS '
+        score: 1
+      - diseaseId: 'CROHN '
+        score: 2
+      - diseaseId: 'GASTROENTERITIS '
+        score: 0
+      - diseaseId: 'FOOD_POISONING '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Stresle art\u0131yor mu?"
+      choiceType: 0
+      doctorLine: "\u015Eikayetleriniz stresli d\xF6nemlerde art\u0131yor mu?\n"
+      patientReply: "Stresliyken daha \xE7ok fark ediyorum ama tek sebep gibi de\u011Fil.\n"
+      assistantReply: "Stres etkisi olabilir ama tek ba\u015F\u0131na yeterli de\u011Fildir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - stress_link
+      - not_only_stress
+      requiredTags:
+      - partial_relief
+      - chronic
+      blockedTags: []
+      discoveredSymptoms:
+      - "Stresle art\u0131\u015F "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Stres etkisi var ama bask\u0131n de\u011Fil. "
+      diseaseEffects:
+      - diseaseId: 'IBS '
+        score: 2
+      - diseaseId: 'CROHN '
+        score: 1
+      - diseaseId: 'GASTROENTERITIS '
+        score: 0
+      - diseaseId: 'FOOD_POISONING '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Gece tuvalete kalk\u0131yor musunuz?"
+      choiceType: 0
+      doctorLine: "Gece ishal nedeniyle tuvalete kalk\u0131yor musunuz?\n"
+      patientReply: "Evet, birka\xE7 kez gece kalkt\u0131m.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - night_stool
+      requiredTags:
+      - diarrhea
+      - weight_loss
+      blockedTags: []
+      discoveredSymptoms:
+      - "Gece d\u0131\u015Fk\u0131lama "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Gece ishal nedeniyle uyan\u0131yor. "
+      diseaseEffects:
+      - diseaseId: 'CROHN '
+        score: 5
+      - diseaseId: 'IBS '
+        score: -3
+      - diseaseId: 'GASTROENTERITIS '
+        score: 1
+      - diseaseId: 'FOOD_POISONING '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Kar\u0131n muayenesi yap"
+      choiceType: 1
+      doctorLine: "Kar\u0131n muayenesi yapaca\u011F\u0131m.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Sa\u011F alt kadranda hassasiyet var. Defans yok.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - rlq_tender
+      - no_guard
+      requiredTags:
+      - rlq_pain
+      - chronic
+      blockedTags: []
+      discoveredSymptoms:
+      - "Sa\u011F alt hassasiyet "
+      performedTests:
+      - "Kar\u0131n muayenesi "
+      notebookSymptoms: []
+      notebookTests:
+      - "Sa\u011F alt kadranda hassasiyet var. "
+      - Defans yok.
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'CROHN '
+        score: 4
+      - diseaseId: 'GASTROENTERITIS '
+        score: 1
+      - diseaseId: 'IBS '
+        score: 0
+      - diseaseId: 'FOOD_POISONING '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tam kan say\u0131m\u0131 ve CRP iste"
+      choiceType: 1
+      doctorLine: "Kan de\u011Ferlerinize bakal\u0131m.\n"
+      patientReply: 'Tamam.
+
+'
+      assistantReply: "WBC: 10.900 /\xB5L\nCRP: 38 mg/L\nHb: 11.7 g/dL"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - crp_high
+      - wbc_mild
+      - hb_low
+      requiredTags:
+      - low_fever
+      - rlq_tender
+      blockedTags: []
+      discoveredSymptoms:
+      - "CRP y\xFCksekli\u011Fi "
+      performedTests:
+      - "Tam kan say\u0131m\u0131 ve CRP "
+      notebookSymptoms: []
+      notebookTests:
+      - "WBC: 10.900 /\xB5L"
+      - 'CRP: 38 mg/L '
+      - 'Hb: 11.7 g/dL '
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: CROHN
+        score: 5
+      - diseaseId: 'GASTROENTERITIS '
+        score: 2
+      - diseaseId: 'FOOD_POISONING '
+        score: 1
+      - diseaseId: 'IBS '
+        score: -3
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "D\u0131\u015Fk\u0131 testi iste"
+      choiceType: 1
+      doctorLine: "D\u0131\u015Fk\u0131 incelemesi isteyelim.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "D\u0131\u015Fk\u0131 k\xFClt\xFCr\xFC: Negatif\nKalprotektin:
+        420 \xB5g/g"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - stool_culture_neg
+      - calpro_high
+      requiredTags:
+      - diarrhea
+      - mucus
+      - crp_high
+      blockedTags: []
+      discoveredSymptoms:
+      - "Kalprotektin y\xFCksek "
+      performedTests:
+      - "D\u0131\u015Fk\u0131 incelemesi "
+      notebookSymptoms: []
+      notebookTests:
+      - "D\u0131\u015Fk\u0131 k\xFClt\xFCr\xFC: Negatif"
+      - "Kalprotektin: 420 \xB5g/g "
+      notebookNotes:
+      - "Kalprotektin y\xFCksek. "
+      diseaseEffects:
+      - diseaseId: CROHN
+        score: 6
+      - diseaseId: GASTROENTERITIS
+        score: -1
+      - diseaseId: FOOD_POISONING
+        score: -2
+      - diseaseId: IBS
+        score: -4
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: Gastroenterit paneli iste
+      choiceType: 1
+      doctorLine: "Enfeksiyon etkenleri i\xE7in h\u0131zl\u0131 panel isteyelim.\n"
+      patientReply: 'Tamam.
+
+'
+      assistantReply: "Salmonella: Negatif\nCampylobacter: Negatif\nNorovir\xFCs:
+        Negatif"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - 'infection_panel_neg '
+      requiredTags:
+      - food_risk
+      - no_group_sick
+      - stool_culture_neg
+      blockedTags: []
+      discoveredSymptoms:
+      - 'Enfeksiyon paneli negatif '
+      performedTests:
+      - 'Gastroenterit etken paneli '
+      notebookSymptoms: []
+      notebookTests:
+      - 'Salmonella: Negatif'
+      - 'Campylobacter: Negatif '
+      - "Norovir\xFCs: Negatif "
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'GASTROENTERITIS '
+        score: -3
+      - diseaseId: 'FOOD_POISONING '
+        score: -3
+      - diseaseId: 'CROHN '
+        score: 2
+      - diseaseId: 'IBS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: Kolonoskopi iste
+      choiceType: 1
+      doctorLine: "Ba\u011F\u0131rsak i\xE7 y\xFCzeyini de\u011Ferlendirmek i\xE7in
+        kolonoskopi isteyelim.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Terminal ileumda aft\xF6z \xFClserler ve segmental tutulum
+        g\xF6r\xFCld\xFC.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - ileum_ulcer
+      - skip_lesion
+      requiredTags:
+      - calpro_high
+      - weight_loss
+      - night_stool
+      blockedTags: []
+      discoveredSymptoms:
+      - "\u0130leumda \xFClser alanlar\u0131 "
+      performedTests:
+      - Kolonoskopi
+      notebookSymptoms: []
+      notebookTests:
+      - "Terminal ileumda aft\xF6z \xFClserler"
+      - "segmental tutulum g\xF6r\xFCld\xFC. "
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'CROHN '
+        score: 8
+      - diseaseId: 'IBS '
+        score: -4
+      - diseaseId: 'GASTROENTERITIS '
+        score: -2
+      - diseaseId: 'FOOD_POISONING '
+        score: -2
+      useTestChance: 1
+      baseSuccessChance: 25
+      bonusSpecialization: 2
+      specializationBonus: 50
+      generalistBonus: 10
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tan\u0131 koy"
+      choiceType: 2
+      doctorLine: 
+      patientReply: 
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 0
+      opensDiagnosisPanel: 1
+      reusable: 1
+      hideAfterUse: 0
+      gainedTags: []
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects: []
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+  diagnosisChoices:
+  - diseaseId: GASTROENTERITIS
+    diagnosisName: Gastroenterit
+    resultText: "Gastroenterit ishal ve kar\u0131n a\u011Fr\u0131s\u0131yla d\xFC\u015F\xFCn\xFClebilir.
+      Ancak uzun s\xFCre, kilo kayb\u0131, y\xFCksek kalprotektin ve negatif enfeksiyon
+      paneli Crohn\u2019u destekler.\n"
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - diarrhea
+    - crp_high
+    - infection_panel_neg
+  - diseaseId: CROHN
+    diagnosisName: "Crohn Hastal\u0131\u011F\u0131"
+    resultText: "Do\u011Fru tan\u0131 Crohn. Uzun s\xFCren ishal, sa\u011F alt kar\u0131n
+      a\u011Fr\u0131s\u0131, kilo kayb\u0131, gece d\u0131\u015Fk\u0131lama, y\xFCksek
+      CRP/kalprotektin ve kolonoskopi bulgular\u0131 tan\u0131y\u0131 destekler."
+    isCorrectDiagnosis: 1
+    recommendedTags:
+    - chronic
+    - rlq_pain
+    - weight_loss
+    - night_stool
+    - crp_high
+    - calpro_high
+    - ileum_ulcer
+  - diseaseId: FOOD_POISONING
+    diagnosisName: "G\u0131da Zehirlenmesi"
+    resultText: "G\u0131da zehirlenmesi \u015F\xFCpheli yemek sonras\u0131 ani ba\u015Flar.
+      Bu vakada s\xFCre uzun, ortak hastalanma yok ve enfeksiyon testleri negatiftir."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - food_risk
+    - no_group_sick
+    - infection_panel_neg
+  - diseaseId: IBS
+    diagnosisName: "IBS (Huzursuz Ba\u011F\u0131rsak)"
+    resultText: "IBS stresle artabilir ve d\u0131\u015Fk\u0131lama sonras\u0131 rahatlama
+      yapabilir. Ancak gece d\u0131\u015Fk\u0131lama, kilo kayb\u0131, CRP ve kalprotektin
+      y\xFCksekli\u011Fi IBS i\xE7in beklenmez."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - stress_link
+    - night_stool
+    - calpro_high
+  assistantHints: []
+  variationProfile: {fileID: 0}

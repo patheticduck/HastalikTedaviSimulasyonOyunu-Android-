@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e75c45052bed688408cd901e1dd29b29
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159893
+  packageName: Professor Room
+  packageVersion: 1.3
+  assetPath: Assets/Professor Room/Prefabs/Notebook.prefab
+  uploadId: 790588

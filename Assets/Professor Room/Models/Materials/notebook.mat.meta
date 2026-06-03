@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c560475407cb3a840bec614c30e224c1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159893
+  packageName: Professor Room
+  packageVersion: 1.3
+  assetPath: Assets/Professor Room/Models/Materials/notebook.mat
+  uploadId: 790588

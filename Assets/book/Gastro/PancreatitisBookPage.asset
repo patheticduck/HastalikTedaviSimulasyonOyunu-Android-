@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34b718b78ce91a4bb6b271059134183, type: 3}
+  m_Name: PancreatitisBookPage
+  m_EditorClassIdentifier: Assembly-CSharp::DiseaseBookPageData
+  diseaseId: pancreatitis
+  diseaseName: "PANKREAT\u0130T"
+  generalInfo: "Pankreatit, pankreas\u0131n iltihaplanmas\u0131yla geli\u015Fen ciddi
+    bir sindirim sistemi hastal\u0131\u011F\u0131d\u0131r. Hastalarda \xFCst kar\u0131n
+    a\u011Fr\u0131s\u0131, bulant\u0131 ve kusma g\xF6r\xFClebilir."
+  symptomsInfo: "\xDCst kar\u0131n a\u011Fr\u0131s\u0131 var olmas\u0131, bulant\u0131
+    ve kusma, s\u0131rta vuran a\u011Fr\u0131 ve hafif ate\u015F var olmas\u0131
+    pankreatitte s\u0131k g\xF6r\xFClen belirtilerdendir. A\u011Fr\u0131 orta-\u015Fiddetli
+    olabilir."
+  diagnosisTips: 
+  diseaseImage: {fileID: 21300000, guid: 58a7dae3fba1ab9488087258e1ad3e56, type: 3}
+  extraInfo: 
+  highlightKeywords:
+  - "\xDCst kar\u0131n a\u011Fr\u0131s\u0131"
+  - "bulant\u0131"
+  - kusma
+  - "a\u011Fr\u0131"
+  - "hafif ate\u015F"
+  - "orta-\u015Fiddetli"
+  - sindirim sistemi
+  - "ya\u011Fl\u0131 yemek"
+  - alkol
+  - epigastrik

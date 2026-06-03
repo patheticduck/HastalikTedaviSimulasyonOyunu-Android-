@@ -1,0 +1,687 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb738e7044b7cc4dae6b9c5d16348a1, type: 3}
+  m_Name: Patient_Cold
+  m_EditorClassIdentifier: Assembly-CSharp::PatientCaseData
+  caseId: DAY1_PATIENT2_COLD
+  trueDiseaseId: COLD
+  patientVisualIndex: 1
+  rootNodeId: root
+  startText: "Merhaba doktor, birka\xE7 g\xFCnd\xFCr burnum ak\u0131yor ve bo\u011Faz\u0131m
+    hafif rahats\u0131z ediyor."
+  startAssistantText: 
+  allNodes:
+  - nodeId: root
+    isHubNode: 1
+    nodeIntroText: 
+    nodeAssistantText: 
+    choices:
+    - choiceText: "Ate\u015Finiz oldu mu?"
+      choiceType: 0
+      doctorLine: "Ate\u015Finiz oldu mu?"
+      patientReply: "\xC7ok y\xFCksek olmad\u0131 doktor, sadece hafif bir s\u0131cakl\u0131k
+        hissediyorum."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - fever_mild
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - mild_fever
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Hafif ate\u015F hissi."
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 2
+      - diseaseId: GRIP
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "\u015Eikayetleriniz ne zaman ba\u015Flad\u0131?"
+      choiceType: 0
+      doctorLine: "\u015Eikayetleriniz ne zaman ba\u015Flad\u0131?"
+      patientReply: "Yakla\u015F\u0131k iki \xFC\xE7 g\xFCnd\xFCr var, yava\u015F
+        yava\u015F ba\u015Flad\u0131."
+      assistantReply: "Yava\u015F ba\u015Flang\u0131\xE7 so\u011Fuk alg\u0131nl\u0131\u011F\u0131
+        ile daha uyumlu olabilir."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - gradual_onset
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - gradual_onset_symptom
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "\u015Eikayetler yava\u015F ba\u015Flang\u0131\xE7l\u0131"
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 2
+      - diseaseId: GRIP
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: Halsizlik hissediyor musunuz?
+      choiceType: 0
+      doctorLine: Halsizlik hissediyor musunuz?
+      patientReply: "Biraz halsizim ama \xE7ok a\u011F\u0131r de\u011Fil."
+      assistantReply: "Hafif halsizlik viral \xFCst solunum yolu enfeksiyonlar\u0131nda
+        s\u0131k g\xF6r\xFCl\xFCr."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - fatigue_mild
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - mild_fatigue
+      performedTests: []
+      notebookSymptoms:
+      - Hafif halsizlik mevcut
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 1
+      - diseaseId: GRIP
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Kas a\u011Fr\u0131n\u0131z var m\u0131?"
+      choiceType: 0
+      doctorLine: "Kas a\u011Fr\u0131n\u0131z var m\u0131?"
+      patientReply: "\xC7ok belirgin de\u011Fil doktor, pek yok gibi."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - muscle_pain_no
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Belirgin kas a\u011Fr\u0131s\u0131 yok"
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 1
+      - diseaseId: GRIP
+        score: -2
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Bo\u011Faz\u0131n\u0131z a\u011Fr\u0131yor mu?"
+      choiceType: 0
+      doctorLine: "Bo\u011Faz\u0131n\u0131z a\u011Fr\u0131yor mu?"
+      patientReply: "Evet, hafif yanma ve tahri\u015F gibi var ama \xE7ok \u015Fiddetli
+        de\u011Fil."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - throat_irritation_yes
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - throat_irritation
+      performedTests: []
+      notebookSymptoms:
+      - "Bo\u011Fazda hafif yanma/tahri\u015F \u015Fikayeti"
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 2
+      - diseaseId: PHARYNGITIS
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "\xD6ks\xFCr\xFCyor musunuz?"
+      choiceType: 0
+      doctorLine: "\xD6ks\xFCr\xFCyor musunuz?"
+      patientReply: "Biraz \xF6ks\xFCr\xFCyorum ama \xE7ok s\u0131k de\u011Fil."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - cough_mild
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - mild_cough
+      performedTests: []
+      notebookSymptoms:
+      - "Hafif \xF6ks\xFCr\xFCk mevcut"
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 1
+      - diseaseId: BRONCHITIS
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Burun ak\u0131nt\u0131n\u0131z var m\u0131?"
+      choiceType: 0
+      doctorLine: "Burun ak\u0131nt\u0131n\u0131z var m\u0131?"
+      patientReply: "Evet doktor, en \xE7ok o rahats\u0131z ediyor zaten. S\xFCrekli
+        ak\u0131yor ve t\u0131kal\u0131 gibi."
+      assistantReply: "Burun ak\u0131nt\u0131s\u0131 ve t\u0131kan\u0131kl\u0131k
+        so\u011Fuk alg\u0131nl\u0131\u011F\u0131n\u0131 g\xFC\xE7l\xFC destekliyor."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - runny_nose_yes
+      - nasal_congestion_yes
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - runny_nose
+      - nasal_congestion
+      performedTests: []
+      notebookSymptoms:
+      - "Belirgin burun ak\u0131nt\u0131s\u0131 var"
+      - "Burun t\u0131kan\u0131kl\u0131\u011F\u0131 var"
+      notebookTests: []
+      notebookNotes:
+      - "Ana yak\u0131nma burun ak\u0131nt\u0131s\u0131"
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 3
+      - diseaseId: GRIP
+        score: 0
+      - diseaseId: PHARYNGITIS
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Hap\u015F\u0131r\u0131\u011F\u0131n\u0131z var m\u0131?"
+      choiceType: 0
+      doctorLine: "Hap\u015F\u0131r\u0131\u011F\u0131n\u0131z var m\u0131?"
+      patientReply: "Evet, g\xFCn i\xE7inde s\u0131k s\u0131k hap\u015F\u0131r\u0131yorum."
+      assistantReply: "S\u0131k hap\u015F\u0131r\u0131k da so\u011Fuk alg\u0131nl\u0131\u011F\u0131
+        lehine bir bulgu olabilir."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - sneezing_yes
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - sneezing
+      performedTests: []
+      notebookSymptoms:
+      - "S\u0131k hap\u015F\u0131r\u0131k mevcut"
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 2
+      - diseaseId: GRIP
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Ate\u015Finiz ka\xE7 dereceye kadar \xE7\u0131kt\u0131?"
+      choiceType: 0
+      doctorLine: "Ate\u015Finiz ka\xE7 dereceye kadar \xE7\u0131kt\u0131?"
+      patientReply: "\xD6l\xE7t\xFC\u011F\xFCmde, 37 bu\xE7uk civar\u0131yd\u0131.
+        \xC7ok y\xFCkselmedi."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - low_grade_fever
+      requiredTags:
+      - fever_mild
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 2
+      - diseaseId: GRIP
+        score: -2
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Burun ak\u0131nt\u0131n\u0131z \u015Feffaf m\u0131?"
+      choiceType: 0
+      doctorLine: "Burun ak\u0131nt\u0131n\u0131z \u015Feffaf m\u0131?"
+      patientReply: "Evet, daha \xE7ok su gibi geliyor."
+      assistantReply: "\u015Eeffaf ak\u0131nt\u0131 \xFCst solunum yolu viral enfeksiyonlar\u0131yla
+        uyumlu olabilir."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - clear_nasal_discharge
+      requiredTags:
+      - runny_nose_yes
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Burun ak\u0131nt\u0131s\u0131 \u015Feffaf"
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 2
+      - diseaseId: SINUSITIS
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Bo\u011Fazdaki rahats\u0131zl\u0131k yutkunurken \xE7ok art\u0131yor
+        mu?"
+      choiceType: 0
+      doctorLine: "Bo\u011Fazdaki rahats\u0131zl\u0131k yutkunurken \xE7ok art\u0131yor
+        mu?"
+      patientReply: "Hay\u0131r doktor, \xE7ok keskin bir a\u011Fr\u0131 de\u011Fil.
+        Daha \xE7ok hafif yanma gibi."
+      assistantReply: "\u015Eiddetli yutma a\u011Fr\u0131s\u0131 olmamas\u0131 farenjiti
+        geri plana atabilir."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - pain_swallow_no
+      requiredTags:
+      - throat_irritation_yes
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Yutkunurken belirgin artan a\u011Fr\u0131 yok"
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 1
+      - diseaseId: PHARYNGITIS
+        score: -2
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "\xD6ks\xFCr\xFC\u011F\xFCn\xFCz kuru mu"
+      choiceType: 0
+      doctorLine: "\xD6ks\xFCr\xFC\u011F\xFCn\xFCz kuru mu"
+      patientReply: "Evet, daha \xE7ok kuru gibi."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - dry_cough_yes
+      requiredTags:
+      - cough_mild
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms:
+      - "Kuru \xF6ks\xFCr\xFCk"
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 1
+      - diseaseId: BRONCHITIS
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "G\xFCnl\xFCk hayatta a\u011F\u0131r k\u0131rg\u0131nl\u0131k var
+        m\u0131"
+      choiceType: 0
+      doctorLine: "G\xFCnl\xFCk hayatta a\u011F\u0131r k\u0131rg\u0131nl\u0131k var
+        m\u0131"
+      patientReply: "Hay\u0131r, yataktan kald\u0131rmayacak kadar a\u011F\u0131r
+        de\u011Fil."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - severe_fatigue_no
+      requiredTags:
+      - fatigue_mild
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms:
+      - "A\u011F\u0131r k\u0131rg\u0131nl\u0131k yok"
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 2
+      - diseaseId: GRIP
+        score: -2
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Ate\u015F \xF6l\xE7\xFCm\xFC yap"
+      choiceType: 1
+      doctorLine: "Ate\u015F \xF6l\xE7\xFCm\xFC yapal\u0131m."
+      patientReply: Tamam doktor.
+      assistantReply: "Sonu\xE7 {fever_cold} Derece."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - temp_checked
+      - temp_low
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests:
+      - temperature_measurement
+      notebookSymptoms: []
+      notebookTests:
+      - "Ate\u015F \xF6l\xE7\xFCm\xFC yap\u0131ld\u0131"
+      notebookNotes:
+      - "\xD6l\xE7\xFClen ate\u015F: {fever_cold}\xB0C"
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 2
+      - diseaseId: GRIP
+        score: -2
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Bo\u011Faz muayenesi yap"
+      choiceType: 1
+      doctorLine: "Bo\u011Faz\u0131n\u0131za bakal\u0131m."
+      patientReply: Tabii doktor.
+      assistantReply: "Belirgin iltihap ya da bademciklerde yo\u011Fun enfeksiyon
+        g\xF6r\xFCnm\xFCyor."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - throat_exam_done
+      - throat_mild_redness
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests:
+      - throat_exam
+      notebookSymptoms: []
+      notebookTests:
+      - "Bo\u011Faz muayenesi yap\u0131ld\u0131"
+      notebookNotes:
+      - "Bo\u011Fazda hafif k\u0131zar\u0131kl\u0131k var, belirgin iltihap yok"
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 2
+      - diseaseId: PHARYNGITIS
+        score: -1
+      - diseaseId: TONSILLITIS
+        score: -2
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: Solunum seslerini dinle
+      choiceType: 1
+      doctorLine: "S\u0131rt\u0131n\u0131z a\xE7\u0131n."
+      patientReply: Tamam doktor.
+      assistantReply: "Akci\u011Fer ve solunum seslerinde belirgin ek bulgu yok."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - lung_exam_done
+      - lungs_clear
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests:
+      - lung_auscultation
+      notebookSymptoms: []
+      notebookTests:
+      - Solunum sesleri dinlendi
+      notebookNotes:
+      - "Solunum sesleri do\u011Fal"
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 1
+      - diseaseId: BRONCHITIS
+        score: -2
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: Burun muayenesi yap
+      choiceType: 1
+      doctorLine: "Burun ve \xFCst solunum yolunu muayene edelim."
+      patientReply: Tamam doktor.
+      assistantReply: "Burun mukozas\u0131nda irritasyon ve ak\u0131nt\u0131 tabloyu
+        destekliyor."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - nasal_exam_done
+      - nasal_irritation_seen
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests:
+      - nasal_exam
+      notebookSymptoms: []
+      notebookTests:
+      - "Burun muayenesi yap\u0131ld\u0131"
+      notebookNotes:
+      - "Burun mukozas\u0131nda irritasyon ve ak\u0131nt\u0131 g\xF6zlendi"
+      diseaseEffects:
+      - diseaseId: COLD
+        score: 2
+      - diseaseId: SINUSITIS
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tan\u0131 koy"
+      choiceType: 2
+      doctorLine: 
+      patientReply: 
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 0
+      opensDiagnosisPanel: 1
+      reusable: 1
+      hideAfterUse: 0
+      gainedTags: []
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects: []
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+  diagnosisChoices:
+  - diseaseId: COLD
+    diagnosisName: "So\u011Fuk Alg\u0131nl\u0131\u011F\u0131"
+    resultText: "Belirtileriniz so\u011Fuk alg\u0131nl\u0131\u011F\u0131 ile uyumlu
+      g\xF6r\xFCn\xFCyor. Burun ak\u0131nt\u0131s\u0131, hafif bo\u011Faz tahri\u015Fi,
+      d\xFC\u015F\xFCk dereceli ate\u015F ve hafif halsizlik bu tan\u0131y\u0131
+      destekliyor. Dinlenme, s\u0131v\u0131 al\u0131m\u0131 ve semptomlar\u0131 hafifletmeye
+      y\xF6nelik tedavi \xF6nerilir."
+    isCorrectDiagnosis: 1
+    recommendedTags:
+    - runny_nose_yes
+    - nasal_congestion_yes
+    - low_grade_fever
+    - muscle_pain_no
+    - throat_irritation_yes
+    - sneezing_yes
+    - gradual_onset
+  - diseaseId: GRIP
+    diagnosisName: Grip
+    resultText: "Bu tabloda grip i\xE7in baz\u0131 ortak belirtiler bulunsa da y\xFCksek
+      ate\u015F, belirgin kas a\u011Fr\u0131s\u0131 ve a\u011F\u0131r k\u0131rg\u0131nl\u0131k
+      yeterince desteklenmiyor."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - high_fever
+    - muscle_pain_yes
+    - acute_onset
+    - severe_fatigue
+  - diseaseId: PHARYNGITIS
+    diagnosisName: Farenjit
+    resultText: "Bo\u011Fazda hafif rahats\u0131zl\u0131k olsa da belirgin yutma
+      a\u011Fr\u0131s\u0131 ve yo\u011Fun bo\u011Faz enfeksiyonu bulgular\u0131 \xF6n
+      planda de\u011Fil."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - throat_pain_yes
+    - pain_swallow_yes
+    - inflamed_throat
+  assistantHints: []
+  variationProfile: {fileID: 11400000, guid: 2fcb7aecba23e9848a9238593bb8760e, type: 2}

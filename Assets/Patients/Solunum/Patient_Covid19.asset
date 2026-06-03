@@ -1,0 +1,798 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb738e7044b7cc4dae6b9c5d16348a1, type: 3}
+  m_Name: Patient_Covid19
+  m_EditorClassIdentifier: Assembly-CSharp::PatientCaseData
+  caseId: PATIENT_COVID_01
+  trueDiseaseId: COVID19
+  patientVisualIndex: 2
+  rootNodeId: root
+  startText: "Merhaba doktor, birka\xE7 g\xFCnd\xFCr burnum t\u0131kal\u0131, biraz
+    \xF6ks\xFCr\xFCyorum ve halsizim."
+  startAssistantText: "\xDCst solunum belirtileri birbirine benzeyebilir. \u015Eikayet
+    s\xFCresi, ate\u015F, temas \xF6yk\xFCs\xFC ve testler \xF6nemli olabilir."
+  allNodes:
+  - nodeId: root
+    isHubNode: 1
+    nodeIntroText: 
+    nodeAssistantText: 
+    choices:
+    - choiceText: "\u015Eikayetleriniz ne zaman ba\u015Flad\u0131?"
+      choiceType: 0
+      doctorLine: "\u015Eikayetleriniz ka\xE7 g\xFCnd\xFCr var?\n"
+      patientReply: "Yakla\u015F\u0131k \xFC\xE7 g\xFCnd\xFCr var. \u0130lk g\xFCn
+        hafifti, sonra biraz artt\u0131."
+      assistantReply: "S\xFCre k\u0131sa. Akut \xFCst solunum tablosu olabilir."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - acute_onset
+      - three_days_symptoms
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "K\u0131sa s\xFCreli \xFCst solunum \u015Fikayeti"
+      performedTests: []
+      notebookSymptoms:
+      - "Akut ba\u015Flang\u0131\xE7 mevcut."
+      notebookTests: []
+      notebookNotes:
+      - "\u015Eikayetler 3 g\xFCnd\xFCr var."
+      diseaseEffects:
+      - diseaseId: COVID19
+        score: 2
+      - diseaseId: COMMON_COLD
+        score: 2
+      - diseaseId: SINUSITIS
+        score: 0
+      - diseaseId: ALLERGIC_RHINITIS
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Ate\u015Finiz oldu mu?"
+      choiceType: 0
+      doctorLine: "Ate\u015Finiz oldu mu?\n"
+      patientReply: "\xC7ok y\xFCksek de\u011Fil. D\xFCn 37.8 civar\u0131 \xF6l\xE7t\xFCm."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - low_grade_fever
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hafif ate\u015F "
+      performedTests: []
+      notebookSymptoms:
+      - "Hafif ate\u015F "
+      notebookTests: []
+      notebookNotes:
+      - "Ate\u015F 37.8\xB0C civar\u0131nda."
+      diseaseEffects:
+      - diseaseId: 'COVID19 '
+        score: 2
+      - diseaseId: 'COMMON_COLD '
+        score: 1
+      - diseaseId: 'SINUSITIS '
+        score: 1
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: -2
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Burnunuz ak\u0131yor mu, t\u0131kal\u0131 m\u0131?"
+      choiceType: 0
+      doctorLine: "Burun ak\u0131nt\u0131n\u0131z veya t\u0131kan\u0131kl\u0131\u011F\u0131n\u0131z
+        var m\u0131?"
+      patientReply: "Evet, burnum t\u0131kal\u0131. Ak\u0131nt\u0131 da var ama \xE7ok
+        koyu de\u011Fil."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - nasal_congestion
+      - watery_discharge
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Burun t\u0131kan\u0131kl\u0131\u011F\u0131 "
+      performedTests: []
+      notebookSymptoms:
+      - "Burun t\u0131kan\u0131kl\u0131\u011F\u0131 "
+      - "hafif ak\u0131nt\u0131 var."
+      notebookTests: []
+      notebookNotes:
+      - "\xDCst solunum belirtisi mevcut. "
+      diseaseEffects:
+      - diseaseId: 'COMMON_COLD '
+        score: 2
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: 2
+      - diseaseId: 'COVID19 '
+        score: 1
+      - diseaseId: 'SINUSITIS '
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Hap\u015F\u0131r\u0131k veya ka\u015F\u0131nt\u0131 var m\u0131?"
+      choiceType: 0
+      doctorLine: "Hap\u015F\u0131r\u0131k, burun ya da g\xF6z ka\u015F\u0131nt\u0131s\u0131
+        oluyor mu?"
+      patientReply: "Biraz hap\u015F\u0131r\u0131yorum ama ka\u015F\u0131nt\u0131
+        pek yok."
+      assistantReply: "Ka\u015F\u0131nt\u0131n\u0131n belirgin olmamas\u0131 alerji
+        a\xE7\u0131s\u0131ndan \xF6nemlidir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - sneezing_mild
+      - itching_absent
+      requiredTags:
+      - nasal_congestion
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hafif hap\u015F\u0131r\u0131k "
+      performedTests: []
+      notebookSymptoms:
+      - "Hafif hap\u015F\u0131r\u0131k "
+      - "ka\u015F\u0131nt\u0131 yok."
+      notebookTests: []
+      notebookNotes:
+      - "Alerji bulgusu zay\u0131f. "
+      diseaseEffects:
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: -2
+      - diseaseId: 'COMMON_COLD '
+        score: 1
+      - diseaseId: 'COVID19 '
+        score: 1
+      - diseaseId: 'SINUSITIS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "\xD6ks\xFCr\xFC\u011F\xFCn\xFCz var m\u0131?"
+      choiceType: 0
+      doctorLine: "\xD6ks\xFCr\xFC\u011F\xFCn\xFCz var m\u0131? Kuru mu balgaml\u0131
+        m\u0131?\n"
+      patientReply: "Var, daha \xE7ok kuru gibi. \xC7ok balgam \xE7\u0131karm\u0131yorum."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - dry_cough
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Kuru \xF6ks\xFCr\xFCk "
+      performedTests: []
+      notebookSymptoms:
+      - "Kuru \xF6ks\xFCr\xFCk var."
+      notebookTests: []
+      notebookNotes:
+      - "Balgam belirgin de\u011Fil. "
+      diseaseEffects:
+      - diseaseId: 'COVID19 '
+        score: 3
+      - diseaseId: 'COMMON_COLD '
+        score: 1
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: 0
+      - diseaseId: 'SINUSITIS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Bo\u011Faz a\u011Fr\u0131n\u0131z var m\u0131?"
+      choiceType: 0
+      doctorLine: "Bo\u011Faz a\u011Fr\u0131n\u0131z veya yanma hissiniz var m\u0131?\n"
+      patientReply: "Hafif bir yanma var ama \xE7ok \u015Fiddetli de\u011Fil.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - mild_sore_throat
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hafif bo\u011Faz yanmas\u0131 "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Hafif bo\u011Faz yanmas\u0131 var. "
+      diseaseEffects:
+      - diseaseId: 'COMMON_COLD '
+        score: 1
+      - diseaseId: 'COVID19 '
+        score: 1
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: 0
+      - diseaseId: 'SINUSITIS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Y\xFCz\xFCn\xFCzde bas\u0131n\xE7 veya a\u011Fr\u0131 var m\u0131?"
+      choiceType: 0
+      doctorLine: "Al\u0131n, yanak veya g\xF6z \xE7evresinde a\u011Fr\u0131/bas\u0131n\xE7
+        oluyor mu?\n"
+      patientReply: "Burnum t\u0131kal\u0131yken biraz bas\u0131n\xE7 oluyor ama
+        \xE7ok belirgin de\u011Fil."
+      assistantReply: "Y\xFCz bas\u0131nc\u0131 sin\xFCsleri d\xFC\u015F\xFCnd\xFCrebilir
+        ama \u015Fiddeti \xF6nemli."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - mild_facial_pressure
+      requiredTags:
+      - nasal_congestion
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hafif y\xFCz bas\u0131nc\u0131"
+      performedTests: []
+      notebookSymptoms:
+      - "Hafif y\xFCz bas\u0131nc\u0131 var. "
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'SINUSITIS '
+        score: 2
+      - diseaseId: 'COMMON_COLD '
+        score: 1
+      - diseaseId: 'COVID19 '
+        score: 0
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Koku veya tat de\u011Fi\u015Fikli\u011Fi oldu mu?"
+      choiceType: 0
+      doctorLine: "Koku veya tat alman\u0131zda de\u011Fi\u015Fiklik fark ettiniz
+        mi?\n"
+      patientReply: "Evet, yemeklerin kokusunu biraz az al\u0131yorum gibi.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - reduced_smell
+      requiredTags:
+      - dry_cough
+      - low_grade_fever
+      blockedTags: []
+      discoveredSymptoms:
+      - "Koku azalmas\u0131"
+      performedTests: []
+      notebookSymptoms:
+      - "Koku azalmas\u0131"
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: COVID19
+        score: 4
+      - diseaseId: 'COMMON_COLD '
+        score: 1
+      - diseaseId: 'SINUSITIS '
+        score: 1
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Yak\u0131n \xE7evrenizde hasta olan var m\u0131?"
+      choiceType: 0
+      doctorLine: "Son g\xFCnlerde yak\u0131n \xE7evrenizde hasta biri oldu mu?\n"
+      patientReply: "Evet, i\u015F yerinde birka\xE7 ki\u015Fi hastayd\u0131.\n"
+      assistantReply: "Temas \xF6yk\xFCs\xFC tan\u0131da yard\u0131mc\u0131 olabilir.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - sick_contact
+      requiredTags:
+      - acute_onset
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hasta temas\u0131 "
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Temas \xF6yk\xFCs\xFC mevcut. "
+      diseaseEffects:
+      - diseaseId: 'COVID19 '
+        score: 3
+      - diseaseId: 'COMMON_COLD '
+        score: 1
+      - diseaseId: 'SINUSITIS '
+        score: 0
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Halsizlik veya kas a\u011Fr\u0131n\u0131z var m\u0131?"
+      choiceType: 0
+      doctorLine: "Halsizlik veya kas a\u011Fr\u0131s\u0131 hissediyor musunuz?"
+      patientReply: "Evet, biraz halsizim. V\xFCcudum da k\u0131rg\u0131n gibi."
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - fatigue
+      - mild_myalgia
+      requiredTags:
+      - acute_onset
+      blockedTags: []
+      discoveredSymptoms:
+      - Halsizlik
+      performedTests: []
+      notebookSymptoms:
+      - "Halsizlik ve k\u0131rg\u0131nl\u0131k var."
+      notebookTests: []
+      notebookNotes:
+      - 'Sistemik belirti mevcut. '
+      diseaseEffects:
+      - diseaseId: 'COVID19 '
+        score: 2
+      - diseaseId: 'COMMON_COLD '
+        score: 1
+      - diseaseId: 'SINUSITIS '
+        score: 0
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: " Burun ak\u0131nt\u0131s\u0131n\u0131n rengi nas\u0131l?"
+      choiceType: 0
+      doctorLine: "Burun ak\u0131nt\u0131n\u0131z \u015Feffaf m\u0131, koyu sar\u0131-ye\u015Fil
+        mi?\n"
+      patientReply: "Daha \xE7ok \u015Feffaf. \xC7ok koyu de\u011Fil.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - clear_nasal_discharge
+      requiredTags:
+      - watery_discharge
+      - mild_facial_pressure
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms:
+      - "\u015Eeffaf burun ak\u0131nt\u0131s\u0131"
+      notebookTests: []
+      notebookNotes:
+      - "Koyu ak\u0131nt\u0131 yok."
+      diseaseEffects:
+      - diseaseId: 'SINUSITIS '
+        score: -2
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: 1
+      - diseaseId: 'COMMON_COLD '
+        score: 1
+      - diseaseId: 'COVID19 '
+        score: 1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "\u015Eikayetler mevsimsel mi?"
+      choiceType: 0
+      doctorLine: "Bu \u015Fikayetler genelde mevsimsel olarak tekrarlar m\u0131?"
+      patientReply: "Hay\u0131r, b\xF6yle d\xFCzenli tekrar eden bir durumum yok.\n"
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - no_seasonal_pattern
+      requiredTags:
+      - sneezing_mild
+      - itching_absent
+      blockedTags: []
+      discoveredSymptoms:
+      - Mevsimsel tekrar yok
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes:
+      - "Mevsimsel alerji \xF6yk\xFCs\xFC yok."
+      diseaseEffects:
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: -3
+      - diseaseId: 'COVID19 '
+        score: 1
+      - diseaseId: 'COMMON_COLD '
+        score: 1
+      - diseaseId: 'SINUSITIS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Burun ve bo\u011Faz muayenesi yap"
+      choiceType: 1
+      doctorLine: "Burun ve bo\u011Faz\u0131n\u0131za bakal\u0131m.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "Bo\u011Fazda hafif eritem. P\xFCr\xFClan ak\u0131nt\u0131
+        yok."
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - mild_throat_redness
+      - no_purulent_discharge
+      requiredTags:
+      - nasal_congestion
+      - mild_sore_throat
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hafif bo\u011Faz k\u0131zar\u0131kl\u0131\u011F\u0131 "
+      performedTests:
+      - "Burun-bo\u011Faz muayenesi "
+      notebookSymptoms: []
+      notebookTests:
+      - "Bo\u011Fazda hafif eritem. P\xFCr\xFClan ak\u0131nt\u0131 yok. "
+      notebookNotes:
+      - "Hafif bo\u011Faz k\u0131zar\u0131kl\u0131\u011F\u0131 "
+      diseaseEffects:
+      - diseaseId: 'COMMON_COLD '
+        score: 1
+      - diseaseId: 'COVID19 '
+        score: 1
+      - diseaseId: 'SINUSITIS '
+        score: -1
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Vital bulgular\u0131 \xF6l\xE7"
+      choiceType: 1
+      doctorLine: "Ate\u015F, nab\u0131z ve oksijen de\u011Ferlerinizi \xF6l\xE7elim.\n"
+      patientReply: 'Tamam.
+
+'
+      assistantReply: "Ate\u015F: 37.9\xB0C\nNab\u0131z: 92/dk\nSpO2: %97"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - vitals_mild_infection
+      - spo2_normal
+      requiredTags:
+      - low_grade_fever
+      - dry_cough
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hafif ate\u015F "
+      performedTests:
+      - 'Vital bulgular '
+      notebookSymptoms: []
+      notebookTests:
+      - "Ate\u015F: 37.9\xB0C Nab\u0131z: 92/dk SpO2: %97"
+      notebookNotes: []
+      diseaseEffects:
+      - diseaseId: 'COVID19 '
+        score: 2
+      - diseaseId: 'COMMON_COLD '
+        score: 1
+      - diseaseId: 'SINUSITIS '
+        score: 0
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tam kan say\u0131m\u0131 ve CRP iste"
+      choiceType: 1
+      doctorLine: "Kan de\u011Ferlerinize bakal\u0131m.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "WBC: 5.400 /\xB5L\nLenfosit: %18\nCRP: 11 mg/L"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - lymphocyte_low_mild
+      - crp_mild_high
+      requiredTags:
+      - fatigue
+      - low_grade_fever
+      blockedTags: []
+      discoveredSymptoms:
+      - "Hafif CRP y\xFCksekli\u011Fi "
+      performedTests:
+      - "Tam kan say\u0131m\u0131 ve CRP"
+      notebookSymptoms: []
+      notebookTests:
+      - "WBC: 5.400 /\xB5L Lenfosit: %18 CRP: 11 mg/L"
+      notebookNotes:
+      - "CRP hafif y\xFCksek, lenfosit d\xFC\u015F\xFCk."
+      diseaseEffects:
+      - diseaseId: 'COVID19 '
+        score: 3
+      - diseaseId: 'COMMON_COLD '
+        score: 1
+      - diseaseId: 'SINUSITIS '
+        score: 0
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: -1
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Sin\xFCs De\u011Ferlendirmesi"
+      choiceType: 1
+      doctorLine: "Sin\xFCs b\xF6lgelerinde hassasiyet var m\u0131 bakal\u0131m.\n"
+      patientReply: 'Tamam.
+
+'
+      assistantReply: "Maksiller sin\xFCs hassasiyeti belirgin de\u011Fil.\n"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - sinus_tenderness_absent
+      requiredTags:
+      - mild_facial_pressure
+      - clear_nasal_discharge
+      blockedTags: []
+      discoveredSymptoms:
+      - "Belirgin sin\xFCs hassasiyeti yok "
+      performedTests:
+      - "Sin\xFCs muayenesi "
+      notebookSymptoms: []
+      notebookTests:
+      - "Maksiller sin\xFCs hassasiyeti belirgin de\u011Fil. "
+      notebookNotes:
+      - "Sin\xFCzit bulgusu zay\u0131f. "
+      diseaseEffects:
+      - diseaseId: 'SINUSITIS '
+        score: -3
+      - diseaseId: 'COVID19 '
+        score: 1
+      - diseaseId: 'COMMON_COLD '
+        score: 1
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: 0
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: COVID-19 testi iste
+      choiceType: 1
+      doctorLine: "COVID-19 a\xE7\u0131s\u0131ndan test isteyelim.\n"
+      patientReply: 'Tamam doktor.
+
+'
+      assistantReply: "COVID-19 h\u0131zl\u0131 antijen: Pozitif\nCt de\u011Feri:
+        24"
+      nextNodeId: 
+      returnToHub: 1
+      opensDiagnosisPanel: 0
+      reusable: 0
+      hideAfterUse: 1
+      gainedTags:
+      - covid_test_positive
+      requiredTags:
+      - reduced_smell
+      - sick_contact
+      - crp_mild_high
+      blockedTags: []
+      discoveredSymptoms:
+      - 'COVID testi pozitif '
+      performedTests:
+      - "COVID-19 h\u0131zl\u0131 antijen testi"
+      notebookSymptoms: []
+      notebookTests:
+      - "COVID-19 h\u0131zl\u0131 antijen: Pozitif Ct de\u011Feri: 24"
+      notebookNotes:
+      - 'COVID-19 testi pozitif. '
+      diseaseEffects:
+      - diseaseId: 'COVID19 '
+        score: 7
+      - diseaseId: 'COMMON_COLD '
+        score: -2
+      - diseaseId: 'SINUSITIS '
+        score: -2
+      - diseaseId: 'ALLERGIC_RHINITIS '
+        score: -3
+      useTestChance: 1
+      baseSuccessChance: 25
+      bonusSpecialization: 1
+      specializationBonus: 50
+      generalistBonus: 10
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+    - choiceText: "Tan\u0131 koy"
+      choiceType: 2
+      doctorLine: 
+      patientReply: 
+      assistantReply: 
+      nextNodeId: 
+      returnToHub: 0
+      opensDiagnosisPanel: 1
+      reusable: 1
+      hideAfterUse: 0
+      gainedTags: []
+      requiredTags: []
+      blockedTags: []
+      discoveredSymptoms: []
+      performedTests: []
+      notebookSymptoms: []
+      notebookTests: []
+      notebookNotes: []
+      diseaseEffects: []
+      useTestChance: 0
+      baseSuccessChance: 70
+      bonusSpecialization: 0
+      specializationBonus: 15
+      generalistBonus: 5
+      failedTestText: "Testten net sonu\xE7 al\u0131namad\u0131. Klinik bulgularla
+        devam etmelisin."
+  diagnosisChoices:
+  - diseaseId: COMMON_COLD
+    diagnosisName: "So\u011Fuk Alg\u0131nl\u0131\u011F\u0131"
+    resultText: "So\u011Fuk alg\u0131nl\u0131\u011F\u0131 burun ak\u0131nt\u0131s\u0131
+      ve hafif bo\u011Faz \u015Fikayetiyle uyumlu olabilir. Ancak koku azalmas\u0131,
+      temas \xF6yk\xFCs\xFC ve pozitif COVID testi bu tan\u0131y\u0131 zay\u0131flat\u0131r."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - nasal_congestion
+    - watery_discharge
+    - mild_sore_throat
+  - diseaseId: SINUSITIS
+    diagnosisName: "Sin\xFCzit"
+    resultText: "Sin\xFCzitte y\xFCz a\u011Fr\u0131s\u0131, koyu burun ak\u0131nt\u0131s\u0131
+      ve sin\xFCs hassasiyeti daha belirgin beklenir. Bu vakada bu bulgular zay\u0131f
+      kald\u0131."
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - mild_facial_pressure
+    - clear_nasal_discharge
+    - sinus_tenderness_absent
+  - diseaseId: ALLERGIC_RHINITIS
+    diagnosisName: Alerjik Rinit
+    resultText: "Alerjik rinitte ka\u015F\u0131nt\u0131, hap\u015F\u0131r\u0131k
+      ve mevsimsel tekrar daha \xF6n plandad\u0131r. Bu hastada enfeksiyon bulgular\u0131
+      daha belirgin.\n"
+    isCorrectDiagnosis: 0
+    recommendedTags:
+    - itching_absent
+    - no_seasonal_pattern
+    - low_grade_fever
+  - diseaseId: COVID19
+    diagnosisName: COVID-19
+    resultText: "Do\u011Fru tan\u0131 COVID-19. Kuru \xF6ks\xFCr\xFCk, hafif ate\u015F,
+      halsizlik, koku azalmas\u0131, temas \xF6yk\xFCs\xFC ve pozitif test sonucu
+      tan\u0131y\u0131 destekler."
+    isCorrectDiagnosis: 1
+    recommendedTags:
+    - dry_cough
+    - low_grade_fever
+    - fatigue
+    - reduced_smell
+    - sick_contact
+    - covid_test_positive
+  assistantHints: []
+  variationProfile: {fileID: 0}

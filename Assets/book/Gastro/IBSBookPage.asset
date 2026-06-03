@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34b718b78ce91a4bb6b271059134183, type: 3}
+  m_Name: IBSBookPage
+  m_EditorClassIdentifier: Assembly-CSharp::DiseaseBookPageData
+  diseaseId: ibs
+  diseaseName: "IBS (Huzursuz Ba\u011F\u0131rsak Sendromu)"
+  generalInfo: "IBS, ba\u011F\u0131rsak hareketlerinde d\xFCzensizlik ve kar\u0131n
+    rahats\u0131zl\u0131\u011F\u0131 ile seyreden fonksiyonel bir sindirim sistemi
+    hastal\u0131\u011F\u0131d\u0131r. Hastalarda kar\u0131n a\u011Fr\u0131s\u0131,
+    \u015Fi\u015Fkinlik ve d\u0131\u015Fk\u0131lama de\u011Fi\u015Fiklikleri g\xF6r\xFClebilir."
+  symptomsInfo: "Kar\u0131n a\u011Fr\u0131s\u0131 var olmas\u0131, \u015Fi\u015Fkinlik
+    hissi var olmas\u0131, ishal mevcut olmas\u0131 ve stresle yak\u0131nmalar\u0131n
+    artmas\u0131 IBS hastalar\u0131nda s\u0131k g\xF6r\xFClen belirtilerdendir. Baz\u0131
+    hastalarda d\u0131\u015Fk\u0131lama sonras\u0131 k\u0131smi rahatlama olabilir."
+  diagnosisTips: 
+  diseaseImage: {fileID: 21300000, guid: 58a7dae3fba1ab9488087258e1ad3e56, type: 3}
+  extraInfo: 
+  highlightKeywords:
+  - "Kar\u0131n a\u011Fr\u0131s\u0131"
+  - "\u015Fi\u015Fkinlik"
+  - ishal
+  - stres
+  - "k\u0131smi rahatlama"
+  - inflamasyon
+  - "ba\u011F\u0131rsak"
+  - "d\xFCzensizlik"
+  - "d\u0131\u015Fk\u0131lama"
